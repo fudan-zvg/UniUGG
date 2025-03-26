@@ -1,0 +1,891 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>From Flatland to Space</title>
+  <link rel="stylesheet" href="assets/style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/simple-datatables@latest/dist/style.css">
+</head>
+
+  <body>
+    <link rel="icon" type="image/png" href="./assets/icons/s_logo.png">
+
+    <!-- <div class="top-logo-bar">🌌 Spatial Perception And Reasoning</div> -->
+    <!-- <div class="top-logo-bar">🌌 <span class="spar-logo">
+      <strong>S</strong>patial <strong>P</strong>erception <strong>A</strong>nd <strong>R</strong>easoning
+    </span></div> -->
+    <header class="hero-header">
+    
+    <!-- <img src="assets/icons/bg2.png" class="header-bg" alt="background"> -->
+
+
+    <div class="hero-content">
+
+      <!-- <h1 class="project-title">From Flatland to Space</h1> -->
+
+      <!-- <h1 class="project-title">From Flatland to Space</h1> -->
+      <div class="title-wrapper">
+        <!-- <img src="assets/icons/sub_bg.jpg" alt="Title Banner" class="title-deco-img"> -->
+        <h1 class="project-title">From Flatland to Space</h1>
+      </div>
+      <p class="project-subtitle">Teaching Vision-Language Models to Perceive and Reason in 3D</p>
+      <div class="authors-list">
+        <div class="author-names">
+          Jiahui Zhang<sup>1*</sup>, Yurui Chen<sup>1*</sup>, Yanpeng Zhou<sup>2*</sup>, Yueming Xu<sup>1</sup>,
+          Ze Huang<sup>1</sup>, Jilin Mei<sup>1</sup>, Junhui Chen<sup>1</sup>,
+          Yu-Jie Yuan<sup>2</sup>, Xinyue Cai<sup>2</sup>, Guowei Huang<sup>2</sup>, Xingyue Quan<sup>2</sup>,
+          Hang Xu<sup>2</sup>, <a href="https://lzrobots.github.io/" target="_blank">Li Zhang<sup>1</sup></a>
+        </div>
+      
+        <div class="equal-contribution">* Equal contribution</div>
+      
+        <div class="affiliations">
+          <span class="inst"><sup>1</sup> Fudan University</span>
+          <span class="inst"><sup>2</sup> Noah’s Ark Lab</span>
+        </div>
+      </div>
+  
+      <div class="button-group">
+        <a href="https://arxiv.org/abs/xxx" target="_blank" class="circle-button green">
+          <img src="assets/icons/arxiv.svg" alt="arXiv" class="icon"> arXiv
+        </a>
+        <a href="https://github.com/your-repo" target="_blank" class="circle-button green">
+          <img src="assets/icons/github.svg" alt="GitHub" class="icon"> Code
+        </a>
+        <a href="https://huggingface.co/datasets/jasonzhango/SPAR-7M" target="_blank" class="circle-button green">
+          <img src="assets/icons/hf.svg" alt="Hugging Face" class="icon"> Data
+        </a>
+        <a href="https://huggingface.co/datasets/jasonzhango/SPAR-Bench" target="_blank" class="circle-button green">
+          <img src="assets/icons/hf.svg" alt="Hugging Face" class="icon"> Benchmark
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <div class="main-content">
+      <!-- <section class="authors-section">
+        <div class="authors-list">
+          <span>Jiahui Zhang<sup>1*</sup></span>,
+          <span>Yurui Chen<sup>1*</sup></span>,
+          <span>Yueming Xu<sup>1</sup></span>,
+          <span>Ze Huang<sup>1</sup></span>,
+          <span>Jilin Mei<sup>1</sup></span>,
+          <span>Junhui Chen<sup>1</sup></span>,
+          <span>Yanpeng Zhou<sup>2</sup></span>,
+          <span>Yujie Yuan<sup>2</sup></span>,
+          <span>Xinyue Cai<sup>2</sup></span>,
+          <span>Guowei Huang<sup>2</sup></span>,
+          <span>Xingyue Quan<sup>2</sup></span>,
+          <span>Hang Xu<sup>2</sup></span>,
+          <a href="https://lzrobots.github.io/" target="_blank">Li Zhang<sup>1</sup></a>
+        </div>
+        
+        <div class="equal-contribution">
+            <span>* Equal contribution</span>
+        </div>
+
+        <div class="affiliations">
+          <span><sup>1</sup> Fudan University</span> &emsp;
+          <span><sup>2</sup> Noah’s Ark Lab</span>
+        </div>
+      </section> -->
+
+      <section class="teaser-section", id="overview">
+        <h2 class="teaser-title">Overview of the SPAR Dataset and Benchmark</h2>
+        <img src="assets/images/teaser.png" alt="Teaser Figure" class="teaser-image">
+        <p class="teaser-caption">
+          <em>
+            Overview of our <strong>Spatial Perception And Reasoning (SPAR)</strong> dataset and benchmark. 
+            Our dataset is sourced from <strong>4,500 scenes</strong> and comprises <strong>33 spatial tasks</strong> spanning 
+            single-view, multi-view, and video settings. Our benchmark includes over 
+            <strong>7,000+</strong> carefully curated high-quality samples to comprehensively evaluate the 
+            spatial perception and understanding capabilities of existing models.
+          </em>
+        </p>
+      </section>
+      <section class="summary-section", id="paper-summary">
+        <h2 class="summary-title">📄 Paper Summary</h2>
+        <p class="summary-text">
+          Recent advances in vision-language models (VLMs) have greatly improved multimodal understanding, but spatial perception remains a major limitation — especially in complex 3D scenes. To address this, we introduce <strong>SPAR-7M</strong>, a large-scale dataset built from 3D scenes using a novel 2D annotation pipeline. It covers <strong>33 spatial tasks</strong> ranging from perception (e.g., depth, distance) to reasoning (e.g., imagination, object relations) across single-view, multi-view, and video settings.
+        </p>
+        <p class="summary-text">
+          We further construct <strong>SPAR-Bench</strong>, a high-quality benchmark of <strong>7,207 human-verified QA pairs</strong> across 20 representative spatial tasks, supporting diverse input modalities. Experiments show that pretraining on SPAR-7M significantly improves model performance on spatial benchmarks, even without explicit 3D representations — revealing the strong potential of 2D-supervised spatial learning.
+        </p>
+      </section>
+      <section class="dataset-section", id="dataset">
+        <h2 class="dataset-title">📦 SPAR-7M & SPAR-Bench</h2>
+        <p class="dataset-intro">
+          <strong>SPAR</strong> is a comprehensive spatial QA suite composed of two components:
+          <strong>SPAR-7M</strong> — a large-scale synthetic dataset for training, and 
+          <strong>SPAR-Bench</strong> — a human-curated benchmark for evaluation.
+          Together, they cover a wide spectrum of 3D spatial understanding tasks across various cognitive levels and modalities.
+        </p>
+      
+        <div class="dataset-cards">
+          <div class="dataset-card">
+            <h3>📚 SPAR-7M</h3>
+            <ul>
+              <li>✅ 7M+ QA pairs</li>
+              <li>🧠 33 spatial task types</li>
+              <li>🖼️ Input: single-view / multi-view / video</li>
+              <li>📐 Tasks: depth, distance, matching, imagination...</li>
+              <li>🏗️ From 4,500 richly annotated 3D scenes</li>
+            </ul>
+          </div>
+          <div class="dataset-card">
+            <h3>🧪 SPAR-Bench</h3>
+            <ul>
+              <li>📏 7,207 QA samples</li>
+              <li>👀 Manually verified high-quality questions</li>
+              <li>🧩 20 representative task types</li>
+              <li>🎯 Zero-shot benchmark for VLMs</li>
+              <li>🚀 Evaluates perception, cross-view & reasoning</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <section class="dataset-distribution-row">
+        <div class="dist-img">
+          <img src="assets/images/data_stats.png" alt="Task Distribution">
+        </div>
+        <div class="dist-caption">
+          <h3>📊 Task Type Distribution in SPAR</h3>
+          <p>
+            <em>
+              This figure summarizes the distribution of all <strong>33 spatial tasks</strong> in SPAR,
+              categorized by <strong>cognitive level</strong> (Low / Medium / High),
+              <strong>input modality</strong> (single-view / multi-view / video), and task type.
+              <br><br>
+              Notably, <strong>51% of SPAR tasks</strong> fall into high-level spatial reasoning,
+              indicating a strong focus on compositional and cognitively demanding skills.
+            </em>
+          </p>
+        </div>
+      </section>         
+      <section class="task-vis-section", id="vis">
+        <h2 class="task-vis-title">🔍 SPAR-7M & SPAR-Bench Visualization</h2>
+        <img src="assets/images/task_vis.png" alt="SPAR task visualization" class="task-vis-img">
+        <p class="task-vis-caption">
+          <em>
+            This figure illustrates representative examples from <strong>SPAR-7M</strong> and 
+            <strong>SPAR-Bench</strong>. It showcases the diversity of spatial tasks across input 
+            modalities (single-view, multi-view, video), cognitive levels (perception to reasoning), 
+            and answer formats (sentence, choice, fill-in). These examples reflect the broad coverage 
+            and structured design of our dataset and benchmark.
+          </em>
+        </p>
+      </section>
+
+      <section class="task-explorer" id="interactive-vis">
+        <h2 class="section-title">🕵️ Explore SPAR-Bench Tasks</h2>
+        <p class="section-subtitle">
+            This interactive viewer showcases representative samples from the <strong>20 spatial tasks</strong> in <strong>SPAR-Bench</strong>. 
+            Each example illustrates different cognitive levels, input modalities, and relation types. 
+            <br><br>
+            Note that <strong>SPAR-Bench only contains multiple-choice and fill-in-the-blank questions</strong>. 
+            For <strong>open-ended</strong> or <strong>descriptive sentence-based</strong> tasks, please refer to the 
+            <a href="https://huggingface.co/datasets/jasonzhango/SPAR-7M" target="_blank">SPAR-7M dataset on Hugging Face</a>.
+          </p>
+          
+        <div class="filter-panel">
+          <select id="level-select" onchange="filterTasks()">
+            <option value="all">All Levels</option>
+            <option value="low">Low</option>
+            <option value="medium">Medium</option>
+            <option value="high">High</option>
+          </select>
+      
+          <select id="modality-select" onchange="filterTasks()">
+            <option value="all">All Modalities</option>
+            <option value="single">Single-view</option>
+            <option value="multi">Multi-view</option>
+            <!-- <option value="video">Video</option> -->
+          </select>
+      
+          <select id="relation-select" onchange="filterTasks()">
+            <option value="all">All Relations</option>
+            <option value="oo">Object–Object</option>
+            <option value="oc">Object–Camera</option>
+          </select>
+        </div>
+      
+        <!-- <div id="task-display" class="task-grid"></div> -->
+        <div class="carousel-wrapper">
+        <!-- <button class="carousel-btn left" onclick="scrollCarousel(-1)">←</button> -->
+        <button class="carousel-btn left" onclick="scrollCarousel(-1)">&lt;</button>
+        <div id="task-carousel" class="carousel-track">
+            <!-- 卡片会通过 JS 插入到这里 -->
+        </div>
+        <!-- <button class="carousel-btn right" onclick="scrollCarousel(1)">→</button> -->
+        <button class="carousel-btn right" onclick="scrollCarousel(1)">&gt;</button>    
+    </div>
+          
+      </section>
+      
+      <section class="benchmark-section", id="bench-eval">
+        <h2 class="benchmark-title">🎯 Benchmark Evaluation</h2>
+        <p class="benchmark-intro">
+          <strong>SPAR-Bench</strong> evaluates 20 spatial tasks across three cognitive levels — 
+          perception, cross-view understanding, and high-level reasoning. 
+          It contains <strong>7,207 human-verified QA pairs</strong> across diverse modalities.
+        </p>
+      
+        <div class="benchmark-table-wrapper">
+          <table class="benchmark-table">
+            <thead>
+              <tr>
+                <th>Model</th>
+                <th>Avg (%) ↑</th>
+                <th>Low ↑</th>
+                <th>Medium ↑</th>
+                <th>High ↑</th>
+              </tr>
+            </thead>
+            <tbody>
+      
+              <tr class="group-label"><td colspan="5">🟤 Baselines</td></tr>
+              <tr><td>Random</td><td>32.74</td><td>31.19</td><td>38.25</td><td>32.29</td></tr>
+              <tr><td>Human</td><td><b>67.27</b></td><td><b>55.31</b></td><td><b>72.32</b></td><td><b>76.22</b></td></tr>
+      
+              <tr class="group-label"><td colspan="5">🟦 API Models</td></tr>
+              <tr><td>GPT-4o</td><td>36.39</td><td>29.25</td><td><b>24.93</b></td><td>45.11</td></tr>
+              <tr><td>Claude-3.7-Sonnet</td><td>21.77</td><td>25.43</td><td>7.33</td><td>23.33</td></tr>
+              <tr><td>Qwen2-VL-72B</td><td>35.62</td><td>35.28</td><td>23.39</td><td>40.00</td></tr>
+              <tr><td>Qwen2.5-VL-72B</td><td><b>39.40</b></td><td><b>35.35</b></td><td>23.05</td><td><b>48.44</b></td></tr>
+      
+              <tr class="group-label"><td colspan="5">🟨 Open-source Models</td></tr>
+              <tr><td>InternVL2-8B</td><td>33.02</td><td>26.83</td><td><b>36.49</b></td><td>37.47</td></tr>
+              <tr><td>InternVL2.5-8B</td><td><b>36.28</b></td><td><b>29.46</b></td><td>31.88</td><td><b>43.80</b></td></tr>
+              <tr><td>LLaVA-OV-7B</td><td>31.20</td><td>21.79</td><td>26.13</td><td>40.14</td></tr>
+              <tr><td>Qwen2-VL-7b</td><td>30.74</td><td>27.52</td><td>20.44</td><td>37.03</td></tr>
+              <tr><td>Qwen2.5-VL-7b</td><td>33.07</td><td>28.75</td><td>22.97</td><td>40.27</td></tr>
+              <tr><td>LLaVA-v1.5-7b</td><td>23.65</td><td>10.85</td><td>27.50</td><td>34.09</td></tr>
+              <tr><td>LLaVA-v1.6-7b</td><td>13.21</td><td>8.53</td><td>4.79</td><td>20.18</td></tr>
+      
+              <tr class="group-label"><td colspan="5">🟥 Fine-tuned</td></tr>
+              <tr><td>InternVL2.5-8B + SPAR-mix</td><td><b>63.25</b></td><td><b>65.53</b></td><td><b>63.01</b></td><td><b>60.19</b></td></tr>
+      
+            </tbody>
+          </table>
+        </div>
+        <div class="benchmark-note">
+            <p><strong>⚠️ Note:</strong> We typically <strong>exclude fine-tuned models</strong> (like <em>InternVL2.5-8B + SPAR-mix</em>) from direct comparison, as they are trained on SPAR-7M and thus not evaluated in a zero-shot setting.</p>
+          
+            <ul>
+              <li><code>Avg</code> is the mean accuracy across all <strong>20 tasks</strong> in SPAR-Bench.</li>
+              <li><code>Low</code>, <code>Medium</code>, and <code>High</code> are means over task subsets (not equal count).</li>
+              <li>So <code>Avg</code> ≠ average of Low / Medium / High.</li>
+              <li>Only a subset of models are shown — see our <a href="#paper">paper</a> for complete results.</li>
+            </ul>
+          </div>
+          
+          
+      </section>
+      <section class="dataset-construction", id="data-con">
+        <h2 class="section-title">🏗️ Dataset Construction</h2>
+      
+        <div class="construction-image">
+          <img src="assets/images/data_pipeline.png" alt="Data construction pipeline" />
+          <p class="caption">Overview of our data construction pipeline. It consists of three main stages.</p>
+        </div>
+      
+        <div class="construction-steps">
+          <ol>
+            <li>
+              <strong>Scene Pre-processing:</strong>
+              We sample keyframes from raw video and extract 3D metadata such as depth, camera pose, and object bounding boxes.
+            </li>
+            <li>
+              <strong>Scene Structuring:</strong>
+              All frames, objects, and camera metadata are stored in a unified database format. This enables flexible multi-view and spatial queries for QA generation.
+            </li>
+            <li>
+              <strong>Multi-task QA Generation:</strong>
+              We design task-specific templates and automatically fill in questions and answers by selecting tasks, object types, image views, and answer formats. This enables systematic generation of 33 spatial QA types.
+            </li>
+          </ol>
+        </div>
+      </section>
+      
+
+      <section class="dataset-distribution-row", id="gd">
+        <div class="dist-img">
+          <img src="assets/images/grounding.png" alt="3D Grounding Module" />
+        </div>
+        <div class="dist-caption">
+          <h3>🧭 3D Grounding Module</h3>
+          <p>
+            <em>
+              We propose a novel <strong>3D grounding module</strong> that integrates seamlessly with Vision-Language Models (VLMs), 
+              enabling precise spatial localization from both <strong>video</strong> and <strong>multi-view</strong> inputs.
+              <br><br>
+              For video inputs, grounding is transformed into a <strong>frame selection</strong> task, followed by <strong>mono-frame 3D localization </strong>
+              via predicted UV coordinates, depth, and size. In multi-view settings, the object is localized in a selected frame 
+              and then back-projected to recover its full 3D bounding box.
+              <br><br>
+              An <strong>optional refinement</strong> stage further improves accuracy by matching the predicted box against 
+              the scene’s proposal boxes based on geometric similarity.
+            </em>
+          </p>
+        </div>
+      </section>
+      
+    <section class="generalization-section", id="exp1">
+        <h2 class="section-title">🌍 Generalization Across Benchmarks</h2>
+
+        <p class="benchmark-intro">
+            We evaluate how pretraining with <strong>SPAR-mix</strong> affects generalization on various
+            <strong>spatial understanding</strong> and <strong>2D vision-language benchmarks</strong>.
+            <br><br>
+            The <strong>Base VLM</strong> is <code>InternVL2.5-8B</code>, trained with high-quality proprietary data.
+            To ensure a fair comparison, we introduce:
+        </p>
+        
+        <ul>
+            <li><strong>+EMOVA-2M</strong>: trained on 2M samples randomly selected from the EMOVA 2D dataset.</li>
+            <li><strong>+SPAR-mix</strong>: trained on 2M samples with <strong>60%</strong> from SPAR-7M and <strong>40%</strong> from EMOVA.</li>
+        </ul>
+        
+        <p class="benchmark-intro">
+            <strong>Bold values</strong> indicate best performance among the two open-source variants (EMOVA vs SPAR-mix).
+        </p>
+        <div class="scrollable-table">
+            <table class="generalization-table">
+                <thead>
+                <tr>
+                    <th>Method</th>
+                    <th>VSI-Bench</th>
+                    <th>CV-Bench 2D</th>
+                    <th>CV-Bench 3D</th>
+                    <th>BLINK</th>
+                    <th>3DSRBench</th>
+                    <th>Seed-Image</th>
+                    <th>MME</th>
+                    <th>MMBench</th>
+                    <th>RealWorldQA</th>
+                    <th>TextVQA</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr><td>GPT-4v</td><td>–</td><td>64.3</td><td>73.8</td><td>51.14</td><td>–</td><td>71.6</td><td>1927</td><td>75.0</td><td>61.4</td><td>77.4</td></tr>
+                <tr><td>GPT-4o</td><td>34.0</td><td>–</td><td>–</td><td>60.04</td><td>45.3</td><td>77.1</td><td>2310</td><td>83.4</td><td>75.4</td><td>–</td></tr>
+                <tr><td>Cambrian-8B</td><td>–</td><td>72.3</td><td>72.0</td><td>–</td><td>–</td><td>74.7</td><td>1547</td><td>75.9</td><td>64.2</td><td>77.8</td></tr>
+                <tr><td>LLaVA-OV-7B</td><td>25.3</td><td>–</td><td>–</td><td>48.2</td><td>44.1</td><td>–</td><td>1998</td><td>80.8</td><td>66.3</td><td>–</td></tr>
+                <tr><td>InternVL2-8B</td><td>34.6</td><td>–</td><td>–</td><td>–</td><td>–</td><td>75.4</td><td>2215</td><td>81.7</td><td>–</td><td>77.4</td></tr>
+            
+                <tr class="group-divider"><td colspan="11"></td></tr>
+            
+                <tr><td>Base VLM</td><td>32.4</td><td>74.20</td><td>78.50</td><td>46.61</td><td>58.33</td><td>76.53</td><td>2323</td><td>84.45</td><td>66.67</td><td>68.73</td></tr>
+                <tr><td>+EMOVA-2M</td><td>24.5</td><td>66.27</td><td>64.83</td><td>42.40</td><td>55.25</td><td><strong>73.8</strong></td><td>2186</td><td>80.24</td><td>63.14</td><td><strong>63.78</strong></td></tr>
+                <tr><td><strong>+SPAR-mix</strong></td>
+                    <td><strong>41.1</strong></td>
+                    <td><strong>72.25</strong></td>
+                    <td><strong>89.08</strong></td>
+                    <td><strong>43.92</strong></td>
+                    <td><strong>57.48</strong></td>
+                    <td>73.2</td>
+                    <td><strong>2163</strong></td>
+                    <td><strong>79.90</strong></td>
+                    <td><strong>64.71</strong></td>
+                    <td>62.91</td>
+                </tr>
+                </tbody>
+            </table>
+            </div>
+            <br>
+            <p class="benchmark-intro">
+                While the <strong>Base VLM</strong> is pretrained on high-quality proprietary data and achieves strong performance, 
+                we introduce <strong>+EMOVA-2M</strong> as a fair open-source baseline for comparison. 
+                <br><br>
+                Under equal data scale (2M), our proposed <strong>+SPAR-mix</strong> significantly improves performance over EMOVA-only training on spatial benchmarks (e.g., <strong>VSI-Bench</strong>, <strong>CV-Bench 3D</strong>), demonstrating the value of our spatial QA data.
+            </p>
+              
+        </section> 
+
+        <section class="task-comparison-section", id="exp2">
+            <h2 class="section-title">🛰️ Evaluation on 3DQA and 3D Grounding</h2>
+          
+            <div class="comparison-grid">
+              <!-- QA Evaluation Block -->
+              <div class="comparison-card">
+                <h3>💬 3D Question Answering</h3>
+                <p class="small-caption">Performance on SQA3D (EM@1) and ScanQA (BLEU-4, CiDEr)</p>
+                <table class="small-table">
+                  <thead>
+                    <tr><th>Method</th><th>EM@1</th><th>BLEU-4</th><th>CiDEr</th></tr>
+                  </thead>
+                  <tbody>
+                    <tr><td>3D-LLM</td><td>–</td><td>12.0</td><td>69.4</td></tr>
+                    <tr><td>Chat-3D v2</td><td>54.7</td><td>14.0</td><td>87.6</td></tr>
+                    <tr><td>LEO</td><td>50.0</td><td>13.2</td><td><strong>101.4</strong></td></tr>
+                    <tr><td>LL3DA</td><td>–</td><td>13.5</td><td>76.8</td></tr>
+                    <tr><td>Scene-LLM</td><td>54.2</td><td>12.0</td><td>80.0</td></tr>
+                    <tr><td><strong>SPAR-mix</strong></td><td><strong>58.1</strong></td><td><strong>15.3</strong></td><td>90.7</td></tr>
+                  </tbody>
+                </table>
+              </div>
+          
+              <!-- Grounding Evaluation Block -->
+              <div class="comparison-card">
+                <h3>📡 3D Grounding (ScanRefer)</h3>
+                <p class="small-caption">Accuracy@0.25 and @0.5. Values in brackets are without refinement.</p>
+                <table class="small-table">
+                  <thead>
+                    <tr><th>Method</th><th>Acc@0.25</th><th>Acc@0.5</th></tr>
+                  </thead>
+                  <tbody>
+                    <tr><td>ScanRefer</td><td>37.3</td><td>24.3</td></tr>
+                    <tr><td>MVT</td><td>40.8</td><td>33.3</td></tr>
+                    <tr><td>ViL3DRel</td><td>47.9</td><td>37.7</td></tr>
+                    <tr><td>3D-LLM</td><td>30.3</td><td>–</td></tr>
+                    <tr><td>Chat-3D v2</td><td>35.9</td><td>30.4</td></tr>
+                    <tr><td>Grounded 3D-LLM</td><td>47.9</td><td><strong>44.1</strong></td></tr>
+                    <tr><td><strong>SPAR-mix</strong></td><td><strong>48.8</strong> <span class="dim">(31.9)</span></td><td><strong>43.1</strong> <span class="dim">(12.4)</span></td></tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </section>
+          <section class="citation-section", id="citation">
+            <h2 class="section-title">📚 Bibtex</h2>
+          
+            <p>If you find our work helpful, please consider citing us:</p>
+          
+            <pre><code>@article{zhang2025from,
+            title={From Flatland to Space: Teaching Vision-Language Models to Perceive and Reason in 3D},
+            author={Zhang, Jiahui and Chen, Yurui and Xu, Yueming and Huang, Ze and Mei, Jilin and Chen, Junhui and Zhou, Yanpeng and Yuan, Yujie and Cai, Xinyue and Huang, Guowei and Quan, Xingyue and Xu, Hang and Zhang, Li},
+            year={2025},
+            journal={arXiv preprint arXiv:xx},
+          }</code></pre>
+          </section>
+
+
+        <!-- Floating TOC Button -->
+        <div class="floating-toc" onclick="toggleTocPopup()">📜 Sections</div>
+
+        <!-- Floating TOC Popup -->
+        <div class="toc-popup" id="tocPopup">
+        <a href="#overview">📌 Paper Overview</a>
+        <a href="#paper-summary">📄 Paper Summary</a>
+        <a href="#dataset">📦 SPAR-7M & SPAR-Bench</a>
+        <a href="#vis">🔍 SPAR-7M & SPAR-Bench Visualization</a>
+        <a href="#interactive-vis">🗂️ Explore SPAR-Bench Tasks</a>
+        <a href="#bench-eval">🎯 Benchmark Evaluation</a>
+        <a href="#data-con">🏗️ Dataset Construction</a>
+        <a href="#gd">🧭 3D Grounding Module</a>
+        <a href="#exp1">🌍 Generalization Across Benchmarks</a>
+        <a href="#exp2">🛰️ Evaluation on 3DQA and 3D Grounding</a>
+        <a href="#citation">📚 Citation</a>
+        </div>
+
+        <script>
+            function toggleTocPopup() {
+              const toc = document.getElementById("tocPopup");
+              toc.style.display = (toc.style.display === "block") ? "none" : "block";
+            }
+          
+            // 可选：点击其他区域时关闭 popup
+            document.addEventListener('click', function (e) {
+              const btn = document.querySelector('.floating-toc');
+              const popup = document.getElementById('tocPopup');
+              if (!btn.contains(e.target) && !popup.contains(e.target)) {
+                popup.style.display = "none";
+              }
+            });
+
+
+            const taskSamples = [
+            {
+            "id": 0,
+            "task": "depth prediction",
+            "level": "low",
+            "modality": "single",
+            "relation": "oc",
+            "format": "fill",
+            "image": [
+              "assets/images/depth_prediction_oc/0_scene0574_02_795.jpg"
+            ],
+            "question": "The camera coordinates show the towel (red point) at 1.0 meters depth. What is the depth of the towel (blue point)?  Calculate or judge based on the 3D center points of these objects. The unit is meter. Answer using a single number and nothing else.",
+            "answer": "0.9"
+          },
+            {
+            "id": 50,
+            "task": "depth prediction",
+            "level": "low",
+            "modality": "single",
+            "relation": "oo",
+            "format": "fill",
+            "image": [
+              "assets/images/depth_prediction_oo/400_scene0377_00_788.jpg"
+            ],
+            "question": "Using bucket (red point) with a known depth of 2.5, calculate the absolute value of the depth difference between chair (green point) and fuse box (blue point) in meters. Calculate or judge based on the 3D center points of these objects. Submit your response as one numeric value only.",
+            "answer": "0.7"
+          },
+            {
+            "id": 100,
+            "task": "distance prediction",
+            "level": "low",
+            "modality": "single",
+            "relation": "oc",
+            "format": "fill",
+            "image": [
+              "assets/images/distance_prediction_oc/800_scene0426_03_935.jpg"
+            ],
+            "question": "What is the total distance in meters from the person who captured the image to the center of box (red point)? Calculate or judge based on the 3D center points of these objects. Ensure your answer contains only one number.",
+            "answer": "2.0"
+          },
+            {
+            "id": 150,
+            "task": "distance prediction",
+            "level": "low",
+            "modality": "single",
+            "relation": "oo",
+            "format": "fill",
+            "image": [
+              "assets/images/distance_prediction_oo/1200_scene0353_01_389.jpg"
+            ],
+            "question": "Express the Euclidean distance between the center of blanket (red point) and clothes (blue point) in meters. Calculate or judge based on the 3D center points of these objects. Answer using a single number and nothing else.",
+            "answer": "1.2"
+          },
+            {
+            "id": 200,
+            "task": "distance infer center",
+            "level": "high",
+            "modality": "single",
+            "relation": "oo",
+            "format": "select",
+            "image": [
+              "assets/images/distance_infer_center_oo/1600_scene0500_01_1027.jpg"
+            ],
+            "question": "From the given positions, which is farther to chair (red point): chair (green point) or chair (blue point)? Calculate or judge based on the 3D center points of these objects. Select the appropriate response from the given choices.\nA. chair (green point)\nB. chair (blue point)\nYour answer can only include one of options A, B.",
+            "answer": "B"
+          },
+            {
+            "id": 250,
+            "task": "obj spatial relation",
+            "level": "high",
+            "modality": "single",
+            "relation": "oo",
+            "format": "select",
+            "image": [
+              "assets/images/obj_spatial_relation_oo/2000_scene0558_01_1393.jpg"
+            ],
+            "question": "In the provided image, explain the location of the books (red bbox) with respect to the books (blue bbox), considering the observer's viewpoint. Calculate or judge based on the 3D center points of these objects.\nThe options describe the spatial relationship between two objects in terms of left-right (left, right, or empty if indistinguishable), above-below (above, below, or empty if indistinguishable), and farther-closer (farther, closer, or empty if indistinguishable).\nPlease select the correct option from the choices provided.\nA. right, , closer\nB. left, below, farther\nC. right, above, closer\nD. right, , farther\nYour answer can only include one of options A, B, C or D.",
+            "answer": "D"
+          },
+            {
+            "id": 300,
+            "task": "spatial imagination",
+            "level": "high",
+            "modality": "single",
+            "relation": "oc",
+            "format": "select",
+            "image": [
+              "assets/images/spatial_imagination_oc/2400_scene0678_00_1228.jpg"
+            ],
+            "question": "What is the positional relationship between window (red bbox) and the observer? If the observer moves to the 3D center of ledge (green bbox) and faces the 3D center of window (blue bbox), how does this change? Calculate or judge based on the 3D center points of these objects. Please use the world coordinate system to determine the up and down position relationship of objects.\nFor multiple-choice questions, consider only the state after the observer has moved.\nThe options describe the spatial relationship between object and observer in terms of left-right (left, right, or empty if indistinguishable), above-below (above, below, or empty if indistinguishable), and front-behind (front, behind, or empty if indistinguishable).\nSelect the correct response from the given choices.\nA. left, above, front\nB. , above, front\nC. , below, front\nD. right, above, \nYour answer can only include one of options A, B, C or D.",
+            "answer": "A"
+          },
+            {
+            "id": 350,
+            "task": "spatial imagination",
+            "level": "high",
+            "modality": "single",
+            "relation": "oo",
+            "format": "select",
+            "image": [
+              "assets/images/spatial_imagination_oo/2800_scene0131_00_487.jpg"
+            ],
+            "question": "What is the initial spatial positioning of keyboard (red bbox) and chair (yellow bbox) from the observer\u2019s viewpoint? How does it alter after observer moving to cup (green bbox) and orienting towards shelf (blue bbox)? Calculate or judge based on the 3D center points of these objects. Please use the world coordinate system to determine the up and down position relationship of objects.\nFor multiple-choice questions, consider only the state after the observer has moved.\nThe options describes the spatial relationship between two objects after the observer moves. They are in terms of left-right (left, right, or empty if indistinguishable), above-below (above, below, or empty if indistinguishable), and farther-closer (farther, closer, or empty if indistinguishable).\nPlease select the correct option from the choices provided.\nA. right, above, farther\nB. left, , farther\nC. left, above, farther\nD. left, below, \nYour answer can only include one of options A, B, C or D.",
+            "answer": "B"
+          },
+            {
+            "id": 400,
+            "task": "view change infer",
+            "level": "medium",
+            "modality": "multi",
+            "relation": "-",
+            "format": "fill",
+            "image": [
+              "assets/images/view_change_infer/3200_scene0084_00_1517.jpg",
+              "assets/images/view_change_infer/3200_scene0084_00_1150.jpg"
+            ],
+            "question": "Describe the changes in orientation needed to transition from the first image to the second.\nProvide the camera movement and rotation in the following format:\nmove_<right_or_left>:<meters>,move_<down_or_up>:<meters>,move_<forward_or_back>:<meters>,rotate_<down_or_up>:<degrees>,rotate_<right_or_left>:<degrees>\n- The first three values are in meters.\n- The last two values are in degrees.\n- Use commas to separate each parameter.\n- Do not include any additional text.\nExample:move_left:2.6,move_down:0.1,move_forward:0.2,rotate_up:10,rotate_left:0",
+            "answer": "move_right:1.6,move_down:0,move_backward:0,rotate_up:15,rotate_left:75"
+          },
+            {
+            "id": 450,
+            "task": "depth prediction oc",
+            "level": "low",
+            "modality": "multi",
+            "relation": "oc",
+            "format": "fill",
+            "image": [
+              "assets/images/depth_prediction_oc_mv/3600_scene0030_00_1085.jpg",
+              "assets/images/depth_prediction_oc_mv/3600_scene0030_00_976.jpg",
+              "assets/images/depth_prediction_oc_mv/3600_scene0030_00_807.jpg"
+            ],
+            "question": "If the books (red point) is 2.5 meters deep, how deep is the bookshelf (blue point)?  Calculate or judge based on the 3D center points of these objects. Answer by providing just one numeric value.",
+            "answer": "2.6"
+          },
+            {
+            "id": 500,
+            "task": "depth prediction oo",
+            "level": "low",
+            "modality": "multi",
+            "relation": "oo",
+            "format": "fill",
+            "image": [
+              "assets/images/depth_prediction_oo_mv/4000_scene0300_00_119.jpg",
+              "assets/images/depth_prediction_oo_mv/4000_scene0300_00_1003.jpg",
+              "assets/images/depth_prediction_oo_mv/4000_scene0300_00_848.jpg"
+            ],
+            "question": "Assume monitor (red point) has a depth of 1.9. How much difference in depth exists between monitor (green point) and chair (blue point), expressed in meters? Calculate or judge based on the 3D center points of these objects. The depth is calculated based on the image where the markers corresponding to these objects are located. Ensure your answer contains only one number.",
+            "answer": "0.1"
+          },
+            {
+            "id": 550,
+            "task": "distance prediction oo",
+            "level": "low",
+            "modality": "multi",
+            "relation": "oo",
+            "format": "fill",
+            "image": [
+              "assets/images/distance_prediction_oo_mv/4400_scene0046_00_2145.jpg",
+              "assets/images/distance_prediction_oo_mv/4400_scene0046_00_1504.jpg",
+              "assets/images/distance_prediction_oo_mv/4400_scene0046_00_1468.jpg"
+            ],
+            "question": "How far in meters is shower curtain (red point) from mirror (blue point) based on their centers in the images? Calculate or judge based on the 3D center points of these objects. Your input must be limited to a single number.",
+            "answer": "0.7"
+          },
+            {
+            "id": 600,
+            "task": "distance prediction oc",
+            "level": "low",
+            "modality": "multi",
+            "relation": "oc",
+            "format": "fill",
+            "image": [
+              "assets/images/distance_prediction_oc_mv/4800_scene0146_00_1376.jpg",
+              "assets/images/distance_prediction_oc_mv/4800_scene0146_00_137.jpg",
+              "assets/images/distance_prediction_oc_mv/4800_scene0146_00_182.jpg"
+            ],
+            "question": "What is the measured distance in meters between the observer and the red point marking the center of toilet paper in the scene? Calculate or judge based on the 3D center points of these objects. The first image is positioned to serve as the main viewpoint for the observer. Provide a numeric response with just one value.",
+            "answer": "2.1"
+          },
+            {
+            "id": 650,
+            "task": "position matching",
+            "level": "medium",
+            "modality": "multi",
+            "relation": "-",
+            "format": "select",
+            "image": [
+              "assets/images/position_matching/5200_scene0695_02_1478.jpg",
+              "assets/images/position_matching/5200_scene0695_02_529.jpg"
+            ],
+            "question": "Based on the red bbox of mat in the first image, locate its bounding box in the second image. Pick the appropriate answer from the options given.\nA. [0, 0, 556, 720]\nB. [529, 1, 1000, 632]\nC. [0, 490, 1000, 999]\nD. [0, 29, 324, 720]\nYour answer can only include one of the options A, B, C, or D.",
+            "answer": "C"
+          },
+            {
+            "id": 700,
+            "task": "camera motion infer",
+            "level": "medium",
+            "modality": "multi",
+            "relation": "-",
+            "format": "select",
+            "image": [
+              "assets/images/camera_motion_infer/5600_scene0699_00_171.jpg",
+              "assets/images/camera_motion_infer/5600_scene0699_00_1718.jpg"
+            ],
+            "question": "Estimate where the second image\u2019s observer would appear when projected onto the first image\u2019s coordinate space. Provide image-plane coordinates and depth in meters. Select the correct response from the given choices.\nA. Image Coor:(569, 18), Depth:1.1 meters\nB. Image Coor:(96, 785), Depth:1.1 meters\nC. Image Coor:(86, 595), Depth:1.1 meters\nD. Image Coor:(771, 298), Depth:1.1 meters\nYour answer can only include one of options A, B, C or D.",
+            "answer": "A"
+          },
+            {
+            "id": 750,
+            "task": "distance infer center oo",
+            "level": "high",
+            "modality": "multi",
+            "relation": "oo",
+            "format": "select",
+            "image": [
+              "assets/images/distance_infer_center_oo_mv/6001_scene0353_00_876.jpg",
+              "assets/images/distance_infer_center_oo_mv/6001_scene0353_00_2288.jpg",
+              "assets/images/distance_infer_center_oo_mv/6001_scene0353_00_748.jpg"
+            ],
+            "question": "Which point, shoes (green point) or laptop (blue point), is located farther to desk lamp (red point)? Calculate or judge based on the 3D center points of these objects. Select the correct answer from the given choices.\nA. shoes (green point)\nB. laptop (blue point)\nYour answer can only include one of options A, B.",
+            "answer": "A"
+          },
+            {
+            "id": 800,
+            "task": "obj spatial relation oc",
+            "level": "high",
+            "modality": "multi",
+            "relation": "oc",
+            "format": "select",
+            "image": [
+              "assets/images/obj_spatial_relation_oc_mv/6400_scene0607_01_209.jpg",
+              "assets/images/obj_spatial_relation_oc_mv/6400_scene0607_01_261.jpg",
+              "assets/images/obj_spatial_relation_oc_mv/6400_scene0607_01_224.jpg"
+            ],
+            "question": "How is object sink (bbox) situated with respect to the observer\u2019s main viewpoint? Calculate or judge based on the 3D center points of these objects. The observer's perspective is captured by setting the first image as the primary view.\nThe options describe the spatial relationship between object and observer in terms of left-right (left, right, or empty if indistinguishable), above-below (above, below, or empty if indistinguishable), and front-behind (front, behind, or empty if indistinguishable).\nPick the right response from the available choices.\nA. left, above, front\nB. , below, behind\nC. right, , front\nD. right, below, front\nYour answer can only include one of options A, B, C or D.",
+            "answer": "D"
+          },
+            {
+            "id": 850,
+            "task": "obj spatial relation oo",
+            "level": "high",
+            "modality": "multi",
+            "relation": "oo",
+            "format": "select",
+            "image": [
+              "assets/images/obj_spatial_relation_oo_mv/6800_scene0356_02_545.jpg",
+              "assets/images/obj_spatial_relation_oo_mv/6800_scene0356_02_533.jpg",
+              "assets/images/obj_spatial_relation_oo_mv/6800_scene0356_02_521.jpg"
+            ],
+            "question": "What is the spatial position of the recycling bin (red bbox) relative to the compost bin (blue bbox) in the two images, from the observer\u2019s perspective? Calculate or judge based on the 3D center points of these objects. To illustrate the observer's perspective, we designate the first image as the main focus.\nThe options describe the spatial relationship between two objects in terms of left-right (left, right, or empty if indistinguishable), above-below (above, below, or empty if indistinguishable), closer-farther (closer, farther, or empty if indistinguishable), the first object is in front of or behind the observer (front, behind, or empty if indistinguishable), the second object is in front of or behind the observer (front, behind, or empty if indistinguishable).\nChoose the right response from the choices provided.\nA. left, , closer, front, front\nB. left, above, farther, front, \nC. right, , closer, front, front\nD. left, below, closer, front, \nYour answer can only include one of options A, B, C or D.",
+            "answer": "A"
+          },
+            {
+            "id": 900,
+            "task": "spatial imagination oc",
+            "level": "high",
+            "modality": "multi",
+            "relation": "oc",
+            "format": "select",
+            "image": [
+              "assets/images/spatial_imagination_oc_mv/7200_scene0231_01_2575.jpg",
+              "assets/images/spatial_imagination_oc_mv/7200_scene0231_01_3939.jpg",
+              "assets/images/spatial_imagination_oc_mv/7200_scene0231_01_1609.jpg"
+            ],
+            "question": "Describe where microwave (red bbox) is located from the observer\u2019s point of view before and after the observer moves to the 3D center of range hood (green bbox) and faces cabinet (blue bbox). Calculate or judge based on the 3D center points of these objects. Answer with the observer's perspective in mind, selecting the first image as the primary view before the move occurs.\nFor multiple-choice questions, consider only the state after the observer has moved.\nThe options describe the spatial relationship between object and observer in terms of left-right (left, right, or empty if indistinguishable), above-below (above, below, or empty if indistinguishable), and front-behind (front, behind, or empty if indistinguishable).\nPick the appropriate answer from the options given.\nA. right, , front\nB. right, below, front\nC. right, above, \nD. left, below, front\nYour answer can only include one of options A, B, C or D.",
+            "answer": "D"
+          },
+            {
+            "id": 950,
+            "task": "spatial imagination oo",
+            "level": "high",
+            "modality": "multi",
+            "relation": "oo",
+            "format": "select",
+            "image": [
+              "assets/images/spatial_imagination_oo_mv/7602_scene0015_00_1437.jpg",
+              "assets/images/spatial_imagination_oo_mv/7602_scene0015_00_1508.jpg",
+              "assets/images/spatial_imagination_oo_mv/7602_scene0015_00_1916.jpg"
+            ],
+            "question": "From the perspective of the observer, how does the relative positioning of chair (red bbox) and whiteboard (yellow bbox) evolve after observer moving to table (green bbox) and facing whiteboard (blue bbox)? Calculate or judge based on the 3D center points of these objects. Frame your response from the observer's perspective, ensuring the first image is used as the main view before movement. Please use the world coordinate system to determine the up and down position relationship of objects.\nFor multiple-choice questions, consider only the state after the observer has moved.\nThe options describe the spatial relationship between two objects in terms of left-right (left, right, or empty if indistinguishable), above-below (above, below, or empty if indistinguishable), closer-farther (closer, farther, or empty if indistinguishable), the first object is in front of or behind the observer (front, behind, or empty if indistinguishable), the second object is in front of or behind the observer (front, behind, or empty if indistinguishable).\nPlease select the correct option from the choices provided.\nA. left, below, closer, front, front\nB. left, below, closer, , front\nC. left, below, , front, front\nD. left, below, , behind, front\nYour answer can only include one of options A, B, C or D.",
+            "answer": "A"
+          },
+          ];
+            
+            function filterTasks() {
+                const level = document.getElementById("level-select").value;
+                const modality = document.getElementById("modality-select").value;
+                const relation = document.getElementById("relation-select").value;
+                const display = document.getElementById("task-carousel");
+                display.innerHTML = "";
+              
+                const filtered = taskSamples.filter(t =>
+                  (level === "all" || t.level === level) &&
+                  (modality === "all" || t.modality === modality) &&
+                  (relation === "all" || t.relation === relation)
+                );
+              
+                filtered.forEach(task => {
+                  display.innerHTML += `
+                    <div class="task-card">
+                      <!-- <img src="${task.image}" alt="Task image"> -->
+                      <div class="task-images">
+                        ${task.image.map(img => `<img src="${img}" class="task-img">`).join('')}
+                      </div>
+                      <div class="task-meta">
+                        <span class="task-name">${formatTaskName(task.task.replace(/ (oc|oo)$/, ''))}</span>
+                        <span class="meta-tag">Level: ${capitalize(task.level)}</span>
+                        <span class="meta-tag">Modality: ${modalityMap[task.modality]}</span>
+                        <span class="meta-tag">Relation: ${task.relation.toUpperCase()}</span>
+                        <span class="meta-tag">Format: ${capitalize(task.format)}</span>
+                      </div>
+                      <!-- <p><strong>Q:</strong> ${task.question.replace(/\n/g, '<br>')}</p> -->
+                      <div class="question-block">
+                        <p class="question-text collapsed"><strong>Q:</strong> ${task.question.replace(/\n/g, '<br>')}</p>
+                        <button class="expand-btn" onclick="toggleExpand(this)">Show more</button>
+                      </div>
+                      <!-- <p class="answer-text"><strong>A:</strong> ${task.answer.replace(/\n/g, '<br>')}</p> -->
+                      <!-- <div class="answer-float hidden" onclick="this.classList.remove('hidden')">
+                        <span class="answer-label">A:</span>
+                        <span class="answer-text">${task.answer}</span>
+                      </div> -->
+                      <div class="answer-toggle">
+                        <button onclick="showAnswer(this)">Show Answer</button>
+                      </div>
+                      <div class="answer-float hidden">
+                        <span class="answer-label">A:</span>
+                        <span class="answer-text">${task.answer}</span>
+                      </div>
+                      <!-- <p><strong>A:</strong> ${task.answer.replace(/\n/g, '<br>')}</p> -->
+                    </div>
+                  `;
+                });
+            function showAnswer(button) {
+                const card = button.closest(".task-card");
+                const answerBox = card.querySelector(".answer-float");
+                answerBox.classList.remove("hidden");
+                button.style.display = "none"; // 隐藏按钮
+                }
+              setTimeout(() => {
+                document.querySelectorAll('.question-block').forEach(block => {
+                    const textEl = block.querySelector('.question-text');
+                    const btnEl = block.querySelector('.expand-btn');
+                
+                    if (textEl.scrollHeight <= textEl.clientHeight + 1) {
+                    btnEl.style.display = 'none';
+                    }
+                });
+                }, 0);
+            }
+            function scrollCarousel(direction) {
+                const track = document.getElementById("task-carousel");
+                const cardWidth = 300; // 约等于每张卡片宽度 + 间距
+                track.scrollBy({ left: direction * cardWidth, behavior: "smooth" });
+            }
+              
+            const modalityMap = {
+                single: "Single-view",
+                multi: "Multi-view",
+                video: "Video"
+              };
+              
+              function capitalize(str) {
+                return str.charAt(0).toUpperCase() + str.slice(1);
+              }
+              function formatTaskName(taskStr) {
+                // 例如 "depth prediction" -> "Depth Prediction"
+                return taskStr
+                  .split(' ')
+                  .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+                  .join(' ');
+              }
+              function toggleExpand(button) {
+                const textEl = button.previousElementSibling;
+                textEl.classList.toggle("expanded");
+                textEl.classList.toggle("collapsed");
+                button.textContent = textEl.classList.contains("expanded") ? "Show less" : "Show more";
+              }
+
+            // 初始自动加载
+            window.onload = filterTasks;
+            
+        </script>
+        <script>
+            // 普通脚本，全局作用域
+            function showAnswer(button) {
+              const card = button.closest(".task-card");
+              const answerBox = card.querySelector(".answer-float");
+              answerBox.classList.remove("hidden");
+              button.style.display = "none";
+            }
+          </script>
+        </div>
+</body>
+</html>
