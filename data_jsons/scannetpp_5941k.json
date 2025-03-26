@@ -1,0 +1,488 @@
+{
+    "scannetpp_depth_prediction_oo_mv_fill": {
+        "root": "spar/scannetpp/images",
+        "annotation": "spar/scannetpp/qa_jsonl/train/depth_prediction_oo_mv/fill/fill_79335.jsonl",
+        "repeat_time": 1,
+        "length": 79335
+    },
+    "scannetpp_depth_prediction_oo_mv_sentence": {
+        "root": "spar/scannetpp/images",
+        "annotation": "spar/scannetpp/qa_jsonl/train/depth_prediction_oo_mv/sentence/sentence_79367.jsonl",
+        "repeat_time": 1,
+        "length": 79367
+    },
+    "scannetpp_depth_prediction_oo_mv_select": {
+        "root": "spar/scannetpp/images",
+        "annotation": "spar/scannetpp/qa_jsonl/train/depth_prediction_oo_mv/select/select_79018.jsonl",
+        "repeat_time": 1,
+        "length": 79018
+    },
+    "scannetpp_obj_count_fill": {
+        "root": "spar/scannetpp/images",
+        "annotation": "spar/scannetpp/qa_jsonl/train/obj_count/fill/fill_75880.jsonl",
+        "repeat_time": 1,
+        "length": 75880
+    },
+    "scannetpp_obj_count_sentence": {
+        "root": "spar/scannetpp/images",
+        "annotation": "spar/scannetpp/qa_jsonl/train/obj_count/sentence/sentence_75880.jsonl",
+        "repeat_time": 1,
+        "length": 75880
+    },
+    "scannetpp_spatial_imagination_oc_mv_sentence": {
+        "root": "spar/scannetpp/images",
+        "annotation": "spar/scannetpp/qa_jsonl/train/spatial_imagination_oc_mv/sentence/sentence_78457.jsonl",
+        "repeat_time": 1,
+        "length": 78457
+    },
+    "scannetpp_spatial_imagination_oc_mv_select": {
+        "root": "spar/scannetpp/images",
+        "annotation": "spar/scannetpp/qa_jsonl/train/spatial_imagination_oc_mv/select/select_78406.jsonl",
+        "repeat_time": 1,
+        "length": 78406
+    },
+    "scannetpp_distance_infer_center_oc_fill": {
+        "root": "spar/scannetpp/images",
+        "annotation": "spar/scannetpp/qa_jsonl/train/distance_infer_center_oc/fill/fill_58502.jsonl",
+        "repeat_time": 1,
+        "length": 58502
+    },
+    "scannetpp_distance_infer_center_oc_sentence": {
+        "root": "spar/scannetpp/images",
+        "annotation": "spar/scannetpp/qa_jsonl/train/distance_infer_center_oc/sentence/sentence_58502.jsonl",
+        "repeat_time": 1,
+        "length": 58502
+    },
+    "scannetpp_distance_infer_center_oc_select": {
+        "root": "spar/scannetpp/images",
+        "annotation": "spar/scannetpp/qa_jsonl/train/distance_infer_center_oc/select/select_58017.jsonl",
+        "repeat_time": 1,
+        "length": 58017
+    },
+    "scannetpp_spatial_imagination_oo_mv_sentence": {
+        "root": "spar/scannetpp/images",
+        "annotation": "spar/scannetpp/qa_jsonl/train/spatial_imagination_oo_mv/sentence/sentence_64317.jsonl",
+        "repeat_time": 1,
+        "length": 64317
+    },
+    "scannetpp_spatial_imagination_oo_mv_select": {
+        "root": "spar/scannetpp/images",
+        "annotation": "spar/scannetpp/qa_jsonl/train/spatial_imagination_oo_mv/select/select_36025.jsonl",
+        "repeat_time": 1,
+        "length": 36025
+    },
+    "scannetpp_spatial_imagination_map_mv_sentence": {
+        "root": "spar/scannetpp/images",
+        "annotation": "spar/scannetpp/qa_jsonl/train/spatial_imagination_map_mv/sentence/sentence_79287.jsonl",
+        "repeat_time": 1,
+        "length": 79287
+    },
+    "scannetpp_distance_prediction_oc_mv_fill": {
+        "root": "spar/scannetpp/images",
+        "annotation": "spar/scannetpp/qa_jsonl/train/distance_prediction_oc_mv/fill/fill_79688.jsonl",
+        "repeat_time": 1,
+        "length": 79688
+    },
+    "scannetpp_distance_prediction_oc_mv_sentence": {
+        "root": "spar/scannetpp/images",
+        "annotation": "spar/scannetpp/qa_jsonl/train/distance_prediction_oc_mv/sentence/sentence_79579.jsonl",
+        "repeat_time": 1,
+        "length": 79579
+    },
+    "scannetpp_distance_prediction_oc_mv_select": {
+        "root": "spar/scannetpp/images",
+        "annotation": "spar/scannetpp/qa_jsonl/train/distance_prediction_oc_mv/select/select_79568.jsonl",
+        "repeat_time": 1,
+        "length": 79568
+    },
+    "scannetpp_depth_prediction_oc_fill": {
+        "root": "spar/scannetpp/images",
+        "annotation": "spar/scannetpp/qa_jsonl/train/depth_prediction_oc/fill/fill_79786.jsonl",
+        "repeat_time": 1,
+        "length": 79786
+    },
+    "scannetpp_depth_prediction_oc_sentence": {
+        "root": "spar/scannetpp/images",
+        "annotation": "spar/scannetpp/qa_jsonl/train/depth_prediction_oc/sentence/sentence_79786.jsonl",
+        "repeat_time": 1,
+        "length": 79786
+    },
+    "scannetpp_depth_prediction_oc_select": {
+        "root": "spar/scannetpp/images",
+        "annotation": "spar/scannetpp/qa_jsonl/train/depth_prediction_oc/select/select_79772.jsonl",
+        "repeat_time": 1,
+        "length": 79772
+    },
+    "scannetpp_distance_prediction_oc_fill": {
+        "root": "spar/scannetpp/images",
+        "annotation": "spar/scannetpp/qa_jsonl/train/distance_prediction_oc/fill/fill_77977.jsonl",
+        "repeat_time": 1,
+        "length": 77977
+    },
+    "scannetpp_distance_prediction_oc_sentence": {
+        "root": "spar/scannetpp/images",
+        "annotation": "spar/scannetpp/qa_jsonl/train/distance_prediction_oc/sentence/sentence_77977.jsonl",
+        "repeat_time": 1,
+        "length": 77977
+    },
+    "scannetpp_distance_prediction_oc_select": {
+        "root": "spar/scannetpp/images",
+        "annotation": "spar/scannetpp/qa_jsonl/train/distance_prediction_oc/select/select_77972.jsonl",
+        "repeat_time": 1,
+        "length": 77972
+    },
+    "scannetpp_spatial_imagination_oc_sentence": {
+        "root": "spar/scannetpp/images",
+        "annotation": "spar/scannetpp/qa_jsonl/train/spatial_imagination_oc/sentence/sentence_79661.jsonl",
+        "repeat_time": 1,
+        "length": 79661
+    },
+    "scannetpp_spatial_imagination_oc_select": {
+        "root": "spar/scannetpp/images",
+        "annotation": "spar/scannetpp/qa_jsonl/train/spatial_imagination_oc/select/select_79638.jsonl",
+        "repeat_time": 1,
+        "length": 79638
+    },
+    "scannetpp_appearance_order_fill": {
+        "root": "spar/scannetpp/images",
+        "annotation": "spar/scannetpp/qa_jsonl/train/appearance_order/fill/fill_26804.jsonl",
+        "repeat_time": 1,
+        "length": 26804
+    },
+    "scannetpp_appearance_order_sentence": {
+        "root": "spar/scannetpp/images",
+        "annotation": "spar/scannetpp/qa_jsonl/train/appearance_order/sentence/sentence_26902.jsonl",
+        "repeat_time": 1,
+        "length": 26902
+    },
+    "scannetpp_spatial_imagination_oo_sentence": {
+        "root": "spar/scannetpp/images",
+        "annotation": "spar/scannetpp/qa_jsonl/train/spatial_imagination_oo/sentence/sentence_79792.jsonl",
+        "repeat_time": 1,
+        "length": 79792
+    },
+    "scannetpp_spatial_imagination_oo_select": {
+        "root": "spar/scannetpp/images",
+        "annotation": "spar/scannetpp/qa_jsonl/train/spatial_imagination_oo/select/select_79716.jsonl",
+        "repeat_time": 1,
+        "length": 79716
+    },
+    "scannetpp_obj_spatial_relation_oc_mv_sentence": {
+        "root": "spar/scannetpp/images",
+        "annotation": "spar/scannetpp/qa_jsonl/train/obj_spatial_relation_oc_mv/sentence/sentence_80079.jsonl",
+        "repeat_time": 1,
+        "length": 80079
+    },
+    "scannetpp_obj_spatial_relation_oc_mv_select": {
+        "root": "spar/scannetpp/images",
+        "annotation": "spar/scannetpp/qa_jsonl/train/obj_spatial_relation_oc_mv/select/select_80044.jsonl",
+        "repeat_time": 1,
+        "length": 80044
+    },
+    "scannetpp_obj_spatial_relation_oo_mv_sentence": {
+        "root": "spar/scannetpp/images",
+        "annotation": "spar/scannetpp/qa_jsonl/train/obj_spatial_relation_oo_mv/sentence/sentence_80168.jsonl",
+        "repeat_time": 1,
+        "length": 80168
+    },
+    "scannetpp_obj_spatial_relation_oo_mv_judge": {
+        "root": "spar/scannetpp/images",
+        "annotation": "spar/scannetpp/qa_jsonl/train/obj_spatial_relation_oo_mv/judge/judge_84272.jsonl",
+        "repeat_time": 1,
+        "length": 84272
+    },
+    "scannetpp_obj_spatial_relation_oo_mv_select": {
+        "root": "spar/scannetpp/images",
+        "annotation": "spar/scannetpp/qa_jsonl/train/obj_spatial_relation_oo_mv/select/select_80164.jsonl",
+        "repeat_time": 1,
+        "length": 80164
+    },
+    "scannetpp_position_matching_fill": {
+        "root": "spar/scannetpp/images",
+        "annotation": "spar/scannetpp/qa_jsonl/train/position_matching/fill/fill_79816.jsonl",
+        "repeat_time": 1,
+        "length": 79816
+    },
+    "scannetpp_position_matching_sentence": {
+        "root": "spar/scannetpp/images",
+        "annotation": "spar/scannetpp/qa_jsonl/train/position_matching/sentence/sentence_79816.jsonl",
+        "repeat_time": 1,
+        "length": 79816
+    },
+    "scannetpp_position_matching_select": {
+        "root": "spar/scannetpp/images",
+        "annotation": "spar/scannetpp/qa_jsonl/train/position_matching/select/select_78965.jsonl",
+        "repeat_time": 1,
+        "length": 78965
+    },
+    "scannetpp_spatial_imagination_oc_video_sentence": {
+        "root": "spar/scannetpp/images",
+        "annotation": "spar/scannetpp/qa_jsonl/train/spatial_imagination_oc_video/sentence/sentence_78811.jsonl",
+        "repeat_time": 1,
+        "length": 78811
+    },
+    "scannetpp_view_change_infer_fill": {
+        "root": "spar/scannetpp/images",
+        "annotation": "spar/scannetpp/qa_jsonl/train/view_change_infer/fill/fill_56174.jsonl",
+        "repeat_time": 1,
+        "length": 56174
+    },
+    "scannetpp_view_change_infer_sentence": {
+        "root": "spar/scannetpp/images",
+        "annotation": "spar/scannetpp/qa_jsonl/train/view_change_infer/sentence/sentence_79816.jsonl",
+        "repeat_time": 1,
+        "length": 79816
+    },
+    "scannetpp_distance_prediction_oo_fill": {
+        "root": "spar/scannetpp/images",
+        "annotation": "spar/scannetpp/qa_jsonl/train/distance_prediction_oo/fill/fill_79093.jsonl",
+        "repeat_time": 1,
+        "length": 79093
+    },
+    "scannetpp_distance_prediction_oo_sentence": {
+        "root": "spar/scannetpp/images",
+        "annotation": "spar/scannetpp/qa_jsonl/train/distance_prediction_oo/sentence/sentence_79093.jsonl",
+        "repeat_time": 1,
+        "length": 79093
+    },
+    "scannetpp_distance_prediction_oo_select": {
+        "root": "spar/scannetpp/images",
+        "annotation": "spar/scannetpp/qa_jsonl/train/distance_prediction_oo/select/select_79031.jsonl",
+        "repeat_time": 1,
+        "length": 79031
+    },
+    "scannetpp_distance_infer_center_oo_fill": {
+        "root": "spar/scannetpp/images",
+        "annotation": "spar/scannetpp/qa_jsonl/train/distance_infer_center_oo/fill/fill_81752.jsonl",
+        "repeat_time": 1,
+        "length": 81752
+    },
+    "scannetpp_distance_infer_center_oo_sentence": {
+        "root": "spar/scannetpp/images",
+        "annotation": "spar/scannetpp/qa_jsonl/train/distance_infer_center_oo/sentence/sentence_81752.jsonl",
+        "repeat_time": 1,
+        "length": 81752
+    },
+    "scannetpp_distance_infer_center_oo_select": {
+        "root": "spar/scannetpp/images",
+        "annotation": "spar/scannetpp/qa_jsonl/train/distance_infer_center_oo/select/select_81752.jsonl",
+        "repeat_time": 1,
+        "length": 81752
+    },
+    "scannetpp_distance_prediction_oo_video_fill": {
+        "root": "spar/scannetpp/images",
+        "annotation": "spar/scannetpp/qa_jsonl/train/distance_prediction_oo_video/fill/fill_80044.jsonl",
+        "repeat_time": 1,
+        "length": 80044
+    },
+    "scannetpp_distance_prediction_oo_video_sentence": {
+        "root": "spar/scannetpp/images",
+        "annotation": "spar/scannetpp/qa_jsonl/train/distance_prediction_oo_video/sentence/sentence_80044.jsonl",
+        "repeat_time": 1,
+        "length": 80044
+    },
+    "scannetpp_distance_prediction_oo_video_select": {
+        "root": "spar/scannetpp/images",
+        "annotation": "spar/scannetpp/qa_jsonl/train/distance_prediction_oo_video/select/select_80040.jsonl",
+        "repeat_time": 1,
+        "length": 80040
+    },
+    "scannetpp_room_size_fill": {
+        "root": "spar/scannetpp/images",
+        "annotation": "spar/scannetpp/qa_jsonl/train/room_size/fill/fill_15240.jsonl",
+        "repeat_time": 1,
+        "length": 15240
+    },
+    "scannetpp_room_size_sentence": {
+        "root": "spar/scannetpp/images",
+        "annotation": "spar/scannetpp/qa_jsonl/train/room_size/sentence/sentence_15240.jsonl",
+        "repeat_time": 1,
+        "length": 15240
+    },
+    "scannetpp_room_size_select": {
+        "root": "spar/scannetpp/images",
+        "annotation": "spar/scannetpp/qa_jsonl/train/room_size/select/select_15240.jsonl",
+        "repeat_time": 1,
+        "length": 15240
+    },
+    "scannetpp_distance_infer_center_oc_mv_fill": {
+        "root": "spar/scannetpp/images",
+        "annotation": "spar/scannetpp/qa_jsonl/train/distance_infer_center_oc_mv/fill/fill_73706.jsonl",
+        "repeat_time": 1,
+        "length": 73706
+    },
+    "scannetpp_distance_infer_center_oc_mv_sentence": {
+        "root": "spar/scannetpp/images",
+        "annotation": "spar/scannetpp/qa_jsonl/train/distance_infer_center_oc_mv/sentence/sentence_73682.jsonl",
+        "repeat_time": 1,
+        "length": 73682
+    },
+    "scannetpp_distance_infer_center_oc_mv_select": {
+        "root": "spar/scannetpp/images",
+        "annotation": "spar/scannetpp/qa_jsonl/train/distance_infer_center_oc_mv/select/select_73642.jsonl",
+        "repeat_time": 1,
+        "length": 73642
+    },
+    "scannetpp_distance_infer_center_oo_mv_fill": {
+        "root": "spar/scannetpp/images",
+        "annotation": "spar/scannetpp/qa_jsonl/train/distance_infer_center_oo_mv/fill/fill_83924.jsonl",
+        "repeat_time": 1,
+        "length": 83924
+    },
+    "scannetpp_distance_infer_center_oo_mv_sentence": {
+        "root": "spar/scannetpp/images",
+        "annotation": "spar/scannetpp/qa_jsonl/train/distance_infer_center_oo_mv/sentence/sentence_83865.jsonl",
+        "repeat_time": 1,
+        "length": 83865
+    },
+    "scannetpp_distance_infer_center_oo_mv_select": {
+        "root": "spar/scannetpp/images",
+        "annotation": "spar/scannetpp/qa_jsonl/train/distance_infer_center_oo_mv/select/select_83954.jsonl",
+        "repeat_time": 1,
+        "length": 83954
+    },
+    "scannetpp_depth_prediction_oo_fill": {
+        "root": "spar/scannetpp/images",
+        "annotation": "spar/scannetpp/qa_jsonl/train/depth_prediction_oo/fill/fill_77807.jsonl",
+        "repeat_time": 1,
+        "length": 77807
+    },
+    "scannetpp_depth_prediction_oo_sentence": {
+        "root": "spar/scannetpp/images",
+        "annotation": "spar/scannetpp/qa_jsonl/train/depth_prediction_oo/sentence/sentence_77807.jsonl",
+        "repeat_time": 1,
+        "length": 77807
+    },
+    "scannetpp_depth_prediction_oo_select": {
+        "root": "spar/scannetpp/images",
+        "annotation": "spar/scannetpp/qa_jsonl/train/depth_prediction_oo/select/select_75430.jsonl",
+        "repeat_time": 1,
+        "length": 75430
+    },
+    "scannetpp_camera_motion_infer_fill": {
+        "root": "spar/scannetpp/images",
+        "annotation": "spar/scannetpp/qa_jsonl/train/camera_motion_infer/fill/fill_72853.jsonl",
+        "repeat_time": 1,
+        "length": 72853
+    },
+    "scannetpp_camera_motion_infer_sentence": {
+        "root": "spar/scannetpp/images",
+        "annotation": "spar/scannetpp/qa_jsonl/train/camera_motion_infer/sentence/sentence_72853.jsonl",
+        "repeat_time": 1,
+        "length": 72853
+    },
+    "scannetpp_camera_motion_infer_select": {
+        "root": "spar/scannetpp/images",
+        "annotation": "spar/scannetpp/qa_jsonl/train/camera_motion_infer/select/select_76781.jsonl",
+        "repeat_time": 1,
+        "length": 76781
+    },
+    "scannetpp_obj_spatial_relation_oo_sentence": {
+        "root": "spar/scannetpp/images",
+        "annotation": "spar/scannetpp/qa_jsonl/train/obj_spatial_relation_oo/sentence/sentence_79916.jsonl",
+        "repeat_time": 1,
+        "length": 79916
+    },
+    "scannetpp_obj_spatial_relation_oo_judge": {
+        "root": "spar/scannetpp/images",
+        "annotation": "spar/scannetpp/qa_jsonl/train/obj_spatial_relation_oo/judge/judge_84016.jsonl",
+        "repeat_time": 1,
+        "length": 84016
+    },
+    "scannetpp_obj_spatial_relation_oo_select": {
+        "root": "spar/scannetpp/images",
+        "annotation": "spar/scannetpp/qa_jsonl/train/obj_spatial_relation_oo/select/select_79916.jsonl",
+        "repeat_time": 1,
+        "length": 79916
+    },
+    "scannetpp_obj_frame_locate_sentence": {
+        "root": "spar/scannetpp/images",
+        "annotation": "spar/scannetpp/qa_jsonl/train/obj_frame_locate/sentence/sentence_51985.jsonl",
+        "repeat_time": 1,
+        "length": 51985
+    },
+    "scannetpp_distance_infer_center_oo_video_fill": {
+        "root": "spar/scannetpp/images",
+        "annotation": "spar/scannetpp/qa_jsonl/train/distance_infer_center_oo_video/fill/fill_80174.jsonl",
+        "repeat_time": 1,
+        "length": 80174
+    },
+    "scannetpp_distance_infer_center_oo_video_sentence": {
+        "root": "spar/scannetpp/images",
+        "annotation": "spar/scannetpp/qa_jsonl/train/distance_infer_center_oo_video/sentence/sentence_80150.jsonl",
+        "repeat_time": 1,
+        "length": 80150
+    },
+    "scannetpp_distance_infer_center_oo_video_select": {
+        "root": "spar/scannetpp/images",
+        "annotation": "spar/scannetpp/qa_jsonl/train/distance_infer_center_oo_video/select/select_80166.jsonl",
+        "repeat_time": 1,
+        "length": 80166
+    },
+    "scannetpp_spatial_imagination_oc_video_hard_sentence": {
+        "root": "spar/scannetpp/images",
+        "annotation": "spar/scannetpp/qa_jsonl/train/spatial_imagination_oc_video_hard/sentence/sentence_76120.jsonl",
+        "repeat_time": 1,
+        "length": 76120
+    },
+    "scannetpp_spatial_imagination_oo_video_hard_sentence": {
+        "root": "spar/scannetpp/images",
+        "annotation": "spar/scannetpp/qa_jsonl/train/spatial_imagination_oo_video_hard/sentence/sentence_75862.jsonl",
+        "repeat_time": 1,
+        "length": 75862
+    },
+    "scannetpp_depth_prediction_oc_mv_fill": {
+        "root": "spar/scannetpp/images",
+        "annotation": "spar/scannetpp/qa_jsonl/train/depth_prediction_oc_mv/fill/fill_80094.jsonl",
+        "repeat_time": 1,
+        "length": 80094
+    },
+    "scannetpp_depth_prediction_oc_mv_sentence": {
+        "root": "spar/scannetpp/images",
+        "annotation": "spar/scannetpp/qa_jsonl/train/depth_prediction_oc_mv/sentence/sentence_80064.jsonl",
+        "repeat_time": 1,
+        "length": 80064
+    },
+    "scannetpp_depth_prediction_oc_mv_select": {
+        "root": "spar/scannetpp/images",
+        "annotation": "spar/scannetpp/qa_jsonl/train/depth_prediction_oc_mv/select/select_80103.jsonl",
+        "repeat_time": 1,
+        "length": 80103
+    },
+    "scannetpp_distance_prediction_oo_mv_fill": {
+        "root": "spar/scannetpp/images",
+        "annotation": "spar/scannetpp/qa_jsonl/train/distance_prediction_oo_mv/fill/fill_80091.jsonl",
+        "repeat_time": 1,
+        "length": 80091
+    },
+    "scannetpp_distance_prediction_oo_mv_sentence": {
+        "root": "spar/scannetpp/images",
+        "annotation": "spar/scannetpp/qa_jsonl/train/distance_prediction_oo_mv/sentence/sentence_80042.jsonl",
+        "repeat_time": 1,
+        "length": 80042
+    },
+    "scannetpp_distance_prediction_oo_mv_select": {
+        "root": "spar/scannetpp/images",
+        "annotation": "spar/scannetpp/qa_jsonl/train/distance_prediction_oo_mv/select/select_80081.jsonl",
+        "repeat_time": 1,
+        "length": 80081
+    },
+    "scannetpp_spatial_imagination_oo_video_sentence": {
+        "root": "spar/scannetpp/images",
+        "annotation": "spar/scannetpp/qa_jsonl/train/spatial_imagination_oo_video/sentence/sentence_78564.jsonl",
+        "repeat_time": 1,
+        "length": 78564
+    },
+    "scannetpp_spatial_volume_infer_fill": {
+        "root": "spar/scannetpp/images",
+        "annotation": "spar/scannetpp/qa_jsonl/train/spatial_volume_infer/fill/fill_78142.jsonl",
+        "repeat_time": 1,
+        "length": 78142
+    },
+    "scannetpp_spatial_volume_infer_sentence": {
+        "root": "spar/scannetpp/images",
+        "annotation": "spar/scannetpp/qa_jsonl/train/spatial_volume_infer/sentence/sentence_78142.jsonl",
+        "repeat_time": 1,
+        "length": 78142
+    }
+}

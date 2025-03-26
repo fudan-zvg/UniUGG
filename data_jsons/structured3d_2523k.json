@@ -1,0 +1,278 @@
+{
+    "structured3d_depth_prediction_oo_mv_fill": {
+        "root": "spar/structured3d/images",
+        "annotation": "spar/structured3d/qa_jsonl/train/depth_prediction_oo_mv/fill/fill_55888.jsonl",
+        "repeat_time": 1,
+        "length": 55888
+    },
+    "structured3d_depth_prediction_oo_mv_sentence": {
+        "root": "spar/structured3d/images",
+        "annotation": "spar/structured3d/qa_jsonl/train/depth_prediction_oo_mv/sentence/sentence_55892.jsonl",
+        "repeat_time": 1,
+        "length": 55892
+    },
+    "structured3d_depth_prediction_oo_mv_select": {
+        "root": "spar/structured3d/images",
+        "annotation": "spar/structured3d/qa_jsonl/train/depth_prediction_oo_mv/select/select_55424.jsonl",
+        "repeat_time": 1,
+        "length": 55424
+    },
+    "structured3d_spatial_imagination_oc_mv_sentence": {
+        "root": "spar/structured3d/images",
+        "annotation": "spar/structured3d/qa_jsonl/train/spatial_imagination_oc_mv/sentence/sentence_48526.jsonl",
+        "repeat_time": 1,
+        "length": 48526
+    },
+    "structured3d_distance_infer_center_oc_fill": {
+        "root": "spar/structured3d/images",
+        "annotation": "spar/structured3d/qa_jsonl/train/distance_infer_center_oc/fill/fill_50488.jsonl",
+        "repeat_time": 1,
+        "length": 50488
+    },
+    "structured3d_distance_infer_center_oc_select": {
+        "root": "spar/structured3d/images",
+        "annotation": "spar/structured3d/qa_jsonl/train/distance_infer_center_oc/select/select_37958.jsonl",
+        "repeat_time": 1,
+        "length": 37958
+    },
+    "structured3d_spatial_imagination_oo_mv_sentence": {
+        "root": "spar/structured3d/images",
+        "annotation": "spar/structured3d/qa_jsonl/train/spatial_imagination_oo_mv/sentence/sentence_20642.jsonl",
+        "repeat_time": 1,
+        "length": 20642
+    },
+    "structured3d_spatial_imagination_map_mv_sentence": {
+        "root": "spar/structured3d/images",
+        "annotation": "spar/structured3d/qa_jsonl/train/spatial_imagination_map_mv/sentence/sentence_38540.jsonl",
+        "repeat_time": 1,
+        "length": 38540
+    },
+    "structured3d_distance_prediction_oc_mv_fill": {
+        "root": "spar/structured3d/images",
+        "annotation": "spar/structured3d/qa_jsonl/train/distance_prediction_oc_mv/fill/fill_56285.jsonl",
+        "repeat_time": 1,
+        "length": 56285
+    },
+    "structured3d_distance_prediction_oc_mv_sentence": {
+        "root": "spar/structured3d/images",
+        "annotation": "spar/structured3d/qa_jsonl/train/distance_prediction_oc_mv/sentence/sentence_56303.jsonl",
+        "repeat_time": 1,
+        "length": 56303
+    },
+    "structured3d_distance_prediction_oc_mv_select": {
+        "root": "spar/structured3d/images",
+        "annotation": "spar/structured3d/qa_jsonl/train/distance_prediction_oc_mv/select/select_56365.jsonl",
+        "repeat_time": 1,
+        "length": 56365
+    },
+    "structured3d_depth_prediction_oc_fill": {
+        "root": "spar/structured3d/images",
+        "annotation": "spar/structured3d/qa_jsonl/train/depth_prediction_oc/fill/fill_61022.jsonl",
+        "repeat_time": 1,
+        "length": 61022
+    },
+    "structured3d_depth_prediction_oc_sentence": {
+        "root": "spar/structured3d/images",
+        "annotation": "spar/structured3d/qa_jsonl/train/depth_prediction_oc/sentence/sentence_61022.jsonl",
+        "repeat_time": 1,
+        "length": 61022
+    },
+    "structured3d_depth_prediction_oc_select": {
+        "root": "spar/structured3d/images",
+        "annotation": "spar/structured3d/qa_jsonl/train/depth_prediction_oc/select/select_61022.jsonl",
+        "repeat_time": 1,
+        "length": 61022
+    },
+    "structured3d_distance_prediction_oc_fill": {
+        "root": "spar/structured3d/images",
+        "annotation": "spar/structured3d/qa_jsonl/train/distance_prediction_oc/fill/fill_59922.jsonl",
+        "repeat_time": 1,
+        "length": 59922
+    },
+    "structured3d_distance_prediction_oc_sentence": {
+        "root": "spar/structured3d/images",
+        "annotation": "spar/structured3d/qa_jsonl/train/distance_prediction_oc/sentence/sentence_59922.jsonl",
+        "repeat_time": 1,
+        "length": 59922
+    },
+    "structured3d_distance_prediction_oc_select": {
+        "root": "spar/structured3d/images",
+        "annotation": "spar/structured3d/qa_jsonl/train/distance_prediction_oc/select/select_59882.jsonl",
+        "repeat_time": 1,
+        "length": 59882
+    },
+    "structured3d_spatial_imagination_oc_sentence": {
+        "root": "spar/structured3d/images",
+        "annotation": "spar/structured3d/qa_jsonl/train/spatial_imagination_oc/sentence/sentence_60849.jsonl",
+        "repeat_time": 1,
+        "length": 60849
+    },
+    "structured3d_spatial_imagination_oo_sentence": {
+        "root": "spar/structured3d/images",
+        "annotation": "spar/structured3d/qa_jsonl/train/spatial_imagination_oo/sentence/sentence_60504.jsonl",
+        "repeat_time": 1,
+        "length": 60504
+    },
+    "structured3d_obj_spatial_relation_oc_mv_sentence": {
+        "root": "spar/structured3d/images",
+        "annotation": "spar/structured3d/qa_jsonl/train/obj_spatial_relation_oc_mv/sentence/sentence_56389.jsonl",
+        "repeat_time": 1,
+        "length": 56389
+    },
+    "structured3d_obj_spatial_relation_oo_mv_sentence": {
+        "root": "spar/structured3d/images",
+        "annotation": "spar/structured3d/qa_jsonl/train/obj_spatial_relation_oo_mv/sentence/sentence_56084.jsonl",
+        "repeat_time": 1,
+        "length": 56084
+    },
+    "structured3d_position_matching_fill": {
+        "root": "spar/structured3d/images",
+        "annotation": "spar/structured3d/qa_jsonl/train/position_matching/fill/fill_58852.jsonl",
+        "repeat_time": 1,
+        "length": 58852
+    },
+    "structured3d_position_matching_sentence": {
+        "root": "spar/structured3d/images",
+        "annotation": "spar/structured3d/qa_jsonl/train/position_matching/sentence/sentence_58852.jsonl",
+        "repeat_time": 1,
+        "length": 58852
+    },
+    "structured3d_view_change_infer_fill": {
+        "root": "spar/structured3d/images",
+        "annotation": "spar/structured3d/qa_jsonl/train/view_change_infer/fill/fill_58892.jsonl",
+        "repeat_time": 1,
+        "length": 58892
+    },
+    "structured3d_view_change_infer_sentence": {
+        "root": "spar/structured3d/images",
+        "annotation": "spar/structured3d/qa_jsonl/train/view_change_infer/sentence/sentence_58892.jsonl",
+        "repeat_time": 1,
+        "length": 58892
+    },
+    "structured3d_distance_prediction_oo_fill": {
+        "root": "spar/structured3d/images",
+        "annotation": "spar/structured3d/qa_jsonl/train/distance_prediction_oo/fill/fill_60300.jsonl",
+        "repeat_time": 1,
+        "length": 60300
+    },
+    "structured3d_distance_prediction_oo_sentence": {
+        "root": "spar/structured3d/images",
+        "annotation": "spar/structured3d/qa_jsonl/train/distance_prediction_oo/sentence/sentence_60300.jsonl",
+        "repeat_time": 1,
+        "length": 60300
+    },
+    "structured3d_distance_infer_center_oc_mv_fill": {
+        "root": "spar/structured3d/images",
+        "annotation": "spar/structured3d/qa_jsonl/train/distance_infer_center_oc_mv/fill/fill_48922.jsonl",
+        "repeat_time": 1,
+        "length": 48922
+    },
+    "structured3d_distance_infer_center_oc_mv_sentence": {
+        "root": "spar/structured3d/images",
+        "annotation": "spar/structured3d/qa_jsonl/train/distance_infer_center_oc_mv/sentence/sentence_49276.jsonl",
+        "repeat_time": 1,
+        "length": 49276
+    },
+    "structured3d_distance_infer_center_oc_mv_select": {
+        "root": "spar/structured3d/images",
+        "annotation": "spar/structured3d/qa_jsonl/train/distance_infer_center_oc_mv/select/select_49156.jsonl",
+        "repeat_time": 1,
+        "length": 49156
+    },
+    "structured3d_distance_infer_center_oo_mv_fill": {
+        "root": "spar/structured3d/images",
+        "annotation": "spar/structured3d/qa_jsonl/train/distance_infer_center_oo_mv/fill/fill_55321.jsonl",
+        "repeat_time": 1,
+        "length": 55321
+    },
+    "structured3d_distance_infer_center_oo_mv_sentence": {
+        "root": "spar/structured3d/images",
+        "annotation": "spar/structured3d/qa_jsonl/train/distance_infer_center_oo_mv/sentence/sentence_55545.jsonl",
+        "repeat_time": 1,
+        "length": 55545
+    },
+    "structured3d_distance_infer_center_oo_mv_select": {
+        "root": "spar/structured3d/images",
+        "annotation": "spar/structured3d/qa_jsonl/train/distance_infer_center_oo_mv/select/select_55404.jsonl",
+        "repeat_time": 1,
+        "length": 55404
+    },
+    "structured3d_depth_prediction_oo_fill": {
+        "root": "spar/structured3d/images",
+        "annotation": "spar/structured3d/qa_jsonl/train/depth_prediction_oo/fill/fill_59715.jsonl",
+        "repeat_time": 1,
+        "length": 59715
+    },
+    "structured3d_depth_prediction_oo_sentence": {
+        "root": "spar/structured3d/images",
+        "annotation": "spar/structured3d/qa_jsonl/train/depth_prediction_oo/sentence/sentence_59715.jsonl",
+        "repeat_time": 1,
+        "length": 59715
+    },
+    "structured3d_depth_prediction_oo_select": {
+        "root": "spar/structured3d/images",
+        "annotation": "spar/structured3d/qa_jsonl/train/depth_prediction_oo/select/select_59084.jsonl",
+        "repeat_time": 1,
+        "length": 59084
+    },
+    "structured3d_camera_motion_infer_fill": {
+        "root": "spar/structured3d/images",
+        "annotation": "spar/structured3d/qa_jsonl/train/camera_motion_infer/fill/fill_40103.jsonl",
+        "repeat_time": 1,
+        "length": 40103
+    },
+    "structured3d_camera_motion_infer_sentence": {
+        "root": "spar/structured3d/images",
+        "annotation": "spar/structured3d/qa_jsonl/train/camera_motion_infer/sentence/sentence_40103.jsonl",
+        "repeat_time": 1,
+        "length": 40103
+    },
+    "structured3d_depth_prediction_oc_mv_fill": {
+        "root": "spar/structured3d/images",
+        "annotation": "spar/structured3d/qa_jsonl/train/depth_prediction_oc_mv/fill/fill_57681.jsonl",
+        "repeat_time": 1,
+        "length": 57681
+    },
+    "structured3d_depth_prediction_oc_mv_sentence": {
+        "root": "spar/structured3d/images",
+        "annotation": "spar/structured3d/qa_jsonl/train/depth_prediction_oc_mv/sentence/sentence_57764.jsonl",
+        "repeat_time": 1,
+        "length": 57764
+    },
+    "structured3d_depth_prediction_oc_mv_select": {
+        "root": "spar/structured3d/images",
+        "annotation": "spar/structured3d/qa_jsonl/train/depth_prediction_oc_mv/select/select_57372.jsonl",
+        "repeat_time": 1,
+        "length": 57372
+    },
+    "structured3d_distance_prediction_oo_mv_fill": {
+        "root": "spar/structured3d/images",
+        "annotation": "spar/structured3d/qa_jsonl/train/distance_prediction_oo_mv/fill/fill_57305.jsonl",
+        "repeat_time": 1,
+        "length": 57305
+    },
+    "structured3d_distance_prediction_oo_mv_sentence": {
+        "root": "spar/structured3d/images",
+        "annotation": "spar/structured3d/qa_jsonl/train/distance_prediction_oo_mv/sentence/sentence_57526.jsonl",
+        "repeat_time": 1,
+        "length": 57526
+    },
+    "structured3d_distance_prediction_oo_mv_select": {
+        "root": "spar/structured3d/images",
+        "annotation": "spar/structured3d/qa_jsonl/train/distance_prediction_oo_mv/select/select_57364.jsonl",
+        "repeat_time": 1,
+        "length": 57364
+    },
+    "structured3d_spatial_volume_infer_fill": {
+        "root": "spar/structured3d/images",
+        "annotation": "spar/structured3d/qa_jsonl/train/spatial_volume_infer/fill/fill_60540.jsonl",
+        "repeat_time": 1,
+        "length": 60540
+    },
+    "structured3d_spatial_volume_infer_sentence": {
+        "root": "spar/structured3d/images",
+        "annotation": "spar/structured3d/qa_jsonl/train/spatial_volume_infer/sentence/sentence_60540.jsonl",
+        "repeat_time": 1,
+        "length": 60540
+    }
+}

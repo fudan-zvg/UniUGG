@@ -1,0 +1,8 @@
+{
+    "rxr_nav_video_sentence": {
+        "root": "spar/rxr/images",
+        "annotation": "spar/rxr/qa_jsonl/train/nav_video/sentence/sentence_11997.jsonl",
+        "repeat_time": 1,
+        "length": 11997
+    }
+}

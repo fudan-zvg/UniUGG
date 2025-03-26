@@ -1,0 +1,16 @@
+{
+    "scannet_depth_prediction_oo_mv_select": {
+        "root": "spar/scannet/images",
+        "annotation": "spar/scannet/qa_jsonl/train/depth_prediction_oo_mv/select/select_112967.jsonl",
+        "repeat_time": 0.0001,
+        "length": 112967,
+        "length_with_repeat": 11
+    },
+    "scannet_obj_count_fill": {
+        "root": "spar/scannet/images",
+        "annotation": "spar/scannet/qa_jsonl/train/obj_count/fill/fill_73680.jsonl",
+        "repeat_time": 0.0001,
+        "length": 73680,
+        "length_with_repeat": 7
+    }
+}
