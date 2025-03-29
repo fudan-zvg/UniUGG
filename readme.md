@@ -5,12 +5,12 @@ Reason in 3D</h1>
 
 
 <a href="https://arxiv.org/abs/xxx" target="_blank">
-    <img alt="arXiv" src="https://img.shields.io/badge/arXiv-from--flatland--to--space-red?logo=arxiv" height="20" />
+    <img alt="arXiv" src="https://img.shields.io/badge/arXiv-SPAR-red?logo=arxiv" height="20" />
 </a>
-<a href="https://xx.github.io/xx.io/" target="_blank">
-    <img alt="Website" src="https://img.shields.io/badge/🌎_Website-from--flatland--to--space-blue.svg" height="20" />
+<a href="https://fudan-zvg.github.io/spar/" target="_blank">
+    <img alt="Website" src="https://img.shields.io/badge/🌎_Website-SPAR-blue.svg" height="20" />
 </a></br>
-<a href="https://huggingface.co/datasets/jasonzhango/SPAR-Dataset" target="_blank">
+<a href="https://huggingface.co/datasets/jasonzhango/SPAR-7M" target="_blank">
     <img alt="HF Dataset: SPAR-7M" src="https://img.shields.io/badge/%F0%9F%A4%97%20_Dataset-SPAR--7M-ffc107?color=ffc107&logoColor=white" height="20" />
 </a>
 <a href="https://huggingface.co/datasets/jasonzhango/SPAR-Bench" target="_blank">
@@ -32,12 +32,12 @@ Reason in 3D</h1>
     <span>Xingyue Quan</span><sup>2</sup>,
     <span>Hang Xu</span><sup>2</sup>,
     </span>
-    <a href="https://lzrobots.github.io/" target="_blank">Li Zhang</a><sup>1</sup>,</span>
+    <a href="https://lzrobots.github.io/" target="_blank">Li Zhang</a><sup>1</sup></span>
 </div>
 
 <div>
     <sup>1</sup>Fudan University&emsp;
-    <sup>2</sup>Noah’s Ark Lab&emsp;
+    <sup>2</sup>Huawei Noah’s Ark Lab&emsp;
 </div>
 
 <img src="docs/resources/teaser.png" width="100%"/>
@@ -439,7 +439,7 @@ If you find this project or dataset helpful, please consider citing our paper:
 ```bibtex
 @article{zhang2025from,
     title={From Flatland to Space: Teaching Vision-Language Models to Perceive and Reason in 3D},
-    author={Zhang, Jiahui and Chen, Yurui and Xu, Yueming and Huang, Ze and Mei, Jilin and Chen, Junhui and Zhou, Yanpeng and Yuan, Yujie and Cai, Xinyue and Huang, Guowei and Quan, Xingyue and Xu, Hang and Zhang, Li},
+    author={Zhang, Jiahui and Chen, Yurui and Zhou, Yanpeng and Xu, Yueming and Huang, Ze and Mei, Jilin and Chen, Junhui and Yuan, Yujie and Cai, Xinyue and Huang, Guowei and Quan, Xingyue and Xu, Hang and Zhang, Li},
     year={2025},
     journal={arXiv preprint arXiv:xx},
 }
