@@ -4,7 +4,7 @@
 Reason in 3D</h1>
 
 
-<a href="https://arxiv.org/abs/xxx" target="_blank">
+<a href="https://arxiv.org/abs/2503.22976" target="_blank">
     <img alt="arXiv" src="https://img.shields.io/badge/arXiv-SPAR-red?logo=arxiv" height="20" />
 </a>
 <a href="https://fudan-zvg.github.io/spar/" target="_blank">
