@@ -245,21 +245,22 @@
             <tbody>
       
               <tr class="group-label"><td colspan="5">🟤 Baselines</td></tr>
-              <tr><td>Random</td><td>32.74</td><td>31.19</td><td>38.25</td><td>32.29</td></tr>
               <tr><td>Human</td><td><b>67.27</b></td><td><b>55.31</b></td><td><b>72.32</b></td><td><b>76.22</b></td></tr>
-      
+              <tr><td>Random</td><td>32.74</td><td>31.19</td><td>38.25</td><td>32.29</td></tr>
+              
               <tr class="group-label"><td colspan="5">🟦 API Models</td></tr>
-              <tr><td>GPT-4o</td><td>36.39</td><td>29.25</td><td><b>24.93</b></td><td>45.11</td></tr>
-              <tr><td>Claude-3.7-Sonnet</td><td>21.77</td><td>25.43</td><td>7.33</td><td>23.33</td></tr>
-              <tr><td>Qwen2-VL-72B</td><td>35.62</td><td>35.28</td><td>23.39</td><td>40.00</td></tr>
               <tr><td>Qwen2.5-VL-72B</td><td><b>39.40</b></td><td><b>35.35</b></td><td>23.05</td><td><b>48.44</b></td></tr>
-      
+              <tr><td>GPT-4o</td><td>36.39</td><td>29.25</td><td><b>24.93</b></td><td>45.11</td></tr>
+              <tr><td>Qwen2-VL-72B</td><td>35.62</td><td>35.28</td><td>23.39</td><td>40.00</td></tr>
+              <tr><td>Claude-3.7-Sonnet</td><td>21.77</td><td>25.43</td><td>7.33</td><td>23.33</td></tr>
+              
               <tr class="group-label"><td colspan="5">🟨 Open-source Models</td></tr>
-              <tr><td>InternVL2-8B</td><td>33.02</td><td>26.83</td><td><b>36.49</b></td><td>37.47</td></tr>
-              <tr><td>InternVL2.5-8B</td><td><b>36.28</b></td><td><b>29.46</b></td><td>31.88</td><td><b>43.80</b></td></tr>
+              <tr><td>SpaceR*</td><td><b>37.55</b></td><td><b>31.03</b></td><td><b>42.73</b></td><td><b>45.44</b></td></tr>
+              <tr><td>InternVL2.5-8B</td><td>36.28</td><td>29.46</td><td>31.88</td><td>43.80</td></tr>
+              <tr><td>Qwen2.5-VL-7b</td><td>33.07</td><td>28.75</td><td>22.97</td><td>40.27</td></tr>
+              <tr><td>InternVL2-8B</td><td>33.02</td><td>26.83</td><td>36.49</td><td>37.47</td></tr>
               <tr><td>LLaVA-OV-7B</td><td>31.20</td><td>21.79</td><td>26.13</td><td>40.14</td></tr>
               <tr><td>Qwen2-VL-7b</td><td>30.74</td><td>27.52</td><td>20.44</td><td>37.03</td></tr>
-              <tr><td>Qwen2.5-VL-7b</td><td>33.07</td><td>28.75</td><td>22.97</td><td>40.27</td></tr>
               <tr><td>LLaVA-v1.5-7b</td><td>23.65</td><td>10.85</td><td>27.50</td><td>34.09</td></tr>
               <tr><td>LLaVA-v1.6-7b</td><td>13.21</td><td>8.53</td><td>4.79</td><td>20.18</td></tr>
       
@@ -271,7 +272,7 @@
         </div>
         <div class="benchmark-note">
             <p><strong>⚠️ Note:</strong> We typically <strong>exclude fine-tuned models</strong> (like <em>InternVL2.5-8B + SPAR-mix</em>) from direct comparison, as they are trained on SPAR-7M and thus not evaluated in a zero-shot setting.</p>
-          
+            <p>* SpaceR is trained using Reinforcement Learning with Verifiable Rewards (RLVR) on an external dataset (SpaceR-151k), with the explicit goal of improving spatial reasoning. While not fine-tuned on SPAR-Bench, SpaceR demonstrates strong generalization to our benchmark tasks.</p>
             <ul>
               <li><code>Avg</code> is the mean accuracy across all <strong>20 tasks</strong> in SPAR-Bench.</li>
               <li><code>Low</code>, <code>Medium</code>, and <code>High</code> are means over task subsets (not equal count).</li>
@@ -377,7 +378,7 @@
                 <tr class="group-divider"><td colspan="11"></td></tr>
             
                 <tr><td>Base VLM</td><td>32.4</td><td>74.20</td><td>78.50</td><td>46.61</td><td>58.33</td><td>76.53</td><td>2323</td><td>84.45</td><td>66.67</td><td>68.73</td></tr>
-                <tr><td>+EMOVA-2M</td><td>24.5</td><td>66.27</td><td>64.83</td><td>42.40</td><td>55.25</td><td><strong>73.8</strong></td><td>2186</td><td>80.24</td><td>63.14</td><td><strong>63.78</strong></td></tr>
+                <tr><td>+EMOVA-2M</td><td>24.5</td><td>66.27</td><td>64.83</td><td>42.40</td><td>55.25</td><td><strong>73.8</strong></td><td><strong>2186</strong></td><td><strong>80.24</strong></td><td>63.14</td><td><strong>63.78</strong></td></tr>
                 <tr><td><strong>+SPAR-mix</strong></td>
                     <td><strong>41.1</strong></td>
                     <td><strong>72.25</strong></td>
@@ -385,8 +386,8 @@
                     <td><strong>43.92</strong></td>
                     <td><strong>57.48</strong></td>
                     <td>73.2</td>
-                    <td><strong>2163</strong></td>
-                    <td><strong>79.90</strong></td>
+                    <td>2163</td>
+                    <td>79.90</td>
                     <td><strong>64.71</strong></td>
                     <td>62.91</td>
                 </tr>
@@ -399,6 +400,8 @@
                 we introduce <strong>+EMOVA-2M</strong> as a fair open-source baseline for comparison. 
                 <br><br>
                 Under equal data scale (2M), our proposed <strong>+SPAR-mix</strong> significantly improves performance over EMOVA-only training on spatial benchmarks (e.g., <strong>VSI-Bench</strong>, <strong>CV-Bench 3D</strong>), demonstrating the value of our spatial QA data.
+                <br>
+                While there are minor drops on general benchmarks such as MMBench and TextVQA—mostly within 1%—this is expected, as our data emphasizes spatial reasoning rather than fine-grained vision-language alignment.
             </p>
               
         </section> 
