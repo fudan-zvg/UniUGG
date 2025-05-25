@@ -309,7 +309,7 @@ We evaluate a wide range of models on SPAR-Bench, including commercial APIs and 
 > Under this setting:
 > - 👨 **Human Level**: **67.27**
 > - 🥇 **Best API model**: Qwen2.5-VL-72B — **39.40**
-> - 🥇 **Best open-source model (<8B)**: InternVL2.5-8B — **36.28**
+> - 🥇 **Best open-source model (<8B)**: SpaceR — **37.55**
 
 
 #### 🔢 Performance Summary (Average Accuracy % by Level)
@@ -317,23 +317,27 @@ We evaluate a wide range of models on SPAR-Bench, including commercial APIs and 
 | Method                         | Avg.  | Low   | Medium | High  |
 |--------------------------------|-------|-------|--------|-------|
 | 🟤 Baselines (eval on tiny)                   |       |       |        |       |
-| Random                         | 32.74 | 31.19 | 38.25  | 32.29 |
 | Human                        | **67.27** | **55.31** | **72.32**  | **76.22** |
+| Random                         | 32.74 | 31.19 | 38.25  | 32.29 |
 | 🟦 API Models (eval on tiny)                  |       |       |        |       |
-| GPT-4o                         | 36.39 | 29.25 | **24.93**  | 45.11 |
-| Claude-3.7-Sonnet              | 21.77 | 25.43 | 7.33  | 23.33 |
-| Qwen2-VL-72B                   | 35.62 | 35.28 | 23.39  | 40.00 |
 | Qwen2.5-VL-72B                 | **39.40** | **35.35** | 23.05  | **48.44** |
+| GPT-4o                         | 36.39 | 29.25 | **24.93**  | 45.11 |
+| Qwen2-VL-72B                   | 35.62 | 35.28 | 23.39  | 40.00 |
+| Claude-3.7-Sonnet              | 21.77 | 25.43 | 7.33  | 23.33 |
 | 🟨 Open-source Models (<8B) (eval on full)    |       |       |        |       |
-| InternVL2-8B                   | 33.02 | 26.83 | **36.49**  | 37.47 |
-| InternVL2.5-8B                 | **36.28** | **29.46** | 31.88  | **43.80** |
+| SpaceR*                  | **37.55** | **31.03**  | **42.73**   | **45.44** |
+| InternVL2.5-8B                 | 36.28 | 29.46 | 31.88  | 43.80 |
+| Qwen2.5-VL-7b                  | 33.07 | 28.75 | 22.97  | 40.27 |
+| InternVL2-8B                   | 33.02 | 26.83 | 36.49  | 37.47 |
 | LLaVA-OV-7B                    | 31.20 | 21.79 | 26.13  | 40.14 |
 | Qwen2-VL-7b                    | 30.74 | 27.52 | 20.44  | 37.03 |
-| Qwen2.5-VL-7b                  | 33.07 | 28.75 | 22.97  | 40.27 |
 | LLaVA-v1.5-7b                  | 23.65 | 10.85 | 27.50  | 34.09 |
 | LLaVA-v1.6-7b                  | 13.21 | 8.53  | 4.79   | 20.18 |
 | 🟥 Fine-tuned (SPAR-mix)       |       |       |        |       |
 | **InternVL2.5-8B + SPAR-mix**  | **63.25** | **65.53** | **63.01** | **60.19** |
+
+> \* SpaceR is trained using Reinforcement Learning with Verifiable Rewards (RLVR) on an external dataset (SpaceR-151k), with the explicit goal of improving spatial reasoning. While not fine-tuned on SPAR-Bench, SpaceR demonstrates strong generalization to our benchmark tasks.
+
 
 > ⚠️ We typically **exclude fine-tuned models** (like *InternVL2.5-8B + SPAR-mix*) from direct comparison, as they are trained on SPAR-7M and thus not evaluated in a zero-shot setting.
 
