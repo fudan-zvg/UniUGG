@@ -325,10 +325,10 @@ We evaluate a wide range of models on SPAR-Bench, including commercial APIs and 
 | Qwen2-VL-72B                   | 35.62 | 35.28 | 23.39  | 40.00 |
 | Claude-3.7-Sonnet              | 21.77 | 25.43 | 7.33  | 23.33 |
 | 🟨 Open-source Models (<8B) (eval on full)    |       |       |        |       |
-| SpaceR*                  | **37.55** | **31.03**  | **42.73**   | **45.44** |
+| SpaceR*                  | **37.55** | **30.90**  | 31.93   | **45.61** |
 | InternVL2.5-8B                 | 36.28 | 29.46 | 31.88  | 43.80 |
 | Qwen2.5-VL-7b                  | 33.07 | 28.75 | 22.97  | 40.27 |
-| InternVL2-8B                   | 33.02 | 26.83 | 36.49  | 37.47 |
+| InternVL2-8B                   | 33.02 | 26.83 | **36.49**  | 37.47 |
 | LLaVA-OV-7B                    | 31.20 | 21.79 | 26.13  | 40.14 |
 | Qwen2-VL-7b                    | 30.74 | 27.52 | 20.44  | 37.03 |
 | LLaVA-v1.5-7b                  | 23.65 | 10.85 | 27.50  | 34.09 |
