@@ -41,9 +41,7 @@ Encoding</h1>
 
 </div>
 
-## 🎞️ Demo Video
-<video src="docs/resources/demo.mp4" controls width="600">
-</video>
+## 🎞️ [Demo Video](https://fudan-zvg.github.io/UniUGG/assets/demo.mp4)
 
 
 
