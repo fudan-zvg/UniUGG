@@ -3,9 +3,52 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>From Flatland to Space</title>
+  <title>UniUGG</title>
   <link rel="stylesheet" href="assets/style.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/simple-datatables@latest/dist/style.css">
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+
+  <style>
+  .render_wrapper {
+    position: relative;
+          height: 300px;
+        }
+      .render_wrapper_small {
+    position: relative;
+          height: 200px;
+        }
+  .render_div {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+      #interpolation-image-wrapper-car{
+          text-align: center;
+      }
+      #interpolation-image-wrapper-chair{
+          text-align: center;
+      }
+      .nested-columns {
+          margin-bottom: 0 !important;
+      }
+  </style>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+
 </head>
 
   <body>
@@ -27,18 +70,19 @@
       <!-- <h1 class="project-title">From Flatland to Space</h1> -->
       <div class="title-wrapper">
         <!-- <img src="assets/icons/sub_bg.jpg" alt="Title Banner" class="title-deco-img"> -->
-        <h1 class="project-title">From Flatland to Space</h1>
+        <h1 class="project-title">UniUGG</h1>
       </div>
-      <p class="project-subtitle">Teaching Vision-Language Models to Perceive and Reason in 3D</p>
+      <p class="project-subtitle">Unified 3D Understanding and Generation via Geometric-Semantic Encoding</p>
       <div class="authors-list">
         <div class="author-names">
-          Jiahui Zhang<sup>1*</sup>, Yurui Chen<sup>1*</sup>, Yanpeng Zhou<sup>2*</sup>, Yueming Xu<sup>1</sup>,
-          Ze Huang<sup>1</sup>, Jilin Mei<sup>1</sup>, Junhui Chen<sup>1</sup>,
-          Yu-Jie Yuan<sup>2</sup>, Xinyue Cai<sup>2</sup>, Guowei Huang<sup>2</sup>, Xingyue Quan<sup>2</sup>,
-          Hang Xu<sup>2</sup>, <a href="https://lzrobots.github.io/" target="_blank">Li Zhang<sup>1</sup></a>
+          Yueming Xu<sup>1&ast;</sup>, Jiahui Zhang<sup>1&ast;</sup>, Ze Huang<sup>1&ast;</sup>, Yurui Chen<sup>1</sup>,
+          Yanpeng Zhou<sup>2</sup>, Zhenyu Chen<sup>2</sup>, Yu-Jie Yuan<sup>2</sup>,
+          Pengxiang Xia<sup>2</sup>, Guowei Huang<sup>2</sup>, Xinyue Cai<sup>2</sup>, Zhongang Qi<sup>2</sup>,
+          Xingyue Quan<sup>2</sup>, Jianye Hao<sup>2</sup>,
+          Hang Xu<sup>2</sup>, <a href="https://lzrobots.github.io/" target="_blank">Li Zhang<sup>1&dagger;</sup></a>
         </div>
       
-        <div class="equal-contribution">* Equal contribution</div>
+        <div class="equal-contribution">&ast; Equal contribution &nbsp;&nbsp; &dagger; Corresponding author</div>
       
         <div class="affiliations">
           <span class="inst"><sup>1</sup> Fudan University</span>
@@ -47,420 +91,681 @@
       </div>
   
       <div class="button-group">
-        <a href="https://arxiv.org/abs/2503.22976" target="_blank" class="circle-button green">
+        <a href="https://fudan-zvg.github.io/UniUGG/docs/assets/UniUGG.pdf" target="_blank" class="circle-button green">
+          <img src="assets/icons/paper.svg" alt="Paper" class="icon"> Paper
+        </a>
+        <a href="https://arxiv.org/abs/2508." target="_blank" class="circle-button green">
           <img src="assets/icons/arxiv.svg" alt="arXiv" class="icon"> arXiv
         </a>
-        <a href="https://github.com/fudan-zvg/spar.git" target="_blank" class="circle-button green">
-          <img src="assets/icons/github.svg" alt="GitHub" class="icon"> Code
-        </a>
-        <a href="https://huggingface.co/datasets/jasonzhango/SPAR-7M" target="_blank" class="circle-button green">
-          <img src="assets/icons/hf.svg" alt="Hugging Face" class="icon"> Data
-        </a>
-        <a href="https://huggingface.co/datasets/jasonzhango/SPAR-Bench" target="_blank" class="circle-button green">
-          <img src="assets/icons/hf.svg" alt="Hugging Face" class="icon"> Benchmark
+        <a href="https://github.com/fudan-zvg/UniUGG.git" target="_blank" class="circle-button green">
+          <img src="assets/icons/github.svg" alt="Code" class="icon"> Code
         </a>
       </div>
     </div>
   </header>
 
-  <div class="main-content">
-      <!-- <section class="authors-section">
-        <div class="authors-list">
-          <span>Jiahui Zhang<sup>1*</sup></span>,
-          <span>Yurui Chen<sup>1*</sup></span>,
-          <span>Yueming Xu<sup>1</sup></span>,
-          <span>Ze Huang<sup>1</sup></span>,
-          <span>Jilin Mei<sup>1</sup></span>,
-          <span>Junhui Chen<sup>1</sup></span>,
-          <span>Yanpeng Zhou<sup>2</sup></span>,
-          <span>Yujie Yuan<sup>2</sup></span>,
-          <span>Xinyue Cai<sup>2</sup></span>,
-          <span>Guowei Huang<sup>2</sup></span>,
-          <span>Xingyue Quan<sup>2</sup></span>,
-          <span>Hang Xu<sup>2</sup></span>,
-          <a href="https://lzrobots.github.io/" target="_blank">Li Zhang<sup>1</sup></a>
-        </div>
-        
-        <div class="equal-contribution">
-            <span>* Equal contribution</span>
-        </div>
-
-        <div class="affiliations">
-          <span><sup>1</sup> Fudan University</span> &emsp;
-          <span><sup>2</sup> Noah’s Ark Lab</span>
-        </div>
-      </section> -->
-
+    <div class="main-content-t">
       <section class="teaser-section", id="overview">
-        <h2 class="teaser-title">Overview of the SPAR Dataset and Benchmark</h2>
+        <!-- <h2 class="teaser-title">Overview of the SPAR Dataset and Benchmark</h2> -->
         <img src="assets/images/teaser.png" alt="Teaser Figure" class="teaser-image">
         <p class="teaser-caption">
           <em>
-            Overview of our <strong>Spatial Perception And Reasoning (SPAR)</strong> dataset and benchmark. 
-            Our dataset is sourced from <strong>4,500 scenes</strong> and comprises <strong>33 spatial tasks</strong> spanning 
-            single-view, multi-view, and video settings. Our benchmark includes over 
-            <strong>7,000+</strong> carefully curated high-quality samples to comprehensively evaluate the 
-            spatial perception and understanding capabilities of existing models.
+            Overview of our <strong>UniUGG</strong>, the first unified framework for spatial understanding and generation. 
+            (A) UniUGG supports spatial-level VQA and generates geometrically consistent 3D scenes. (B) Given a reference image, it can creatively
+            generate 3D variations and describe them accurately. (C) UniUGG outperforms baselines in both spatial understanding and
+            generation, with our specially tuned vision encoder excelling in downstream tasks.
           </em>
         </p>
-      </section>
-      <section class="summary-section", id="paper-summary">
-        <h2 class="summary-title">📄 Paper Summary</h2>
-        <p class="summary-text">
-          Recent advances in vision-language models (VLMs) have greatly improved multimodal understanding, but spatial perception remains a major limitation — especially in complex 3D scenes. To address this, we introduce <strong>SPAR-7M</strong>, a large-scale dataset built from 3D scenes using a novel 2D annotation pipeline. It covers <strong>33 spatial tasks</strong> ranging from perception (e.g., depth, distance) to reasoning (e.g., imagination, object relations) across single-view, multi-view, and video settings.
-        </p>
-        <p class="summary-text">
-          We further construct <strong>SPAR-Bench</strong>, a high-quality benchmark of <strong>7,207 human-verified QA pairs</strong> across 20 representative spatial tasks, supporting diverse input modalities. Experiments show that pretraining on SPAR-7M significantly improves model performance on spatial benchmarks, even without explicit 3D representations — revealing the strong potential of 2D-supervised spatial learning.
-        </p>
-      </section>
-      <section class="dataset-section", id="dataset">
-        <h2 class="dataset-title">📦 SPAR-7M & SPAR-Bench</h2>
-        <p class="dataset-intro">
-          <strong>SPAR</strong> is a comprehensive spatial QA suite composed of two components:
-          <strong>SPAR-7M</strong> — a large-scale synthetic dataset for training, and 
-          <strong>SPAR-Bench</strong> — a human-curated benchmark for evaluation.
-          Together, they cover a wide spectrum of 3D spatial understanding tasks across various cognitive levels and modalities.
-        </p>
-      
-        <div class="dataset-cards">
-          <div class="dataset-card">
-            <h3>📚 SPAR-7M</h3>
-            <ul>
-              <li>✅ 7M+ QA pairs</li>
-              <li>🧠 33 spatial task types</li>
-              <li>🖼️ Input: single-view / multi-view / video</li>
-              <li>📐 Tasks: depth, distance, matching, imagination...</li>
-              <li>🏗️ From 4,500 richly annotated 3D scenes</li>
-            </ul>
-          </div>
-          <div class="dataset-card">
-            <h3>🧪 SPAR-Bench</h3>
-            <ul>
-              <li>📏 7,207 QA samples</li>
-              <li>👀 Manually verified high-quality questions</li>
-              <li>🧩 20 representative task types</li>
-              <li>🎯 Zero-shot benchmark for VLMs</li>
-              <li>🚀 Evaluates perception, cross-view & reasoning</li>
-            </ul>
-          </div>
-        </div>
-      </section>
-      <section class="dataset-distribution-row">
-        <div class="dist-img">
-          <img src="assets/images/data_stats.png" alt="Task Distribution">
-        </div>
-        <div class="dist-caption">
-          <h3>📊 Task Type Distribution in SPAR</h3>
-          <p>
-            <em>
-              This figure summarizes the distribution of all <strong>33 spatial tasks</strong> in SPAR,
-              categorized by <strong>cognitive level</strong> (Low / Medium / High),
-              <strong>input modality</strong> (single-view / multi-view / video), and task type.
-              <br><br>
-              Notably, <strong>51% of SPAR tasks</strong> fall into high-level spatial reasoning,
-              indicating a strong focus on compositional and cognitively demanding skills.
-            </em>
-          </p>
-        </div>
-      </section>         
-      <section class="task-vis-section", id="vis">
-        <h2 class="task-vis-title">🔍 SPAR-7M & SPAR-Bench Visualization</h2>
-        <img src="assets/images/task_vis.png" alt="SPAR task visualization" class="task-vis-img">
-        <p class="task-vis-caption">
-          <em>
-            This figure illustrates representative examples from <strong>SPAR-7M</strong> and 
-            <strong>SPAR-Bench</strong>. It showcases the diversity of spatial tasks across input 
-            modalities (single-view, multi-view, video), cognitive levels (perception to reasoning), 
-            and answer formats (sentence, choice, fill-in). These examples reflect the broad coverage 
-            and structured design of our dataset and benchmark.
-          </em>
-        </p>
-      </section>
-
-      <section class="task-explorer" id="interactive-vis">
-        <h2 class="section-title">🕵️ Explore SPAR-Bench Tasks</h2>
-        <p class="section-subtitle">
-            This interactive viewer showcases representative samples from the <strong>20 spatial tasks</strong> in <strong>SPAR-Bench</strong>. 
-            Each example illustrates different cognitive levels, input modalities, and relation types. 
-            <br><br>
-            Note that <strong>SPAR-Bench only contains multiple-choice and fill-in-the-blank questions</strong>. 
-            For <strong>open-ended</strong> or <strong>descriptive sentence-based</strong> tasks, please refer to the 
-            <a href="https://huggingface.co/datasets/jasonzhango/SPAR-7M" target="_blank">SPAR-7M dataset on Hugging Face</a>.
-          </p>
-          
-        <div class="filter-panel">
-          <select id="level-select" onchange="filterTasks()">
-            <option value="all">All Levels</option>
-            <option value="low">Low</option>
-            <option value="medium">Medium</option>
-            <option value="high">High</option>
-          </select>
-      
-          <select id="modality-select" onchange="filterTasks()">
-            <option value="all">All Modalities</option>
-            <option value="single">Single-view</option>
-            <option value="multi">Multi-view</option>
-            <!-- <option value="video">Video</option> -->
-          </select>
-      
-          <select id="relation-select" onchange="filterTasks()">
-            <option value="all">All Relations</option>
-            <option value="oo">Object–Object</option>
-            <option value="oc">Object–Camera</option>
-          </select>
-        </div>
-      
-        <!-- <div id="task-display" class="task-grid"></div> -->
-        <div class="carousel-wrapper">
-        <!-- <button class="carousel-btn left" onclick="scrollCarousel(-1)">←</button> -->
-        <button class="carousel-btn left" onclick="scrollCarousel(-1)">&lt;</button>
-        <div id="task-carousel" class="carousel-track">
-            <!-- 卡片会通过 JS 插入到这里 -->
-        </div>
-        <!-- <button class="carousel-btn right" onclick="scrollCarousel(1)">→</button> -->
-        <button class="carousel-btn right" onclick="scrollCarousel(1)">&gt;</button>    
+    </section>
     </div>
-          
-      </section>
       
-      <section class="benchmark-section", id="bench-eval">
-        <h2 class="benchmark-title">🎯 Benchmark Evaluation</h2>
-        <p class="benchmark-intro">
-          <strong>SPAR-Bench</strong> evaluates 20 spatial tasks across three cognitive levels — 
-          perception, cross-view understanding, and high-level reasoning. 
-          It contains <strong>7,207 human-verified QA pairs</strong> across diverse modalities.
-        </p>
-      
-        <div class="benchmark-table-wrapper">
-          <table class="benchmark-table">
-            <thead>
-              <tr>
-                <th>Model</th>
-                <th>Avg (%) ↑</th>
-                <th>Low ↑</th>
-                <th>Medium ↑</th>
-                <th>High ↑</th>
-              </tr>
-            </thead>
-            <tbody>
-      
-              <tr class="group-label"><td colspan="5">🟤 Baselines</td></tr>
-              <tr><td>Human</td><td><b>67.27</b></td><td><b>55.31</b></td><td><b>72.32</b></td><td><b>76.22</b></td></tr>
-              <tr><td>Random</td><td>32.74</td><td>31.19</td><td>38.25</td><td>32.29</td></tr>
-              
-              <tr class="group-label"><td colspan="5">🟦 API Models</td></tr>
-              <tr><td>Qwen2.5-VL-72B</td><td><b>39.40</b></td><td><b>35.35</b></td><td>23.05</td><td><b>48.44</b></td></tr>
-              <tr><td>GPT-4o</td><td>36.39</td><td>29.25</td><td><b>24.93</b></td><td>45.11</td></tr>
-              <tr><td>Qwen2-VL-72B</td><td>35.62</td><td>35.28</td><td>23.39</td><td>40.00</td></tr>
-              <tr><td>Claude-3.7-Sonnet</td><td>21.77</td><td>25.43</td><td>7.33</td><td>23.33</td></tr>
-              
-              <tr class="group-label"><td colspan="5">🟨 Open-source Models</td></tr>
-              <tr><td>SpaceR*</td><td><b>37.55</b></td><td><b>30.90</b></td><td>31.93</td><td><b>45.61</b></td></tr>
-              <tr><td>InternVL2.5-8B</td><td>36.28</td><td>29.46</td><td>31.88</td><td>43.80</td></tr>
-              <tr><td>Qwen2.5-VL-7b</td><td>33.07</td><td>28.75</td><td>22.97</td><td>40.27</td></tr>
-              <tr><td>InternVL2-8B</td><td>33.02</td><td>26.83</td><td><b>36.49</b></td><td>37.47</td></tr>
-              <tr><td>LLaVA-OV-7B</td><td>31.20</td><td>21.79</td><td>26.13</td><td>40.14</td></tr>
-              <tr><td>Qwen2-VL-7b</td><td>30.74</td><td>27.52</td><td>20.44</td><td>37.03</td></tr>
-              <tr><td>LLaVA-v1.5-7b</td><td>23.65</td><td>10.85</td><td>27.50</td><td>34.09</td></tr>
-              <tr><td>LLaVA-v1.6-7b</td><td>13.21</td><td>8.53</td><td>4.79</td><td>20.18</td></tr>
-      
-              <tr class="group-label"><td colspan="5">🟥 Fine-tuned</td></tr>
-              <tr><td>InternVL2.5-8B + SPAR-mix</td><td><b>63.25</b></td><td><b>65.53</b></td><td><b>63.01</b></td><td><b>60.19</b></td></tr>
-      
-            </tbody>
-          </table>
-        </div>
-        <div class="benchmark-note">
-            <p><strong>⚠️ Note:</strong> We typically <strong>exclude fine-tuned models</strong> (like <em>InternVL2.5-8B + SPAR-mix</em>) from direct comparison, as they are trained on SPAR-7M and thus not evaluated in a zero-shot setting.</p>
-            <p>* SpaceR is trained using Reinforcement Learning with Verifiable Rewards (RLVR) on an external dataset (SpaceR-151k), with the explicit goal of improving spatial reasoning. While not fine-tuned on SPAR-Bench, SpaceR demonstrates strong generalization to our benchmark tasks.</p>
-            <ul>
-              <li><code>Avg</code> is the mean accuracy across all <strong>20 tasks</strong> in SPAR-Bench.</li>
-              <li><code>Low</code>, <code>Medium</code>, and <code>High</code> are means over task subsets (not equal count).</li>
-              <li>So <code>Avg</code> ≠ average of Low / Medium / High.</li>
-              <li>Only a subset of models are shown — see our <a href="#paper">paper</a> for complete results.</li>
-            </ul>
-          </div>
-          
-          
-      </section>
-      <section class="dataset-construction", id="data-con">
-        <h2 class="section-title">🏗️ Dataset Construction</h2>
-      
-        <div class="construction-image">
-          <img src="assets/images/data_pipeline.png" alt="Data construction pipeline" />
-          <p class="caption">Overview of our data construction pipeline. It consists of three main stages.</p>
-        </div>
-      
-        <div class="construction-steps">
-          <ol>
-            <li>
-              <strong>Scene Pre-processing:</strong>
-              We sample keyframes from raw video and extract 3D metadata such as depth, camera pose, and object bounding boxes.
-            </li>
-            <li>
-              <strong>Scene Structuring:</strong>
-              All frames, objects, and camera metadata are stored in a unified database format. This enables flexible multi-view and spatial queries for QA generation.
-            </li>
-            <li>
-              <strong>Multi-task QA Generation:</strong>
-              We design task-specific templates and automatically fill in questions and answers by selecting tasks, object types, image views, and answer formats. This enables systematic generation of 33 spatial QA types.
-            </li>
-          </ol>
-        </div>
-      </section>
-      
-
-      <section class="dataset-distribution-row", id="gd">
-        <div class="dist-img">
-          <img src="assets/images/grounding.png" alt="3D Grounding Module" />
-        </div>
-        <div class="dist-caption">
-          <h3>🧭 3D Grounding Module</h3>
-          <p>
-            <em>
-              We propose a novel <strong>3D grounding module</strong> that integrates seamlessly with Vision-Language Models (VLMs), 
-              enabling precise spatial localization from both <strong>video</strong> and <strong>multi-view</strong> inputs.
-              <br><br>
-              For video inputs, grounding is transformed into a <strong>frame selection</strong> task, followed by <strong>mono-frame 3D localization </strong>
-              via predicted UV coordinates, depth, and size. In multi-view settings, the object is localized in a selected frame 
-              and then back-projected to recover its full 3D bounding box.
-              <br><br>
-              An <strong>optional refinement</strong> stage further improves accuracy by matching the predicted box against 
-              the scene’s proposal boxes based on geometric similarity.
-            </em>
-          </p>
-        </div>
-      </section>
-      
-    <section class="generalization-section", id="exp1">
-        <h2 class="section-title">🌍 Generalization Across Benchmarks</h2>
-
-        <p class="benchmark-intro">
-            We evaluate how pretraining with <strong>SPAR-mix</strong> affects generalization on various
-            <strong>spatial understanding</strong> and <strong>2D vision-language benchmarks</strong>.
-            <br><br>
-            The <strong>Base VLM</strong> is <code>InternVL2.5-8B</code>, trained with high-quality proprietary data.
-            To ensure a fair comparison, we introduce:
-        </p>
-        
-        <ul>
-            <li><strong>+EMOVA-2M</strong>: trained on 2M samples randomly selected from the EMOVA 2D dataset.</li>
-            <li><strong>+SPAR-mix</strong>: trained on 2M samples with <strong>60%</strong> from SPAR-7M and <strong>40%</strong> from EMOVA.</li>
-        </ul>
-        
-        <p class="benchmark-intro">
-            <strong>Bold values</strong> indicate best performance among the two open-source variants (EMOVA vs SPAR-mix).
-        </p>
-        <div class="scrollable-table">
-            <table class="generalization-table">
-                <thead>
-                <tr>
-                    <th>Method</th>
-                    <th>VSI-Bench</th>
-                    <th>CV-Bench 2D</th>
-                    <th>CV-Bench 3D</th>
-                    <th>BLINK</th>
-                    <th>3DSRBench</th>
-                    <th>Seed-Image</th>
-                    <th>MME</th>
-                    <th>MMBench</th>
-                    <th>RealWorldQA</th>
-                    <th>TextVQA</th>
-                </tr>
-                </thead>
-                <tbody>
-                <tr><td>GPT-4v</td><td>–</td><td>64.3</td><td>73.8</td><td>51.14</td><td>–</td><td>71.6</td><td>1927</td><td>75.0</td><td>61.4</td><td>77.4</td></tr>
-                <tr><td>GPT-4o</td><td>34.0</td><td>–</td><td>–</td><td>60.04</td><td>45.3</td><td>77.1</td><td>2310</td><td>83.4</td><td>75.4</td><td>–</td></tr>
-                <tr><td>Cambrian-8B</td><td>–</td><td>72.3</td><td>72.0</td><td>–</td><td>–</td><td>74.7</td><td>1547</td><td>75.9</td><td>64.2</td><td>77.8</td></tr>
-                <tr><td>LLaVA-OV-7B</td><td>25.3</td><td>–</td><td>–</td><td>48.2</td><td>44.1</td><td>–</td><td>1998</td><td>80.8</td><td>66.3</td><td>–</td></tr>
-                <tr><td>InternVL2-8B</td><td>34.6</td><td>–</td><td>–</td><td>–</td><td>–</td><td>75.4</td><td>2215</td><td>81.7</td><td>–</td><td>77.4</td></tr>
-            
-                <tr class="group-divider"><td colspan="11"></td></tr>
-            
-                <tr><td>Base VLM</td><td>32.4</td><td>74.20</td><td>78.50</td><td>46.61</td><td>58.33</td><td>76.53</td><td>2323</td><td>84.45</td><td>66.67</td><td>68.73</td></tr>
-                <tr><td>+EMOVA-2M</td><td>24.5</td><td>66.27</td><td>64.83</td><td>42.40</td><td>55.25</td><td><strong>73.8</strong></td><td><strong>2186</strong></td><td><strong>80.24</strong></td><td>63.14</td><td><strong>63.78</strong></td></tr>
-                <tr><td><strong>+SPAR-mix</strong></td>
-                    <td><strong>41.1</strong></td>
-                    <td><strong>72.25</strong></td>
-                    <td><strong>89.08</strong></td>
-                    <td><strong>43.92</strong></td>
-                    <td><strong>57.48</strong></td>
-                    <td>73.2</td>
-                    <td>2163</td>
-                    <td>79.90</td>
-                    <td><strong>64.71</strong></td>
-                    <td>62.91</td>
-                </tr>
-                </tbody>
-            </table>
+    <section class="hero is-light is-small", id = "vis_gen">
+        <div class="hero-body">
+            <div class="container">
+                 <div id="results-carousel" class="carousel results-carousel">
+                    <div class="item item-steve render_wrapper">
+			            <div id="sample_case1" class="render_div"></div>
+                    </div>
+                    <div class="item item-steve render_wrapper">
+			            <div id="sample_case2" class="render_div"></div>
+                    </div>
+                    <div class="item item-steve render_wrapper">
+			            <div id="sample_case3" class="render_div"></div>
+                    </div>
+                    <div class="item item-steve render_wrapper">
+			            <div id="sample_case4" class="render_div"></div>
+                    </div>
+                    <div class="item item-steve render_wrapper">
+			            <div id="sample_case5" class="render_div"></div>
+                    </div>
+                </div>
+                <div style="text-align: center;">Press <b>G</b> to see scene generation. Press <b>R</b> to reset. </div>
             </div>
-            <br>
-            <p class="benchmark-intro">
-                While the <strong>Base VLM</strong> is pretrained on high-quality proprietary data and achieves strong performance, 
-                we introduce <strong>+EMOVA-2M</strong> as a fair open-source baseline for comparison. 
-                <br><br>
-                Under equal data scale (2M), our proposed <strong>+SPAR-mix</strong> significantly improves performance over EMOVA-only training on spatial benchmarks (e.g., <strong>VSI-Bench</strong>, <strong>CV-Bench 3D</strong>), demonstrating the value of our spatial QA data.
-                <br>
-                While there are minor drops on general benchmarks such as MMBench and TextVQA—mostly within 1%—this is expected, as our data emphasizes spatial reasoning rather than fine-grained vision-language alignment.
-            </p>
-              
-        </section> 
+        </div>
+    </section>
 
-        <section class="task-comparison-section", id="exp2">
-            <h2 class="section-title">🛰️ Evaluation on 3DQA and 3D Grounding</h2>
+      <div class="main-content">
+      <section class="summary-section", id="paper-summary">
+        <h2 class="summary-title">📄 Abstract</h2>
+        <p class="summary-text">
+        Despite the impressive progress on understanding and generating images shown by the recent unified architectures, 
+        the integration of 3D tasks remains challenging and largely unexplored. In this paper, we introduce UniUGG, the first unified understanding and generation framework for 3D modalities. Our unified framework employs an LLM to comprehend and decode sentences and 3D representations. At its core, we propose a spatial decoder leveraging a latent diffusion model to generate high-quality 3D representations. This allows for the generation and imagination of 3D scenes based on a reference image and an arbitrary view transformation, while remaining supports for spatial visual question answering (VQA) tasks. Additionally, we propose a geometric-semantic learning strategy to pretrain the vision encoder. This design jointly captures the input's semantic and geometric cues, enhancing both spatial understanding and generation. Extensive experimental results demonstrate the superiority of our method in visual representation, spatial understanding, and 3D generation.
+        </p>
+      </section>
+
+      <section class="video-section", id="video">
+        <h2 class="video-title">🎞️ Video</h2>
+        <div class="video-box">
+        <video id="demo-video" controls preload="metadata" poster="assets/cover.jpg" playsinline>
+          <source src="assets/demo.mp4" type="video/mp4">
+          </video>
+        </div>
+      </section>
+
+      <section id="generation_comparison">
+      <h2 class="task-vis-title">⚖️ 3D generation comparison</h2>
+                <p>
+                    UniUGG accurately captures the input view transformation and leverages the reference image to ‘imagine’ fine-grained spatial structures under novel views, and outputs correct captioning.                </p>
+          <section class="section-seed" style="overflow:hidden;">
+                  <div id="post_images" class="carousel">
+                          <div class="grid_comp">
+                              <!-- Top Left: Reference Image -->
+                              <div class="grid-item_comp">
+                                <div class="title_comp">Reference image</div>
+                                <img src="./models/case1.jpg" alt="Reference" class="image-box_comp" id="ref_img_comp">
+                              </div>
+
+                              <!-- Top Right: Yaw Render -->
+                              <div class="grid-item_comp">
+                                <div class="title_comp">Yaw right 40°</div>
+                                <div class="mesh-box-comp" id="meshcomp_cut3r1"></div>
+                                <div class="model-name_comp">CUT3R</div>
+                              </div>
+                              <!-- Bottom Left: Caption -->
+                              <div class="grid-item_comp">
+                                <div class="title_comp">Caption</div>
+                                <div class="caption-box_comp" id="caption_comp">
+                                  A bathroom scene featuring a window with a small shelf. Below the shelf, a bathtub is partially visible. The walls are tiled, and the overall layout shows the window as the back.
+                                </div>
+                              </div>
+
+                              <!-- Bottom Right: Highlighted View -->
+                              <div class="grid-item_comp">
+                                <div class="mesh-box-comp" id="meshcomp_ours1"></div>
+                                <div class="model-name_comp"><strong>UniUGG</strong></div>
+                              </div>
+                            </div>
+                                                      <div class="grid_comp">
+                              <!-- Top Left: Reference Image -->
+                              <div class="grid-item_comp">
+                                <div class="title_comp">Reference image</div>
+                                <img src="./models/case2.jpg" alt="Reference" class="image-box_comp" id="ref_img_comp">
+                              </div>
+
+                              <!-- Top Right: Yaw Render -->
+                              <div class="grid-item_comp">
+                                <div class="title_comp">Yaw right 40°</div>
+                                <div class="mesh-box-comp" id="meshcomp_cut3r2"></div>
+                                <div class="model-name_comp">CUT3R</div>
+                              </div>
+                              <!-- Bottom Left: Caption -->
+                              <div class="grid-item_comp">
+                                <div class="title_comp">Caption</div>
+                                <div class="caption-box_comp" id="caption_comp">
+                                  A window with two panes is centered in the image, flanked by two frosted glass panels. On the windowsill, there is a small decorative item.
+                                </div>
+                              </div>
+
+                              <!-- Bottom Right: Highlighted View -->
+                              <div class="grid-item_comp">
+                                <div class="mesh-box-comp" id="meshcomp_ours2"></div>
+                                <div class="model-name_comp"><strong>UniUGG</strong></div>
+                              </div>
+                            </div>
+                                                      <div class="grid_comp">
+                              <!-- Top Left: Reference Image -->
+                              <div class="grid-item_comp">
+                                <div class="title_comp">Reference image</div>
+                                <img src="./models/case3.jpg" alt="Reference" class="image-box_comp" id="ref_img_comp">
+                              </div>
+
+                              <!-- Top Right: Yaw Render -->
+                              <div class="grid-item_comp">
+                                <div class="title_comp">Pitch down 40°, Yaw left 40°</div>
+                                <div class="mesh-box-comp" id="meshcomp_cut3r3"></div>
+                                <div class="model-name_comp">CUT3R</div>
+                              </div>
+                              <!-- Bottom Left: Caption -->
+                              <div class="grid-item_comp">
+                                <div class="title_comp">Caption</div>
+                                <div class="caption-box_comp" id="caption_comp">
+                                  A gray sectional sofa is positioned to the right, with a small table in front of it holding an item. In the background, a dining area is visible.                                </div>
+                              </div>
+
+                              <!-- Bottom Right: Highlighted View -->
+                              <div class="grid-item_comp">
+                                <div class="mesh-box-comp" id="meshcomp_ours3"></div>
+                                <div class="model-name_comp"><strong>UniUGG</strong></div>
+                              </div>
+                            </div>
+                  </div>
+        <script src="https://cdn.jsdelivr.net/npm/bulma-carousel@4.0.3/dist/js/bulma-carousel.min.js"></script>
+                <script>
+                    bulmaCarousel.attach('#post_images', {
+                          slidesToScroll: 1,
+                          slidesToShow: 1,
+                          loop: true,
+                    });
+                </script>
+        </section>
+
+        <section id="generations_captions">
+          <h2 class="task-vis-title">🔍 3D scene generations and captions</h2>
+                <p>
+                    Given a reference image, we randomly sample plausible relative view transformations and let UniUGG generate the corresponding 3D scenes, and further caption the generated 3D scenes.
+                </p>
+          <section class="section-seed" style="overflow:hidden;">
+              <!-- <div class="container"> -->
+                  <div id="post_images" class="carousel">
+                      <section class="three-column-layout">
+                          <!-- Left: Reference Image -->
+                          <div class="column reference-image">
+                            <div class="section-title-reference">Reference image</div>
+                            <img src="./models/meshseed4.png" alt="Reference Image">
+                          </div>
+
+                          <!-- Middle: Mesh Visualizations -->
+                          <div class="column">
+                            <div class="section-title">Random seed 1</div>
+                            <div class="mesh-box" id="meshseed1_1"></div>
+
+                            <div class="section-title">Random seed 2</div>
+                            <div class="mesh-box" id="meshseed1_2"></div>
+                          </div>
+
+                          <!-- Right: Captions -->
+                          <div class="column">
+                            <div class="section-title">Caption</div>
+                            <div class="caption-box">
+                              A kitchen countertop with a double sink and a faucet, featuring a dish rack with dishes and a container to the right. A kettle sits on the counter to the left, with a window above the sink allowing natural light to enter.
+                            </div>
+
+                            <div class="section-title">Caption</div>
+                            <div class="caption-box">
+                              A kitchen sink area with a dish rack on the right holding a plate of food. To the left, there are cabinets and a countertop with items near the window.
+                            </div>
+                          </div>
+                        </section>
+                      <section class="three-column-layout">
+                          <!-- Left: Reference Image -->
+                          <div class="column reference-image">
+                            <div class="section-title-reference">Reference image</div>
+                            <img src="./models/meshseed0.png" alt="Reference Image">
+                          </div>
+
+                          <!-- Middle: Mesh Visualizations -->
+                          <div class="column">
+                            <div class="section-title">Random seed 1</div>
+                            <div class="mesh-box" id="meshseed2_1"></div>
+
+                            <div class="section-title">Random seed 2</div>
+                            <div class="mesh-box" id="meshseed2_2"></div>
+                          </div>
+
+                          <!-- Right: Captions -->
+                          <div class="column">
+                            <div class="section-title">Caption</div>
+                            <div class="caption-box">
+                              A neatly made bed with white linens and a gray headboard is centered against a gray upholstered headboard. Above the bed, a framed artwork hang on the wall, and a small bedside table with a lamp is visible to the right.
+                            </div>
+
+                            <div class="section-title">Caption</div>
+                            <div class="caption-box">
+                              A neatly made bed with white linens and pillows are positioned against a wall, with a gray upholstered headboard. Above the bed, a framed artwork hang on the wall, and a small bedside table with a lamp is visible to the right.
+                            </div>
+                          </div>
+                        </section>
+                      <!-- <section class="three-column-layout">
+                          <div class="column reference-image">
+                            <div class="section-title-reference">Reference image</div>
+                            <img src="./models/meshseed1.png" alt="Reference Image">
+                          </div>
+
+                          <div class="column">
+                            <div class="section-title">Random seed 1</div>
+                            <div class="mesh-box" id="meshseed3_1"></div>
+
+                            <div class="section-title">Random seed 2</div>
+                            <div class="mesh-box" id="meshseed3_2"></div>
+                          </div>
+
+                          <div class="column">
+                            <div class="section-title">Caption</div>
+                            <div class="caption-box">
+                              A brown leather couch is positioned to the left, with a yellow lamp on a metal stand to the right, casting a shadow on a patterned wall. 
+                            </div>
+
+                            <div class="section-title">Caption</div>
+                            <div class="caption-box">
+                              A brown leather sofa with a purple cushion is positioned to the left, while a red lamp with a base stands on a wooden floor to the right. To the right, there is another purple sofa partially visible.
+                            </div>
+                          </div>
+                        </section> -->
+                  </div>
+              <!-- </div> -->
+        <script src="https://cdn.jsdelivr.net/npm/bulma-carousel@4.0.3/dist/js/bulma-carousel.min.js"></script>
+                <script>
+                    bulmaCarousel.attach('#post_images', {
+                          slidesToScroll: 1,
+                          slidesToShow: 1,
+                          loop: true,
+                    });
+                </script>
+          </section>
+          <section class="spatial_understanding" id="spatial_understanding">
+            <h2 class="task-vis-title">💬 Spatial understanding </h2>
+                      <p> UniUGG can capture fine-grained spatial relations and support spatial visual question answering (VQA) tasks.</p>
+                <section class="section-seed" style="overflow:hidden;">
+                        <div id="post_images" class="carousel">
+                                <div class="grid_comp">
+                                  <section class="qa_section">
+                                    <!-- 图片区域 -->
+                                      <div class="video_grid_qa">
+                                        <video controls>
+                                        <source src="models/Q1.mp4" type="video/mp4">
+                                        </video>
+                                      </div>
+
+                                    <!-- 文本区域 -->
+                                    <div class="text_block_qa">
+                                      <div class="question_qa">
+                                        <strong>👤 Question:</strong>
+                                        <p>
+                                          These are frames of a video. How many ceiling light(s) are in this room?
+                                        </p>
+                                      </div>
+                                      <div class="answer_qa">
+                                        <strong>🤖 Answer:</strong>
+                                        <p>
+                                          The video reveals a total of 2 ceiling light occupying the room.
+                                        </p>
+                                      </div>
+                                    </div>
+                                  </section>
+                                  </div>
+                                  <div class="grid_comp">
+                                    <section class="qa_section">
+                                    <!-- 图片区域 -->
+                                    <div class="image_grid_qa">
+                                      <img src="models/Q2_1.png" alt="Image 1">
+                                      <img src="models/Q2_2.png" alt="Image 2">
+                                      <img src="models/Q2_3.png" alt="Image 3">
+                                    </div>
+
+                                    <!-- 文本区域 -->
+                                    <div class="text_block_qa">
+                                      <div class="question_qa">
+                                        <strong>👤 Question:</strong>
+                                        <p>
+                                          In the given three images, what is the spatial alignment of the shoe 
+                                          <span class="red_qa">(red bbox)</span> relative to the plant pot 
+                                          <span class="blue_qa">(blue bbox)</span> as perceived by the observer? 
+                                          Set the first image as the observer’s perspective.
+                                        </p>
+                                      </div>
+                                      <div class="answer_qa">
+                                        <strong>🤖 Answer:</strong>
+                                        <p>
+                                          In this arrangement, the shoe <span class="red_qa">(red bbox)</span> is positioned to the left below the 
+                                          plant pot <span class="blue_qa">(blue bbox)</span>. From the observer’s perspective, it looks farther. 
+                                          The shoe <span class="red_qa">(red bbox)</span> and the plant pot <span class="blue_qa">(blue bbox)</span> are in front 
+                                          of the observer.
+                                        </p>
+                                      </div>
+                                    </div>
+                                  </section>
+                                  </div>
+                                  <div class="grid_comp">
+                                  <section class="qa_section">
+                                    <!-- 图片区域 -->
+                                    <div class="image_grid_qa">
+                                      <img src="models/Q3_1.png" alt="Image 1">
+                                      <img src="models/Q3_2.png" alt="Image 2">
+                                    </div>
+
+                                    <!-- 文本区域 -->
+                                    <div class="text_block_qa">
+                                      <div class="question_qa">
+                                        <strong>👤 Question:</strong>
+                                        <p>
+                                          The images are frames from a video. The video is shooting a static scene. The camera is either moving clockwise (left) or counter-clockwise (right) around the object. 
+                                          The first image is from the beginning of the video and the second image is from the end. Is the camera moving left or right when shooting the video?
+                                        </p>
+                                      </div>
+                                      <div class="answer_qa">
+                                        <strong>🤖 Answer:</strong>
+                                        <p>
+                                          From the observer's perspective, the camera transitions left.
+                                        </p>
+                                      </div>
+                                    </div>
+                                  </section>
+                                  </div>
+
+                                  <div class="grid_comp">
+                                  <section class="qa_section">
+                                    <!-- 图片区域 -->
+                                    <div class="single_image_grid_qa">
+                                      <img src="models/Q4.png" alt="Image 1">
+                                    </div>
+
+                                    <!-- 文本区域 -->
+                                    <div class="text_block_qa">
+                                      <div class="question_qa">
+                                        <strong>👤 Question:</strong>
+                                        <p>
+                                          Consider the real-world 3D locations of the objects. Which object has a lower location? 
+                                          <br>A: fan<br>
+                                          B: people 
+                                        </p>
+                                      </div>
+                                      <div class="answer_qa">
+                                        <strong>🤖 Answer:</strong>
+                                        <p>
+                                          The answer is A. The object fan is located at a lower height in the real world.
+                                        </p>
+                                      </div>
+                                    </div>
+                                  </section>
+                                  </div>
+                        
+                        </div>
+              <script src="https://cdn.jsdelivr.net/npm/bulma-carousel@4.0.3/dist/js/bulma-carousel.min.js"></script>
+                      <script>
+                          bulmaCarousel.attach('#post_images', {
+                                slidesToScroll: 1,
+                                slidesToShow: 1,
+                                loop: true,
+                          });
+                      </script>
+            </section>
+
+            </div>
+
+            <div class="main-content-exp">
+
+            <section class="task-comparison-section", id="exp">
+            <h2 class="section-title">🎯Evaluation on spatial understanding and 3D generation</h2>
           
             <div class="comparison-grid">
               <!-- QA Evaluation Block -->
               <div class="comparison-card">
-                <h3>💬 3D Question Answering</h3>
-                <p class="small-caption">Performance on SQA3D (EM@1) and ScanQA (BLEU-4, CiDEr)</p>
-                <table class="small-table">
-                  <thead>
-                    <tr><th>Method</th><th>EM@1</th><th>BLEU-4</th><th>CiDEr</th></tr>
-                  </thead>
-                  <tbody>
-                    <tr><td>3D-LLM</td><td>–</td><td>12.0</td><td>69.4</td></tr>
-                    <tr><td>Chat-3D v2</td><td>54.7</td><td>14.0</td><td>87.6</td></tr>
-                    <tr><td>LEO</td><td>50.0</td><td>13.2</td><td><strong>101.4</strong></td></tr>
-                    <tr><td>LL3DA</td><td>–</td><td>13.5</td><td>76.8</td></tr>
-                    <tr><td>Scene-LLM</td><td>54.2</td><td>12.0</td><td>80.0</td></tr>
-                    <tr><td><strong>SPAR-mix</strong></td><td><strong>58.1</strong></td><td><strong>15.3</strong></td><td>90.7</td></tr>
-                  </tbody>
-                </table>
+                <h3>💬 Spatial understanding</h3>
+                <p class="small-caption">3D understanding performance on various spatial reasoning benchmarks.</p>
+              <table class="benchmark-table">
+                <thead>
+                  <tr>
+                    <th rowspan="2"style="text-align: center; vertical-align: middle;">Method</th>
+                    <th rowspan="2"style="text-align: center; vertical-align: middle;">VSI</th>
+                    <th rowspan="2"style="text-align: center; vertical-align: middle;">BLINK</th>
+                    <th rowspan="2"style="text-align: center; vertical-align: middle;">3DSR</th>
+                    <th colspan="4">SPAR</th>
+                  </tr>
+                  <tr>
+                    <td>Low</td>
+                    <td>Med.</td>
+                    <td>High</td>
+                    <td>Avg.</td>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr class="group-label"><td colspan="5">📂 Open-source models</td></tr>
+                  <tr>
+                    <td style="text-align: left; white-space: nowrap;">LLaVA-v1.5-7B</td>
+                    <td>18.0</td>
+                    <td>37.1</td>
+                    <td>38.1</td>
+                    <td>10.9</td>
+                    <td>26.5</td>
+                    <td>34.1</td>
+                    <td>23.7</td>
+                  </tr>
+                  <tr>
+                    <td style="text-align: left; white-space: nowrap;">LLaVA-NeXT-7B</td>
+                    <td>20.6</td>
+                    <td>41.8</td>
+                    <td>48.4</td>
+                    <td>8.5</td>
+                    <td>4.8</td>
+                    <td>20.2</td>
+                    <td>13.2</td>
+                  </tr>
+                  <tr>
+                    <td style="text-align: left; white-space: nowrap;">InternVL2.5-8B</td>
+                    <td>32.5</td>
+                    <td>54.8</td>
+                    <td>50.9</td>
+                    <td>29.5</td>
+                    <td><span style="text-decoration: underline;">31.9</span></td>
+                    <td><span style="text-decoration: underline;">43.8</span></td>
+                    <td>36.3</td>
+                  </tr>
+                  <tr>
+                    <td style="text-align: left; white-space: nowrap;">Qwen2.5-VL-7B</td>
+                    <td>30.3</td>
+                    <td><span style="text-decoration: underline;">56.4</span></td>
+                    <td>48.4</td>
+                    <td>28.8</td>
+                    <td>23.0</td>
+                    <td>40.3</td>
+                    <td>33.1</td>
+                  </tr>
+                  <tr class="group-label"><td colspan="5">☁️ API models</td></tr>
+                  <tr>
+                    <td style="text-align: left; white-space: nowrap;">GPT-4o</td>
+                    <td><span style="text-decoration: underline;">34.0</span></td>
+                    <td><b>60.0</b></td>
+                    <td>44.2</td>
+                    <td><span style="text-decoration: underline;">36.9</span></td>
+                    <td>26.5</td>
+                    <td><span style="text-decoration: underline;">43.8</span></td>
+                    <td><span style="text-decoration: underline;">38.1</span></td>
+                  </tr>
+                  <tr class="group-label"><td colspan="5">🔄 Unified understanding-generation models</td></tr>
+                  <tr>
+                    <td style="text-align: left; white-space: nowrap;">Janus-Pro-1B</td>
+                    <td>-</td>
+                    <td>38.9</td>
+                    <td>50.0</td>
+                    <td>10.7</td>
+                    <td>24.7</td>
+                    <td>30.8</td>
+                    <td>20.6</td>
+                  </tr>
+                  <tr>
+                    <td style="text-align: left; white-space: nowrap;">Janus-Pro-7B</td>
+                    <td>-</td>
+                    <td>40.5</td>
+                    <td><b>53.7</b></td>
+                    <td>27.3</td>
+                    <td>24.6</td>
+                    <td>33.9</td>
+                    <td>28.6</td>
+                  </tr>
+                  <tr>
+                    <td style="text-align: left; white-space: nowrap;"><i>UniUGG-3B (Ours)</i></td>
+                    <td><b>40.1</b></td>
+                    <td>43.6</td>
+                    <td><span style="text-decoration: underline;">52.1</span></td>
+                    <td><b>50.8</b></td>
+                    <td><b>41.7</b></td>
+                    <td><b>45.7</b></td>
+                    <td><b>47.2</b></td>
+                  </tr>
+                </tbody>
+              </table>
+
               </div>
           
               <!-- Grounding Evaluation Block -->
               <div class="comparison-card">
-                <h3>📡 3D Grounding (ScanRefer)</h3>
-                <p class="small-caption">Accuracy@0.25 and @0.5. Values in brackets are without refinement.</p>
-                <table class="small-table">
-                  <thead>
-                    <tr><th>Method</th><th>Acc@0.25</th><th>Acc@0.5</th></tr>
-                  </thead>
-                  <tbody>
-                    <tr><td>ScanRefer</td><td>37.3</td><td>24.3</td></tr>
-                    <tr><td>MVT</td><td>40.8</td><td>33.3</td></tr>
-                    <tr><td>ViL3DRel</td><td>47.9</td><td>37.7</td></tr>
-                    <tr><td>3D-LLM</td><td>30.3</td><td>–</td></tr>
-                    <tr><td>Chat-3D v2</td><td>35.9</td><td>30.4</td></tr>
-                    <tr><td>Grounded 3D-LLM</td><td>47.9</td><td><strong>44.1</strong></td></tr>
-                    <tr><td><strong>SPAR-mix</strong></td><td><strong>48.8</strong> <span class="dim">(31.9)</span></td><td><strong>43.1</strong> <span class="dim">(12.4)</span></td></tr>
-                  </tbody>
-                </table>
+                <h3>📦 3D generation</h3>
+                <p class="small-caption">Quantitative spatial generation comparison on ARKitScenes and ScanNet++ datasets.</p>
+                <table class="benchmark-table">
+                <thead>
+                  <tr>
+                    <th rowspan="2" style="text-align: center; vertical-align: middle;">Method</th>
+                    <th colspan="3" style="text-align: center; vertical-align: middle;">ARKitScenes</th>
+                    <th colspan="3" style="text-align: center; vertical-align: middle;">ScanNet++</th>
+                  </tr>
+                  <tr>
+                    <th>FID↓</th> 
+                    <th>KID↓</th>
+                    <th>LPIPS↓</th>
+                    <th>FID↓</th>
+                    <th>KID↓</th>
+                    <th>LPIPS↓</th>
+                  </tr>
+                </thead>
+                <tbody>
+                   <tr class="group-label"><td colspan="5">🧪 Ablation setting</td></tr>
+                  <tr>
+                    <td style="text-align: left; white-space: nowrap;">w/ RADIO</td>
+                    <td><span style="text-decoration: underline;">64.16</span></td>
+                    <td><span style="text-decoration: underline;">.0518</span></td>
+                    <td> .4904 </td>
+                    <td><span style="text-decoration: underline;">73.69</span></td>
+                    <td><span style="text-decoration: underline;">.0614</span></td>
+                    <td> .4629 </td>
+                  </tr>
+                  <tr>
+                    <td style="text-align: left; white-space: nowrap;">w/ MASt3R Enc.</td>
+                    <td>81.18</td>
+                    <td>.0691</td>
+                    <td>.5076</td>
+                    <td>86.79</td>
+                    <td>.0803</td>
+                    <td>.5242</td>
+                  </tr>
+                  <tr>
+                    <td style="text-align: left; white-space: nowrap;">w/o Dec. finetune</td>
+                    <td>149.97</td>
+                    <td>.1447</td>
+                    <td>.5301</td>
+                    <td>168.05</td>
+                    <td>.1686</td>
+                    <td>.4945</td>
+                  </tr>
+                  <tr>
+                    <td style="text-align: left; white-space: nowrap;">w/o Diff.</td>
+                    <td>87.51</td>
+                    <td>.0672</td>
+                    <td><b>.4494</b></td>
+                    <td>114.93</td>
+                    <td>.0955</td>
+                    <td><span style="text-decoration: underline;">.4345</span></td>
+                  </tr>
+                  <tr class="group-label"><td colspan="5">📏 Baselins</td></tr>
+                  <tr>
+                    <td style="text-align: left; white-space: nowrap;">CUT3R</td>
+                    <td>138.54</td>
+                    <td>.1128</td>
+                    <td>.5758</td>
+                    <td>130.76</td>
+                    <td>.1051</td>
+                    <td>.5637</td>
+                  </tr>
+                  <tr>
+                    <td style="text-align: left; white-space: nowrap;">LVSM</td>
+                    <td>269.45</td>
+                    <td>.3088</td>
+                    <td>.5067</td>
+                    <td>414.63</td>
+                    <td>.5117</td>
+                    <td>.5865</td>
+                  </tr>
+                  <tr>
+                    <td style="text-align: left; white-space: nowrap;"><i>UniUGG (Ours)</i></td>
+                    <td><b>55.01</b></td>
+                    <td><b>.0425</b></td>
+                    <td><span style="text-decoration: underline;">.4849</span></td>
+                    <td><b>55.64</b></td>
+                    <td><b>.0442</b></td>
+                    <td><b>.4263</b></td>
+                  </tr>
+                </tbody>
+              </table>
               </div>
+
             </div>
           </section>
+      </div>
+      
+      <div class="main-content">
+          
+      <section class="method-section", id="method">
+      <h2 class="task-vis-title">⚙️ Method overview</h2>
+      <section class="dataset-distribution-row-top">
+        <div class="dist-img">
+          <img src="assets/images/encoder.png" alt="Vision encoder pretraining">
+        </div>
+        <div class="dist-caption">
+          <h3>🟦 Vision encoder pretraining</h3>
+          <p>
+            <em>
+              We introduce a novel geometric-semantic vision encoder pretraining strategy.
+              <br>
+              <strong>(a)</strong> During semantic guiding, our student encoder learns to mimic the teacher's visual representations.
+              <br>
+              <strong>(b)</strong> In spatial representation learning, the spatial decoder jointly refines predictions using information from both views.            </em>
+          </p>
+        </div>
+      </section>    
+
+      <section class="task-vis-section", id="vis">
+        <img src="assets/images/training.png" alt="Spatial understanding and generation training" class="task-vis-img">
+        <div style="text-align: left;">
+        <h3>🟨 Spatial understanding and generation training</h3>
+        <p>
+          <em>
+            <strong>(a)</strong> In the latent token learning stage, visual representation is compressed using the Spatial-VAE, while the spatial decoder is linked for fine-tuning.
+            <br>
+            <strong>(b)</strong> In the unified learning stage, the reference image’s visual representation and view transformation are input to an LLM, which outputs conditional features for noise prediction on latent token. The LLM also performs VQA-related training to maintain its understanding capability.
+          </em>
+        </p>
+        </div>
+      </section>
+
+      <section class="dataset-distribution-row">
+        <div class="dist-img">
+          <img src="assets/images/inference.png" alt="Task Distribution">
+        </div>
+        <div class="dist-caption">
+          <h3>🟥 Spatial understanding and generation inferencing</h3>
+          <p>
+            <em>
+              <strong>(a)</strong> We achieve 3D generation by generating the target-view’s visual representation using the LLM and diffusion model. 
+              <br>
+              <strong>(b)</strong> The LLM performs VQA using visual representations as input, whether generated or real. 
+              <br>
+              <strong>(c)</strong> The visual representations of both target and reference views are input to the pretrained spatial decoder to decode 3D scene.
+            </em>
+          </p>
+        </div>
+      </section> 
+      </section>   
+        
           <section class="citation-section", id="citation">
             <h2 class="section-title">📚 Bibtex</h2>
           
             <p>If you find our work helpful, please consider citing us:</p>
           
-            <pre><code>@article{zhang2025from,
-            title={From Flatland to Space: Teaching Vision-Language Models to Perceive and Reason in 3D},
-            author={Zhang, Jiahui and Chen, Yurui and Zhou, Yanpeng and Xu, Yueming and Huang, Ze and Mei, Jilin and Chen, Junhui and Yuan, Yujie and Cai, Xinyue and Huang, Guowei and Quan, Xingyue and Xu, Hang and Zhang, Li},
-            year={2025},
-            journal={arXiv preprint arXiv:2503.22976},
-          }</code></pre>
+            <pre><code>@article{xu2025uniugg,
+title={UniUGG: Unified 3D Understanding and Generation via Geometric-Semantic Encoding},
+author={Xu, Yueming and Zhang, Jiahui and Huang, Ze and Chen, Yurui and Zhou, Yanpeng and Chen Zhenyu and Yuan, Yujie and Xia, Pengxiang and Huang, Guowei and Cai, Xinyue and Qi, Zhongang and Quan, Xingyue and Hao, Jianye and Xu, Hang and Zhang, Li},
+year={2025},
+journal={arXiv preprint arXiv:2508.},
+}</code></pre>
           </section>
 
 
@@ -470,18 +775,16 @@
         <!-- Floating TOC Popup -->
         <div class="toc-popup" id="tocPopup">
         <a href="#overview">📌 Paper Overview</a>
-        <a href="#paper-summary">📄 Paper Summary</a>
-        <a href="#dataset">📦 SPAR-7M & SPAR-Bench</a>
-        <a href="#vis">🔍 SPAR-7M & SPAR-Bench Visualization</a>
-        <a href="#interactive-vis">🗂️ Explore SPAR-Bench Tasks</a>
-        <a href="#bench-eval">🎯 Benchmark Evaluation</a>
-        <a href="#data-con">🏗️ Dataset Construction</a>
-        <a href="#gd">🧭 3D Grounding Module</a>
-        <a href="#exp1">🌍 Generalization Across Benchmarks</a>
-        <a href="#exp2">🛰️ Evaluation on 3DQA and 3D Grounding</a>
+        <a href="#vis_gen">🌐 Generation Visualization</a>
+        <a href="#paper-summary">📄 Abstract</a>
+        <a href="#video">🎞️ Video</a>
+        <a href="#generation_comparison">⚖️ 3D generation comparison</a>
+        <a href="#generations_captions">🔍 3D scene generations and captions</a>
+        <a href="#spatial_understanding">💬 Spatial understanding</a>
+        <a href="#exp">🎯 Evaluation</a>
+        <a href="#method">⚙️ Method overview</a>
         <a href="#citation">📚 Citation</a>
         </div>
-
         <script>
             function toggleTocPopup() {
               const toc = document.getElementById("tocPopup");
@@ -496,399 +799,563 @@
                 popup.style.display = "none";
               }
             });
-
-
-            const taskSamples = [
-            {
-            "id": 0,
-            "task": "depth prediction",
-            "level": "low",
-            "modality": "single",
-            "relation": "oc",
-            "format": "fill",
-            "image": [
-              "assets/images/depth_prediction_oc/0_scene0574_02_795.jpg"
-            ],
-            "question": "The camera coordinates show the towel (red point) at 1.0 meters depth. What is the depth of the towel (blue point)?  Calculate or judge based on the 3D center points of these objects. The unit is meter. Answer using a single number and nothing else.",
-            "answer": "0.9"
-          },
-            {
-            "id": 50,
-            "task": "depth prediction",
-            "level": "low",
-            "modality": "single",
-            "relation": "oo",
-            "format": "fill",
-            "image": [
-              "assets/images/depth_prediction_oo/400_scene0377_00_788.jpg"
-            ],
-            "question": "Using bucket (red point) with a known depth of 2.5, calculate the absolute value of the depth difference between chair (green point) and fuse box (blue point) in meters. Calculate or judge based on the 3D center points of these objects. Submit your response as one numeric value only.",
-            "answer": "0.7"
-          },
-            {
-            "id": 100,
-            "task": "distance prediction",
-            "level": "low",
-            "modality": "single",
-            "relation": "oc",
-            "format": "fill",
-            "image": [
-              "assets/images/distance_prediction_oc/800_scene0426_03_935.jpg"
-            ],
-            "question": "What is the total distance in meters from the person who captured the image to the center of box (red point)? Calculate or judge based on the 3D center points of these objects. Ensure your answer contains only one number.",
-            "answer": "2.0"
-          },
-            {
-            "id": 150,
-            "task": "distance prediction",
-            "level": "low",
-            "modality": "single",
-            "relation": "oo",
-            "format": "fill",
-            "image": [
-              "assets/images/distance_prediction_oo/1200_scene0353_01_389.jpg"
-            ],
-            "question": "Express the Euclidean distance between the center of blanket (red point) and clothes (blue point) in meters. Calculate or judge based on the 3D center points of these objects. Answer using a single number and nothing else.",
-            "answer": "1.2"
-          },
-            {
-            "id": 200,
-            "task": "distance infer center",
-            "level": "high",
-            "modality": "single",
-            "relation": "oo",
-            "format": "select",
-            "image": [
-              "assets/images/distance_infer_center_oo/1600_scene0500_01_1027.jpg"
-            ],
-            "question": "From the given positions, which is farther to chair (red point): chair (green point) or chair (blue point)? Calculate or judge based on the 3D center points of these objects. Select the appropriate response from the given choices.\nA. chair (green point)\nB. chair (blue point)\nYour answer can only include one of options A, B.",
-            "answer": "B"
-          },
-            {
-            "id": 250,
-            "task": "obj spatial relation",
-            "level": "high",
-            "modality": "single",
-            "relation": "oo",
-            "format": "select",
-            "image": [
-              "assets/images/obj_spatial_relation_oo/2000_scene0558_01_1393.jpg"
-            ],
-            "question": "In the provided image, explain the location of the books (red bbox) with respect to the books (blue bbox), considering the observer's viewpoint. Calculate or judge based on the 3D center points of these objects.\nThe options describe the spatial relationship between two objects in terms of left-right (left, right, or empty if indistinguishable), above-below (above, below, or empty if indistinguishable), and farther-closer (farther, closer, or empty if indistinguishable).\nPlease select the correct option from the choices provided.\nA. right, , closer\nB. left, below, farther\nC. right, above, closer\nD. right, , farther\nYour answer can only include one of options A, B, C or D.",
-            "answer": "D"
-          },
-            {
-            "id": 300,
-            "task": "spatial imagination",
-            "level": "high",
-            "modality": "single",
-            "relation": "oc",
-            "format": "select",
-            "image": [
-              "assets/images/spatial_imagination_oc/2400_scene0678_00_1228.jpg"
-            ],
-            "question": "What is the positional relationship between window (red bbox) and the observer? If the observer moves to the 3D center of ledge (green bbox) and faces the 3D center of window (blue bbox), how does this change? Calculate or judge based on the 3D center points of these objects. Please use the world coordinate system to determine the up and down position relationship of objects.\nFor multiple-choice questions, consider only the state after the observer has moved.\nThe options describe the spatial relationship between object and observer in terms of left-right (left, right, or empty if indistinguishable), above-below (above, below, or empty if indistinguishable), and front-behind (front, behind, or empty if indistinguishable).\nSelect the correct response from the given choices.\nA. left, above, front\nB. , above, front\nC. , below, front\nD. right, above, \nYour answer can only include one of options A, B, C or D.",
-            "answer": "A"
-          },
-            {
-            "id": 350,
-            "task": "spatial imagination",
-            "level": "high",
-            "modality": "single",
-            "relation": "oo",
-            "format": "select",
-            "image": [
-              "assets/images/spatial_imagination_oo/2800_scene0131_00_487.jpg"
-            ],
-            "question": "What is the initial spatial positioning of keyboard (red bbox) and chair (yellow bbox) from the observer\u2019s viewpoint? How does it alter after observer moving to cup (green bbox) and orienting towards shelf (blue bbox)? Calculate or judge based on the 3D center points of these objects. Please use the world coordinate system to determine the up and down position relationship of objects.\nFor multiple-choice questions, consider only the state after the observer has moved.\nThe options describes the spatial relationship between two objects after the observer moves. They are in terms of left-right (left, right, or empty if indistinguishable), above-below (above, below, or empty if indistinguishable), and farther-closer (farther, closer, or empty if indistinguishable).\nPlease select the correct option from the choices provided.\nA. right, above, farther\nB. left, , farther\nC. left, above, farther\nD. left, below, \nYour answer can only include one of options A, B, C or D.",
-            "answer": "B"
-          },
-            {
-            "id": 400,
-            "task": "view change infer",
-            "level": "medium",
-            "modality": "multi",
-            "relation": "-",
-            "format": "fill",
-            "image": [
-              "assets/images/view_change_infer/3200_scene0084_00_1517.jpg",
-              "assets/images/view_change_infer/3200_scene0084_00_1150.jpg"
-            ],
-            "question": "Describe the changes in orientation needed to transition from the first image to the second.\nProvide the camera movement and rotation in the following format:\nmove_<right_or_left>:<meters>,move_<down_or_up>:<meters>,move_<forward_or_back>:<meters>,rotate_<down_or_up>:<degrees>,rotate_<right_or_left>:<degrees>\n- The first three values are in meters.\n- The last two values are in degrees.\n- Use commas to separate each parameter.\n- Do not include any additional text.\nExample:move_left:2.6,move_down:0.1,move_forward:0.2,rotate_up:10,rotate_left:0",
-            "answer": "move_right:1.6,move_down:0,move_backward:0,rotate_up:15,rotate_left:75"
-          },
-            {
-            "id": 450,
-            "task": "depth prediction oc",
-            "level": "low",
-            "modality": "multi",
-            "relation": "oc",
-            "format": "fill",
-            "image": [
-              "assets/images/depth_prediction_oc_mv/3600_scene0030_00_1085.jpg",
-              "assets/images/depth_prediction_oc_mv/3600_scene0030_00_976.jpg",
-              "assets/images/depth_prediction_oc_mv/3600_scene0030_00_807.jpg"
-            ],
-            "question": "If the books (red point) is 2.5 meters deep, how deep is the bookshelf (blue point)?  Calculate or judge based on the 3D center points of these objects. Answer by providing just one numeric value.",
-            "answer": "2.6"
-          },
-            {
-            "id": 500,
-            "task": "depth prediction oo",
-            "level": "low",
-            "modality": "multi",
-            "relation": "oo",
-            "format": "fill",
-            "image": [
-              "assets/images/depth_prediction_oo_mv/4000_scene0300_00_119.jpg",
-              "assets/images/depth_prediction_oo_mv/4000_scene0300_00_1003.jpg",
-              "assets/images/depth_prediction_oo_mv/4000_scene0300_00_848.jpg"
-            ],
-            "question": "Assume monitor (red point) has a depth of 1.9. How much difference in depth exists between monitor (green point) and chair (blue point), expressed in meters? Calculate or judge based on the 3D center points of these objects. The depth is calculated based on the image where the markers corresponding to these objects are located. Ensure your answer contains only one number.",
-            "answer": "0.1"
-          },
-            {
-            "id": 550,
-            "task": "distance prediction oo",
-            "level": "low",
-            "modality": "multi",
-            "relation": "oo",
-            "format": "fill",
-            "image": [
-              "assets/images/distance_prediction_oo_mv/4400_scene0046_00_2145.jpg",
-              "assets/images/distance_prediction_oo_mv/4400_scene0046_00_1504.jpg",
-              "assets/images/distance_prediction_oo_mv/4400_scene0046_00_1468.jpg"
-            ],
-            "question": "How far in meters is shower curtain (red point) from mirror (blue point) based on their centers in the images? Calculate or judge based on the 3D center points of these objects. Your input must be limited to a single number.",
-            "answer": "0.7"
-          },
-            {
-            "id": 600,
-            "task": "distance prediction oc",
-            "level": "low",
-            "modality": "multi",
-            "relation": "oc",
-            "format": "fill",
-            "image": [
-              "assets/images/distance_prediction_oc_mv/4800_scene0146_00_1376.jpg",
-              "assets/images/distance_prediction_oc_mv/4800_scene0146_00_137.jpg",
-              "assets/images/distance_prediction_oc_mv/4800_scene0146_00_182.jpg"
-            ],
-            "question": "What is the measured distance in meters between the observer and the red point marking the center of toilet paper in the scene? Calculate or judge based on the 3D center points of these objects. The first image is positioned to serve as the main viewpoint for the observer. Provide a numeric response with just one value.",
-            "answer": "2.1"
-          },
-            {
-            "id": 650,
-            "task": "position matching",
-            "level": "medium",
-            "modality": "multi",
-            "relation": "-",
-            "format": "select",
-            "image": [
-              "assets/images/position_matching/5200_scene0695_02_1478.jpg",
-              "assets/images/position_matching/5200_scene0695_02_529.jpg"
-            ],
-            "question": "Based on the red bbox of mat in the first image, locate its bounding box in the second image. Pick the appropriate answer from the options given.\nA. [0, 0, 556, 720]\nB. [529, 1, 1000, 632]\nC. [0, 490, 1000, 999]\nD. [0, 29, 324, 720]\nYour answer can only include one of the options A, B, C, or D.",
-            "answer": "C"
-          },
-            {
-            "id": 700,
-            "task": "camera motion infer",
-            "level": "medium",
-            "modality": "multi",
-            "relation": "-",
-            "format": "select",
-            "image": [
-              "assets/images/camera_motion_infer/5600_scene0699_00_171.jpg",
-              "assets/images/camera_motion_infer/5600_scene0699_00_1718.jpg"
-            ],
-            "question": "Estimate where the second image\u2019s observer would appear when projected onto the first image\u2019s coordinate space. Provide image-plane coordinates and depth in meters. Select the correct response from the given choices.\nA. Image Coor:(569, 18), Depth:1.1 meters\nB. Image Coor:(96, 785), Depth:1.1 meters\nC. Image Coor:(86, 595), Depth:1.1 meters\nD. Image Coor:(771, 298), Depth:1.1 meters\nYour answer can only include one of options A, B, C or D.",
-            "answer": "A"
-          },
-            {
-            "id": 750,
-            "task": "distance infer center oo",
-            "level": "high",
-            "modality": "multi",
-            "relation": "oo",
-            "format": "select",
-            "image": [
-              "assets/images/distance_infer_center_oo_mv/6001_scene0353_00_876.jpg",
-              "assets/images/distance_infer_center_oo_mv/6001_scene0353_00_2288.jpg",
-              "assets/images/distance_infer_center_oo_mv/6001_scene0353_00_748.jpg"
-            ],
-            "question": "Which point, shoes (green point) or laptop (blue point), is located farther to desk lamp (red point)? Calculate or judge based on the 3D center points of these objects. Select the correct answer from the given choices.\nA. shoes (green point)\nB. laptop (blue point)\nYour answer can only include one of options A, B.",
-            "answer": "A"
-          },
-            {
-            "id": 800,
-            "task": "obj spatial relation oc",
-            "level": "high",
-            "modality": "multi",
-            "relation": "oc",
-            "format": "select",
-            "image": [
-              "assets/images/obj_spatial_relation_oc_mv/6400_scene0607_01_209.jpg",
-              "assets/images/obj_spatial_relation_oc_mv/6400_scene0607_01_261.jpg",
-              "assets/images/obj_spatial_relation_oc_mv/6400_scene0607_01_224.jpg"
-            ],
-            "question": "How is object sink (bbox) situated with respect to the observer\u2019s main viewpoint? Calculate or judge based on the 3D center points of these objects. The observer's perspective is captured by setting the first image as the primary view.\nThe options describe the spatial relationship between object and observer in terms of left-right (left, right, or empty if indistinguishable), above-below (above, below, or empty if indistinguishable), and front-behind (front, behind, or empty if indistinguishable).\nPick the right response from the available choices.\nA. left, above, front\nB. , below, behind\nC. right, , front\nD. right, below, front\nYour answer can only include one of options A, B, C or D.",
-            "answer": "D"
-          },
-            {
-            "id": 850,
-            "task": "obj spatial relation oo",
-            "level": "high",
-            "modality": "multi",
-            "relation": "oo",
-            "format": "select",
-            "image": [
-              "assets/images/obj_spatial_relation_oo_mv/6800_scene0356_02_545.jpg",
-              "assets/images/obj_spatial_relation_oo_mv/6800_scene0356_02_533.jpg",
-              "assets/images/obj_spatial_relation_oo_mv/6800_scene0356_02_521.jpg"
-            ],
-            "question": "What is the spatial position of the recycling bin (red bbox) relative to the compost bin (blue bbox) in the two images, from the observer\u2019s perspective? Calculate or judge based on the 3D center points of these objects. To illustrate the observer's perspective, we designate the first image as the main focus.\nThe options describe the spatial relationship between two objects in terms of left-right (left, right, or empty if indistinguishable), above-below (above, below, or empty if indistinguishable), closer-farther (closer, farther, or empty if indistinguishable), the first object is in front of or behind the observer (front, behind, or empty if indistinguishable), the second object is in front of or behind the observer (front, behind, or empty if indistinguishable).\nChoose the right response from the choices provided.\nA. left, , closer, front, front\nB. left, above, farther, front, \nC. right, , closer, front, front\nD. left, below, closer, front, \nYour answer can only include one of options A, B, C or D.",
-            "answer": "A"
-          },
-            {
-            "id": 900,
-            "task": "spatial imagination oc",
-            "level": "high",
-            "modality": "multi",
-            "relation": "oc",
-            "format": "select",
-            "image": [
-              "assets/images/spatial_imagination_oc_mv/7200_scene0231_01_2575.jpg",
-              "assets/images/spatial_imagination_oc_mv/7200_scene0231_01_3939.jpg",
-              "assets/images/spatial_imagination_oc_mv/7200_scene0231_01_1609.jpg"
-            ],
-            "question": "Describe where microwave (red bbox) is located from the observer\u2019s point of view before and after the observer moves to the 3D center of range hood (green bbox) and faces cabinet (blue bbox). Calculate or judge based on the 3D center points of these objects. Answer with the observer's perspective in mind, selecting the first image as the primary view before the move occurs.\nFor multiple-choice questions, consider only the state after the observer has moved.\nThe options describe the spatial relationship between object and observer in terms of left-right (left, right, or empty if indistinguishable), above-below (above, below, or empty if indistinguishable), and front-behind (front, behind, or empty if indistinguishable).\nPick the appropriate answer from the options given.\nA. right, , front\nB. right, below, front\nC. right, above, \nD. left, below, front\nYour answer can only include one of options A, B, C or D.",
-            "answer": "D"
-          },
-            {
-            "id": 950,
-            "task": "spatial imagination oo",
-            "level": "high",
-            "modality": "multi",
-            "relation": "oo",
-            "format": "select",
-            "image": [
-              "assets/images/spatial_imagination_oo_mv/7602_scene0015_00_1437.jpg",
-              "assets/images/spatial_imagination_oo_mv/7602_scene0015_00_1508.jpg",
-              "assets/images/spatial_imagination_oo_mv/7602_scene0015_00_1916.jpg"
-            ],
-            "question": "From the perspective of the observer, how does the relative positioning of chair (red bbox) and whiteboard (yellow bbox) evolve after observer moving to table (green bbox) and facing whiteboard (blue bbox)? Calculate or judge based on the 3D center points of these objects. Frame your response from the observer's perspective, ensuring the first image is used as the main view before movement. Please use the world coordinate system to determine the up and down position relationship of objects.\nFor multiple-choice questions, consider only the state after the observer has moved.\nThe options describe the spatial relationship between two objects in terms of left-right (left, right, or empty if indistinguishable), above-below (above, below, or empty if indistinguishable), closer-farther (closer, farther, or empty if indistinguishable), the first object is in front of or behind the observer (front, behind, or empty if indistinguishable), the second object is in front of or behind the observer (front, behind, or empty if indistinguishable).\nPlease select the correct option from the choices provided.\nA. left, below, closer, front, front\nB. left, below, closer, , front\nC. left, below, , front, front\nD. left, below, , behind, front\nYour answer can only include one of options A, B, C or D.",
-            "answer": "A"
-          },
-          ];
-            
-            function filterTasks() {
-                const level = document.getElementById("level-select").value;
-                const modality = document.getElementById("modality-select").value;
-                const relation = document.getElementById("relation-select").value;
-                const display = document.getElementById("task-carousel");
-                display.innerHTML = "";
-              
-                const filtered = taskSamples.filter(t =>
-                  (level === "all" || t.level === level) &&
-                  (modality === "all" || t.modality === modality) &&
-                  (relation === "all" || t.relation === relation)
-                );
-              
-                filtered.forEach(task => {
-                  display.innerHTML += `
-                    <div class="task-card">
-                      <!-- <img src="${task.image}" alt="Task image"> -->
-                      <div class="task-images">
-                        ${task.image.map(img => `<img src="${img}" class="task-img">`).join('')}
-                      </div>
-                      <div class="task-meta">
-                        <span class="task-name">${formatTaskName(task.task.replace(/ (oc|oo)$/, ''))}</span>
-                        <span class="meta-tag">Level: ${capitalize(task.level)}</span>
-                        <span class="meta-tag">Modality: ${modalityMap[task.modality]}</span>
-                        <span class="meta-tag">Relation: ${task.relation.toUpperCase()}</span>
-                        <span class="meta-tag">Format: ${capitalize(task.format)}</span>
-                      </div>
-                      <!-- <p><strong>Q:</strong> ${task.question.replace(/\n/g, '<br>')}</p> -->
-                      <div class="question-block">
-                        <p class="question-text collapsed"><strong>Q:</strong> ${task.question.replace(/\n/g, '<br>')}</p>
-                        <button class="expand-btn" onclick="toggleExpand(this)">Show more</button>
-                      </div>
-                      <!-- <p class="answer-text"><strong>A:</strong> ${task.answer.replace(/\n/g, '<br>')}</p> -->
-                      <!-- <div class="answer-float hidden" onclick="this.classList.remove('hidden')">
-                        <span class="answer-label">A:</span>
-                        <span class="answer-text">${task.answer}</span>
-                      </div> -->
-                      <div class="answer-toggle">
-                        <button onclick="showAnswer(this)">Show Answer</button>
-                      </div>
-                      <div class="answer-float hidden">
-                        <span class="answer-label">A:</span>
-                        <span class="answer-text">${task.answer}</span>
-                      </div>
-                      <!-- <p><strong>A:</strong> ${task.answer.replace(/\n/g, '<br>')}</p> -->
-                    </div>
-                  `;
-                });
-            function showAnswer(button) {
-                const card = button.closest(".task-card");
-                const answerBox = card.querySelector(".answer-float");
-                answerBox.classList.remove("hidden");
-                button.style.display = "none"; // 隐藏按钮
-                }
-              setTimeout(() => {
-                document.querySelectorAll('.question-block').forEach(block => {
-                    const textEl = block.querySelector('.question-text');
-                    const btnEl = block.querySelector('.expand-btn');
-                
-                    if (textEl.scrollHeight <= textEl.clientHeight + 1) {
-                    btnEl.style.display = 'none';
-                    }
-                });
-                }, 0);
-            }
-            function scrollCarousel(direction) {
-                const track = document.getElementById("task-carousel");
-                const cardWidth = 300; // 约等于每张卡片宽度 + 间距
-                track.scrollBy({ left: direction * cardWidth, behavior: "smooth" });
-            }
-              
-            const modalityMap = {
-                single: "Single-view",
-                multi: "Multi-view",
-                video: "Video"
-              };
-              
-              function capitalize(str) {
-                return str.charAt(0).toUpperCase() + str.slice(1);
-              }
-              function formatTaskName(taskStr) {
-                // 例如 "depth prediction" -> "Depth Prediction"
-                return taskStr
-                  .split(' ')
-                  .map(word => word.charAt(0).toUpperCase() + word.slice(1))
-                  .join(' ');
-              }
-              function toggleExpand(button) {
-                const textEl = button.previousElementSibling;
-                textEl.classList.toggle("expanded");
-                textEl.classList.toggle("collapsed");
-                button.textContent = textEl.classList.contains("expanded") ? "Show less" : "Show more";
-              }
-
-            // 初始自动加载
-            window.onload = filterTasks;
             
         </script>
-        <script>
-            // 普通脚本，全局作用域
-            function showAnswer(button) {
-              const card = button.closest(".task-card");
-              const answerBox = card.querySelector(".answer-float");
-              answerBox.classList.remove("hidden");
-              button.style.display = "none";
-            }
-          </script>
         </div>
 </body>
+
+<script async src="https://unpkg.com/es-module-shims@1.3.6/dist/es-module-shims.js"></script>
+
+    <script type="importmap">
+        {
+            "imports": {
+                "three": "./js/three.module.js"
+            }
+        }
+    </script>
+    
+    <script type="module">
+    import * as THREE from './three.module.js';
+    import { PLYLoader } from './PLYLoader.js'; // 也可以换成你之前那份 PLYPointCloudLoader
+
+    // 场景
+    const scene = new THREE.Scene();
+    scene.background = new THREE.Color(0x000000);
+
+    // 相机
+    const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.01, 1000);
+    camera.position.z = 2;
+
+    // 渲染器
+    const renderer = new THREE.WebGLRenderer({ antialias: true });
+    renderer.setSize(window.innerWidth, window.innerHeight);
+    document.body.appendChild(renderer.domElement);
+
+    // 轨道控制器（可选）
+    import { OrbitControls } from 'https://threejs.org/examples/jsm/controls/OrbitControls.js';
+    const controls = new OrbitControls(camera, renderer.domElement);
+
+    // 点云材质
+    const pointMaterial = new THREE.PointsMaterial({
+      size: 0.05,
+      vertexColors: true
+    });
+
+    // 加载PLY点云
+    const loader = new PLYLoader();
+    loader.load('model.ply', geometry => {
+      geometry.computeVertexNormals(); // 可选
+      const points = new THREE.Points(geometry, pointMaterial);
+      scene.add(points);
+    });
+
+    // 渲染循环
+    function animate() {
+      requestAnimationFrame(animate);
+      controls.update();
+      renderer.render(scene, camera);
+    }
+
+    animate();
+
+    // 响应窗口变化
+    window.addEventListener('resize', () => {
+      camera.aspect = window.innerWidth / window.innerHeight;
+      camera.updateProjectionMatrix();
+      renderer.setSize(window.innerWidth, window.innerHeight);
+    });
+  </script>
+
+
+    <script type="module">
+        import * as THREE from 'three';
+
+    import { PLYLoader } from './js/PLYLoader.js';
+    import { OrbitControls } from './js/OrbitControls.js'
+    let div_to_scene = {
+        "sample_case1": {
+            "geo": null,
+            "color": null,
+        },
+        "sample_case2": {
+            "geo": null,
+            "color": null,
+        },
+        "sample_case3": {
+            "geo": null,
+            "color": null,
+        },
+        "sample_case4": {
+            "geo": null,
+            "color": null,
+        },
+        "sample_case5": {
+            "geo": null,
+            "color": null,
+        },
+
+        "meshseed1_1": {
+            "geo": null,
+            "color": null,
+        },
+        "meshseed1_2": {
+            "geo": null,
+            "color": null,
+        }
+    }
+    let div_to_render_scene = {
+        "mesh_style_0": {
+            "0": null,
+            "1": null,
+            "2": null,
+            "geo": null,
+        },
+        "mesh_style_1": {
+            "0": null,
+            "1": null,
+            "2": null,
+            "geo": null,
+        },
+        "mesh_style_2": {
+            "0": null,
+            "1": null,
+            "2": null,
+            "geo": null,
+        },
+        "mesh_style_3": {
+            "0": null,
+            "1": null,
+            "2": null,
+            "geo": null,
+        },
+    }
+    let mouse_button_down = false;
+    let list_of_orbit_controls = []
+    let list_of_camera_init = []
+    let style_camera = null;
+    let render_colors = true;
+    let style_id = "0"
+
+    function setup_camera(div_name){
+        // let container = document.getElementById(div_name);
+        // let width = container.parentElement.clientWidth;
+        // let height = container.parentElement.clientHeight;
+        let width, height;
+        let container = document.getElementById(div_name);
+        if (div_name.includes("sample")) {
+          width = container.parentElement.clientWidth;
+          height = container.parentElement.clientHeight;
+        } else {
+          width = container.clientWidth;
+          height = container.clientHeight;
+        }
+      
+        let camera = new THREE.PerspectiveCamera( 35, width / height, 0.1, 50 );
+
+        let camera_init_position = new THREE.Vector3( 2.25, 1.525, -3.75 );
+        camera_init_position = camera_init_position.multiplyScalar(0.55)
+        camera.position.set(camera_init_position.x, camera_init_position.y, camera_init_position.z);
+        return camera;
+    }
+
+    function setup_render_divs(div_name, mesh_path){
+        let camera = setup_camera(div_name)
+        let orbit_control = create_render_div(camera, div_name, mesh_path)
+
+        // orbit_control.saveState();
+        list_of_orbit_controls.push(orbit_control)
+        // list_of_camera_init.push(camera_init)
+    }
+
+    function create_render_div(camera, div_id, ply_path) {
+    let container;
+    let renderer, controls;
+
+    init();
+    animate();
+
+    function init() {
+        let width, height;
+        container = document.getElementById(div_id);
+        if (div_id.includes("sample")) {
+          width = container.parentElement.clientWidth;
+          height = container.parentElement.clientHeight;
+        } else {
+          width = container.clientWidth;
+          height = container.clientHeight;
+        }
+      
+
+        div_to_scene[div_id] = {
+            "pointcloud": new THREE.Scene()
+        };
+        div_to_scene[div_id]["pointcloud"].background = new THREE.Color(0xffffff);
+
+        // 加载 PLY 点云文件
+        const loader = new PLYLoader();
+        loader.load(ply_path, function (geometry) {
+            geometry.computeBoundingBox();
+
+            const center = new THREE.Vector3();
+            geometry.boundingBox.getCenter(center);
+            geometry.translate(-center.x, -center.y, -center.z);
+
+            const size = new THREE.Vector3();
+            geometry.boundingBox.getSize(size);
+            const maxDim = Math.max(size.x, size.y, size.z);
+            const cameraDistance = maxDim * 1.2;
+
+            // camera.position.set(-cameraDistance, cameraDistance, -cameraDistance);
+            // camera.lookAt(0, 0, 0);
+
+            if (div_id == "sample_case1") {
+            geometry.translate(-0.2,0.2,0);
+            camera.position.set(1.6230225350342913, -0.6234737139583433, -10.580383072470458);
+            camera.lookAt(0.11114839239697578, -0.2644762011750067, 0.02392370737928461);
+            }
+            else if (div_id == "sample_case2") {
+            geometry.translate(-1.15,-1.1,0);
+            camera.position.set(0.9754964219328183, 2.517406240143193, -12.204394752459265);
+            camera.lookAt(-0.13833566556182408, 0.4339470960846704, 0.0614466252405209);
+            } 
+            else if (div_id == "sample_case3") {
+            geometry.translate(1.0,0.8,0);
+            camera.position.set(0.0787889354865618, -1.7679012697541576, -11.30418255421156);
+            camera.lookAt(0.30173379710215437, 0.1990478654557605, -0.040776980350966684);
+            } 
+            else if (div_id == "sample_case4") {
+            geometry.translate(-0.5,-0.2,0);
+            camera.position.set(-0.7032851032269549, 1.5349932868720284, -9.212814739904227);
+            camera.lookAt(0.27758942337233355, 0.23186805929506343, -0.020830662725487767);
+            } 
+            else if (div_id == "sample_case5") {
+                geometry.translate(2.1,1.6,0);
+                camera.position.set(0.1414997446191119, -4.184683563023461, -18.816445494560966);
+                camera.lookAt(0,0,0);
+            }
+            else if (div_id == "meshseed1_1") {
+                geometry.translate(0,0.6,0);
+                camera.position.set(1.0030601064612272, -0.1088538358867176, -14.13416233754261);
+                camera.lookAt(0.2514249565446477, 0.21558620250131819, 0.00935426841167492);
+            }
+            else if (div_id == "meshseed1_2") {
+                geometry.translate(0,0.6,0);
+                camera.position.set(1.0030601064612272, -0.1088538358867176, -14.13416233754261);
+                camera.lookAt(0.2514249565446477, 0.21558620250131819, 0.00935426841167492);
+            }
+            else if (div_id == "meshseed2_1") {
+                geometry.translate(-0.7,0,0);
+                camera.position.set(1.5441232684641364, -6.611089234298225, -17.0395607415357);
+                camera.lookAt(0,0,0);
+            }
+            else if (div_id == "meshseed2_2") {
+                geometry.translate(-0.7,0,0);
+                camera.position.set(0.14149974461911177, -4.184683563023455, -18.816445494560945);
+                camera.lookAt(0,0,0);
+            }
+            // else if (div_id == "meshseed3_1") {
+            //     geometry.translate(3.0,0.8,0);
+            //     camera.position.set(1.8009893785847924, -7.710849085054061, -19.874104961697856);
+            //     camera.lookAt(0,0,0);
+            // }
+            // else if (div_id == "meshseed3_2") {
+            //     geometry.translate(2.5,1.0,0);
+            //     camera.position.set(0.17372456579567302, -5.137693618708831, -23.101658820372418);
+            //     camera.lookAt(0,0,0);
+            // }
+            else if (div_id == "meshcomp_ours1") {
+                geometry.translate(0,-0.2,0);
+                camera.position.set(-0.6029351653858079, 2.409739498603034, -11.243305433879831);
+                camera.lookAt(0.2605144437816586, 0.5251704276204188, 0.06761420596854788);
+            }
+            else if (div_id == "meshcomp_cut3r1") {
+                camera.position.set(-0.1588855317391846, 0.6350147803096983, -2.9628369100431895);
+                camera.lookAt(0,0,0);
+            }
+            else if (div_id == "meshcomp_ours2") {
+                geometry.translate(1.5,0,0);
+                camera.position.set(0.1509333906542638, 1.0095877890502678, -14.621696423829443);
+                camera.lookAt(-2.2359452116612033, 0.012120463725496142, 0.30967244334301236);
+              }
+            else if (div_id == "meshcomp_cut3r2") {
+                geometry.translate(0.7,0,0);
+                camera.position.set(-0.10204247789220514, 0.7373891237088912, -3.643367950197162);
+                camera.lookAt(-0.24401574038757337, -0.0315091379023128, 0.002179183646267757);
+            }
+            else if (div_id == "meshcomp_ours3") {
+                geometry.translate(3.8,0.2,0);
+                camera.position.set(-10.707202397720406, 4.939583621126656, -9.619093725704547);
+                camera.lookAt(-0.7835858651885019, 0.030434162586977648, 0.7633625743797616);
+              }
+            else if (div_id == "meshcomp_cut3r3") {
+                geometry.translate(1.0,0.1,0);
+                camera.position.set(-4.247510970569815, 1.3082676737398056, -2.990237367827976);
+                camera.lookAt(-0.3853986462949379, -0.18438584278501854, 0.36071567888471245);
+            }
+
+            // 点云材质
+            const material = new THREE.PointsMaterial({
+                size: 0.2,
+                vertexColors: geometry.hasAttribute('color'),
+                // color: 0x5588ff // 如果没有颜色属性，使用默认颜色
+            });
+
+            const points = new THREE.Points(geometry, material);
+            div_to_scene[div_id]["pointcloud"].add(points);
+            div_to_scene[div_id]["old_points"] = points
+            div_to_scene[div_id]["camera"] = camera
+            div_to_scene[div_id]["controls"] = controls
+
+            // 添加监听器
+            controls.addEventListener('change', () => {
+                console.log('Camera position:', camera.position.toArray());
+                console.log('Camera lookAt (target):', controls.target.toArray());
+            });
+        },
+            (xhr) => {
+                console.log((xhr.loaded / xhr.total * 100) + '% loaded');
+            },
+            (error) => {
+                console.error('PLY load error:', error);
+            }
+        );
+
+        // 灯光
+        const hemiLight = new THREE.HemisphereLight(0xffffff, 0x444444, 0.5);
+        div_to_scene[div_id]["pointcloud"].add(hemiLight);
+
+        // 渲染器设置
+        renderer = new THREE.WebGLRenderer({ antialias: true });
+        renderer.setPixelRatio(window.devicePixelRatio);
+        renderer.setSize(width, height);
+        renderer.outputEncoding = THREE.sRGBEncoding;
+        container.appendChild(renderer.domElement);
+
+        // 控制器设置
+        controls = new OrbitControls(camera, renderer.domElement);
+        controls.enableDamping = true;
+        controls.dampingFactor = 0.05;
+
+        window.addEventListener('resize', onWindowResize);
+    }
+
+    function onWindowResize() {
+        let width = container.parentElement.clientWidth;
+        let height = container.parentElement.clientHeight;
+        camera.aspect = width / height;
+        camera.updateProjectionMatrix();
+        renderer.setSize(width, height);
+    }
+
+    function animate() {
+        requestAnimationFrame(animate);
+        controls.update();
+        renderer.render(div_to_scene[div_id]["pointcloud"], camera);
+    }
+
+    return controls
+}
+
+    function addShadowedLight(scene, x, y, z, color, intensity ) {
+
+        const directionalLight = new THREE.DirectionalLight( color, intensity );
+        directionalLight.position.set( x, y, z );
+        scene.add( directionalLight );
+
+        directionalLight.castShadow = true;
+
+        const d = 1;
+        directionalLight.shadow.camera.left = - d;
+        directionalLight.shadow.camera.right = d;
+        directionalLight.shadow.camera.top = d;
+        directionalLight.shadow.camera.bottom = - d;
+
+        directionalLight.shadow.camera.near = 1;
+        directionalLight.shadow.camera.far = 4;
+
+        directionalLight.shadow.mapSize.width = 1024;
+        directionalLight.shadow.mapSize.height = 1024;
+
+        directionalLight.shadow.bias = - 0.001;
+
+    }
+
+    document.addEventListener('keydown', logKey);
+
+    function logKey(evt) {
+        if (evt.keyCode === 71 && !mouse_button_down) {
+            // switch_geometry()
+            replace_pointcloud("sample_case1", './models/sample1_gen.ply', true)
+            replace_pointcloud("sample_case2", './models/sample2_gen.ply', true)
+            replace_pointcloud("sample_case3", './models/sample3_gen.ply', true)
+            replace_pointcloud("sample_case4", './models/sample4_gen.ply', true)
+            replace_pointcloud("sample_case5", './models/meshseed_1_2.ply', true)
+        }
+        if (evt.keyCode === 82 && !mouse_button_down) {
+
+            replace_pointcloud("sample_case1", './models/sample1.ply')
+            replace_pointcloud("sample_case2", './models/sample2.ply')
+            replace_pointcloud("sample_case3", './models/sample3.ply')
+            replace_pointcloud("sample_case4", './models/sample4.ply')
+            replace_pointcloud("sample_case5", './models/sample5.ply')
+        }
+    }
+
+    function switch_geometry() {
+        render_colors = !render_colors
+    }
+
+    function replace_pointcloud(div_id, new_ply_path, gen = false) {
+    // let camera = setup_camera(div_id)
+    const scene = div_to_scene[div_id]["pointcloud"];
+    const oldPoints = div_to_scene[div_id]["old_points"];
+    const camera = div_to_scene[div_id]["camera"];
+    const controls = div_to_scene[div_id]["controls"];
+
+    if (oldPoints) {
+        scene.remove(oldPoints);
+        oldPoints.geometry.dispose();
+        oldPoints.material.dispose();
+    }
+
+    const loader = new PLYLoader();
+    loader.load(new_ply_path, function (geometry) {
+        // geometry.computeBoundingBox();
+        // geometry.center();
+        geometry.computeBoundingBox();
+
+        const center = new THREE.Vector3();
+        geometry.boundingBox.getCenter(center);
+        geometry.translate(-center.x, -center.y, -center.z);  
+
+        const material = new THREE.PointsMaterial({
+            size: 0.2,
+            vertexColors: geometry.hasAttribute('color')
+        });
+
+        const newPoints = new THREE.Points(geometry, material);
+        scene.add(newPoints);
+        div_to_scene[div_id]["old_points"] = newPoints;
+
+        // ✅ 重新设置视角
+        const size = new THREE.Vector3();
+        geometry.boundingBox.getSize(size);
+        const maxDim = Math.max(size.x, size.y, size.z);
+        const cameraDistance = maxDim * 2.0;
+
+        if (gen) {
+          if (div_id == "sample_case1") {
+            geometry.translate(0.25,0.25,0);
+            camera.position.set(-0.33495542093006947, 0.5351001270264002, -15.344135222323422);
+            camera.lookAt(-0.24414380491916332, -0.18998936067360706, -0.007512305468929134 );
+          }
+          else if (div_id == "sample_case2") {
+            geometry.translate(-2.1,-0.2,0);
+            camera.position.set(1.4146791736565425, 3.7352682016439167, -19.4888688194049);
+            camera.lookAt(0,0,0);
+            } 
+          else if (div_id == "sample_case3") {
+            geometry.translate(5.8,1.6,0);
+            camera.position.set(-5.8417940622082565, -2.172554252972644, -20.78835510822863);
+            camera.lookAt(0,0,0);
+          }
+          else if (div_id == "sample_case4") {
+            geometry.translate(0,-0.5,0);
+            camera.position.set(1.8356574680512194, 4.29455009496978, -12.631850506803769);
+            camera.lookAt(0.2107390071914075, 0.6707376442203, 0.17890295060176492);
+          }
+          else if (div_id == "sample_case5") {
+            geometry.translate(3.3,1.6,0);
+            camera.position.set(3.63627548891057, -5.075209363770819, -20.426332478687243);
+            camera.lookAt(0,0,0);
+          }
+        }
+        else {
+            if (div_id == "sample_case1") {
+            geometry.translate(-0.2,0.2,0);
+            camera.position.set(1.6230225350342913, -0.6234737139583433, -10.580383072470458);
+            camera.lookAt(0.11114839239697578, -0.2644762011750067, 0.02392370737928461);
+            } 
+            else if (div_id == "sample_case2") {
+            geometry.translate(-1.15,-1.1,0);
+            camera.position.set(0.9754964219328183, 2.517406240143193, -12.204394752459265);
+            camera.lookAt(-0.13833566556182408, 0.4339470960846704, 0.0614466252405209);
+            } 
+            else if (div_id == "sample_case3") {
+            geometry.translate(1.0,0.8,0);
+            camera.position.set(0.0787889354865618, -1.7679012697541576, -11.30418255421156);
+            camera.lookAt(0.30173379710215437, 0.1990478654557605, -0.040776980350966684);
+            } 
+            else if (div_id == "sample_case4") {
+            geometry.translate(-0.5,-0.2,0);
+            camera.position.set(-0.7032851032269549, 1.5349932868720284, -9.212814739904227);
+            camera.lookAt(0.27758942337233355, 0.23186805929506343, -0.020830662725487767);
+            } 
+            else if (div_id == "sample_case5") {
+            geometry.translate(2.1,1.6,0);
+            camera.position.set(0.1414997446191119, -4.184683563023461, -18.816445494560966);
+            camera.lookAt(0,0,0);
+            }
+        }
+
+        // controls.target.set(0, 0, 0);
+        // controls.update();
+    });
+    }
+
+    function reset_orbit_controls() {
+        list_of_orbit_controls.forEach(oc => {
+            oc.reset()
+            // oc.update()
+        })
+    }
+
+    function set_style_0(){
+        style_id = "0"
+    }
+
+    function set_style_1(){
+        style_id = "1"
+    }
+
+    function set_style_2(){
+        style_id = "2"
+    }
+
+    document.body.onmousedown = function(evt) {
+        if (evt.button === 0)
+            mouse_button_down = true
+    }
+    document.body.onmouseup = function(evt) {
+        if (evt.button === 0)
+            mouse_button_down = false
+    }
+
+    window.onload = function() {
+        let slider = document.getElementsByClassName("slider")[0]
+        slider.removeAttribute("tabIndex")
+        // slider.addEventListener("mouseout", reset_orbit_controls);
+        
+        setup_render_divs("sample_case1", './models/sample1.ply')
+        setup_render_divs("sample_case2", './models/sample2.ply')
+        setup_render_divs("sample_case3", './models/sample3.ply')
+        setup_render_divs("sample_case4", './models/sample4.ply')
+        setup_render_divs("sample_case5", './models/sample5.ply')
+
+        setup_render_divs("meshcomp_ours1", './models/case1_ours.ply')
+        setup_render_divs("meshcomp_cut3r1", './models/case1_cut.ply')
+        setup_render_divs("meshcomp_ours2", './models/case2_ours.ply')
+        setup_render_divs("meshcomp_cut3r2", './models/case2_cut.ply')
+        setup_render_divs("meshcomp_ours3", './models/case3_ours.ply')
+        setup_render_divs("meshcomp_cut3r3", './models/case3_cut.ply')
+
+        setup_render_divs("meshseed1_1", './models/meshseed_4_1.ply')
+        setup_render_divs("meshseed1_2", './models/meshseed_4_2.ply')
+        setup_render_divs("meshseed2_1", './models/meshseed_0_1.ply')
+        setup_render_divs("meshseed2_2", './models/meshseed_0_2.ply')
+
+    };
+
+    </script>
+
 </html>
