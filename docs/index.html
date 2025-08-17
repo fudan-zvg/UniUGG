@@ -119,7 +119,7 @@
     </section>
     </div>
       
-    <section class="hero is-light is-small", id = "vis_gen">
+    <!-- <section class="hero is-light is-small", id = "vis_gen">
         <div class="hero-body">
             <div class="container">
                  <div id="results-carousel" class="carousel results-carousel">
@@ -144,9 +144,98 @@
                   Here are the pointmaps of reference views. <b>Press <span style="font-size: 20px;">G</span> to see the generated scenes. Press <span style="font-size: 20px;">R</span> to reset.</b> </div>
             </div>
         </div>
+    </section> -->
+
+    <!-- section 开始 -->
+    <section class="hero is-light is-small" id="vis_gen">
+      <div class="hero-body">
+        <div class="container">
+          <div id="results-carousel" class="carousel results-carousel">
+            <!-- Item 1 -->
+            <div class="item">
+              <!-- <div class="reference-image-wrapper">
+                <img src="./models/sample1.png" alt="Reference View 1" class="reference-image">
+              </div> -->
+              <div class="reference-block">
+                <img src="./models/sample1.png" alt="Reference View 1" class="reference-image">
+                <div class="reference-caption">
+                  view transformation:<br>
+                  Pitch down 40°
+                </div>
+              </div>
+              <div class="render-container">
+                <div id="sample_case1" class="render_div"></div>
+              </div>
+            </div>
+
+            <!-- Item 2 -->
+            <div class="item">
+              <div class="reference-block">
+                <img src="./models/sample2.png" alt="Reference View 1" class="reference-image">
+                <div class="reference-caption">
+                  view transformation:<br>
+                  Pitch down 40°
+                </div>
+              </div>
+              <div class="render-container">
+                <div id="sample_case2" class="render_div"></div>
+              </div>
+            </div>
+            
+            <!-- Item 3 -->
+            <div class="item">
+              <div class="reference-block">
+                <img src="./models/sample3.png" alt="Reference View 1" class="reference-image">
+                <div class="reference-caption">
+                  view transformation:<br>
+                  Pitch down 40°
+                </div>
+              </div>
+              <div class="render-container">
+                <div id="sample_case3" class="render_div"></div>
+              </div>
+            </div>
+
+            <!-- Item 4 -->
+            <div class="item">
+              <div class="reference-block">
+                <img src="./models/case1.jpg" alt="Reference View 1" class="reference-image">
+                <div class="reference-caption">
+                  view transformation:<br>
+                  Yaw right 40°
+                </div>
+              </div>
+              <div class="render-container">
+                <div id="sample_case4" class="render_div"></div>
+              </div>
+            </div>
+
+            <!-- Item 5 -->
+            <div class="item">
+              <div class="reference-block">
+                <img src="./models/sample5.png" alt="Reference View 1" class="reference-image">
+                <div class="reference-caption">
+                  view transformation:<br>
+                  Pitch down 40°
+                </div>
+              </div>
+              <div class="render-container">
+                <div id="sample_case5" class="render_div"></div>
+              </div>
+            </div>
+
+          </div>
+          <div style="text-align: center;">
+          <br>
+          Given a reference image and the relative view transformation, UniUGG can generate the corresponding 3D scenes.<br>
+          Here are the pointmaps of reference views. <b>Press <span style="font-size: 20px;">G</span> to see the generated scenes. Press <span style="font-size: 20px;">R</span> to reset.</b> 
+          </div>
+        </div>
+      </div>
     </section>
 
-      <div class="main-content">
+
+    <div class="main-content">
       <section class="summary-section", id="paper-summary">
         <h2 class="summary-title">📄 Abstract</h2>
         <p class="summary-text">
@@ -776,8 +865,8 @@ journal={arXiv preprint arXiv:2508.},
 
         <!-- Floating TOC Popup -->
         <div class="toc-popup" id="tocPopup">
-        <a href="#overview">📌 Paper Overview</a>
-        <a href="#vis_gen">🌐 Generation Visualization</a>
+        <a href="#overview">📌 Paper overview</a>
+        <a href="#vis_gen">🌐 Generation visualization</a>
         <a href="#paper-summary">📄 Abstract</a>
         <a href="#video">🎞️ Video</a>
         <a href="#generation_comparison">⚖️ 3D generation comparison</a>
