@@ -4,7 +4,7 @@
 Encoding</h1>
 
 
-<a href="https://arxiv.org/abs/2508." target="_blank">
+<a href="https://arxiv.org/abs/2508.11952" target="_blank">
     <img alt="arXiv" src="https://img.shields.io/badge/arXiv-UniUGG-red?logo=arxiv" height="20" />
 </a>
 <a href="https://fudan-zvg.github.io/UniUGG/" target="_blank">
@@ -54,6 +54,6 @@ If you find this project or dataset helpful, please consider citing our paper:
     title={UniUGG: Unified 3D Understanding and Generation via Geometric-Semantic Encoding},
     author={Xu, Yueming and Zhang, Jiahui and Huang, Ze and Chen, Yurui and Zhou, Yanpeng and Chen Zhenyu and Yuan, Yujie and Xia, Pengxiang and Huang, Guowei and Cai, Xinyue and Qi, Zhongang and Quan, Xingyue and Hao, Jianye and Xu, Hang and Zhang, Li},
     year={2025},
-    journal={arXiv preprint arXiv:2508.},
+    journal={arXiv preprint arXiv:2508.11952},
 }
 ```
