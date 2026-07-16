@@ -59,12 +59,12 @@ If you find this project or dataset helpful, please consider citing our paper:
 ```
 
 ## ✅ TODO
-✔ Release Vision encoder module\
-✔ Encoder Pretraining pipeline\
+✔ Release vision encoder module\
+✔ Encoder pretraining pipeline\
 ✔ Pretrained checkpoints  
 
 ✘ Spatial-VAE module  
-✘ Unified Understanding and Generation module
+✘ Unified Understanding and Generation
 
 ##  🔄Pipeline Overview
 <img src="docs/resources/overview.png" width="100%"/>
